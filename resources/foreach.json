@@ -1,0 +1,25 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "foreach", "name" : "'foreach'"},
+        ["$", "arr"],
+        ["$", "e"],
+        [
+            {"value" : "echo", "name" : "'echo'"},
+            ["$", "e"]
+        ]
+    ],
+    [
+        {"value" : "foreach", "name" : "'foreach'"},
+        ["$", "arr"], 
+        [
+            {"value" : "=>", "name" : "'=>'"},
+            ["$", "k"], ["$", "v"]
+        ],
+        [
+            {"value" : "echo", "name" : "'echo'"},
+            ["$", "k"]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

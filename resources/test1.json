@@ -1,0 +1,6 @@
+[
+    null,
+    {"name":"BodyString", "value":"<?php"},
+    ["echo", "$a"],
+    {"name":"BodyString", "value":"?>"}
+]

@@ -1,0 +1,12 @@
+<?php
+$GLOBALS['request_string'] = "&module=$module&action=$action&record=$record&lang_crm=$lang_crm";
+
+$current_user = new Users();
+if($use_current_login)
+{
+	//$result = $current_user->retrieve($_SESSION['authenticated_user_id']);
+	//getting the current user info from flat file
+	$result = $current_user->retrieveCurrentUserInfoFromFile($_SESSION['authenticated_user_id']);
+}
+
+?>

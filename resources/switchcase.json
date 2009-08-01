@@ -1,0 +1,30 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "switch", "name" : "'switch'"},
+        [
+            {"value" : "+", "name" : "'+'"},
+            ["$", "a"], ["$", "b"]
+        ],
+        [
+            {"value" : "case", "name" : "'case'"},
+            [
+                {"value" : "+", "name" : "'+'"},
+                ["$", "a"], ["$", "b"]
+            ], 
+            [
+                {"value" : "echo", "name" : "'echo'"},
+                {"value" : "\"Yaye\"", "name" : "DoubleQuotedString"}
+            ],
+            {"value" : "break", "name" : "'break'"}
+        ],
+        [
+            {"value" : "default", "name" : "'default'"},
+            [
+                {"value" : "echo", "name" : "'echo'"},
+                {"value" : "\"Nope\"", "name" : "DoubleQuotedString"}
+            ]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

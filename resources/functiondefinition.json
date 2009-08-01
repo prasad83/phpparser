@@ -1,0 +1,36 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "function", "name" : "'function'"},
+        {"value" : "test", "name" : "UnquotedString"},
+        [
+            {"value" : "Params", "name" : "Params"},
+            ["$", "a"], 
+            [
+                {"value" : "=", "name" : "'='"},
+                ["$", "b"],
+                {"value" : "6", "name" : "Integer"}
+            ]
+        ],
+        [
+            {"value" : "Block", "name" : "Block"},
+            [
+                {"value" : "return", "name" : "'return'"},
+                ["$", "a"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "function", "name" : "'function'"},
+        {"value" : "test", "name" : "UnquotedString"},
+        {"value" : "Params", "name" : "Params"},
+        [
+            {"value" : "Block", "name" : "Block"},
+            [
+                {"value" : "return", "name" : "'return'"},
+                {"value" : "1", "name" : "Integer"}
+            ]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

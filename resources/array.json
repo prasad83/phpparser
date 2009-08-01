@@ -1,0 +1,33 @@
+[
+    null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        [
+            {"value" : "array", "name" : "Array"},
+            {"value" : "'a'", "name" : "SingleQuotedString"},
+            {"value" : "'b'", "name" : "SingleQuotedString"}
+        ]
+    ],
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        [
+            {"value" : "array", "name" : "Array"},
+            [
+                {"value" : "=>", "name" : "'=>'"},
+                {"value" : "'a'", "name" : "SingleQuotedString"},
+                {"value" : "1", "name" : "Integer"}
+            ],
+            [
+                {"value" : "=>", "name" : "'=>'"},
+                {"value" : "'b'", "name" : "SingleQuotedString"},
+                {"value" : "2", "name" : "Integer"}
+            ]
+        ]
+    ],
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        {"value" : "array", "name" : "Array"}
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

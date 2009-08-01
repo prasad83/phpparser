@@ -1,0 +1,16 @@
+<?php
+abstract class A{
+    abstract function f($a);
+}
+class B extends A{
+    const e = "hello";
+    var $a = 5;
+    private $b = 'hello';
+    protected $c;
+    public $d = array(1);
+
+    function f($a){
+        return $this->c;
+    }
+}
+?>

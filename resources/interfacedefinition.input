@@ -1,0 +1,15 @@
+<?php
+    interface I extends A, B{
+        const c = 100;
+        public function f($a);
+    }
+
+    interface J {
+    }
+
+    class C implements I, J{
+        public function f($a){
+            return "Aye!";
+        }
+    }
+?>

@@ -1,0 +1,13 @@
+<?php
+    for($i=0, $n=10; false, $i<$n; $i++, $n--){
+	echo "Hello";
+    }
+
+    for($i=0;$i<100;$i++){
+        echo "Hello";
+    }
+    
+    for(;;){
+        echo "World";
+    }
+?>

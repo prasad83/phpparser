@@ -1,0 +1,9 @@
+<?php
+switch($a+$b){
+    case $a+$b:
+	echo "Yaye";
+	break;
+    default:
+        echo "Nope";
+}
+?>

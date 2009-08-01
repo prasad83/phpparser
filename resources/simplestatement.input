@@ -1,0 +1,11 @@
+<?php
+echo "hello ", "world";
+global $a, $b;
+break;
+break 20;
+continue;
+continue 10;
+return $a;
+require 'test.php';
+static $a = 5;
+?>

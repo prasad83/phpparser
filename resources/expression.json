@@ -1,0 +1,267 @@
+[null, {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "or", "name" : "'or'"},
+        [
+            {"value" : "or", "name" : "'or'"},
+            ["$", "a"], ["$", "b"]
+        ],
+        ["$", "c"]
+    ],
+    [
+        {"value" : "or", "name" : "'or'"},
+        ["$", "a"],
+        [
+            {"value" : "xor", "name" : "'xor'"},
+            ["$", "b"], 
+            [
+                {"value" : "and", "name" : "'and'"},
+                ["$", "c"], 
+                ["$", "d"]
+            ]
+        ]
+    ],
+    [
+        {"value" : ".=", "name" : "AsignmentOperator"},
+        ["$", "a"],
+        [{"value" : "*=", "name" : "AsignmentOperator"},
+            ["$", "b"], 
+            ["$", "c"]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "IfExpression", "name" : "IfExpression"},
+            ["$", "b"], 
+            [
+                {"value" : "and", "name" : "'and'"},
+                ["$", "a"], ["$", "b"]
+            ],
+            [
+                {"value" : "or", "name" : "'or'"},
+                ["$", "a"], ["$", "b"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$","a"], 
+        [
+            {"value" : "||", "name" : "'||'"},
+            ["$", "b"], 
+            [
+                {"value" : "&&", "name" : "'&&'"},
+                ["$", "c"], ["$", "d"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "|", "name" : "'|'"},
+            ["$", "b"], 
+            [
+                {"value" : "&", "name" : "'&'"},
+                ["$", "c"], ["$", "d"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "and", "name" : "'and'"},
+        [
+            {"value" : "=", "name" : "'='"},
+            ["$", "a"],
+            [
+                {"value" : "==", "name" : "EqualityOperator"},
+                ["$", "b"], ["$", "c"]
+            ]
+        ],
+        [
+            {"value" : "!=", "name" : "EqualityOperator"},
+            ["$", "b"], ["$", "d"]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "&&", "name" : "'&&'"},
+            [
+                {"value" : "<", "name" : "ComparisionOperator"},
+                ["$", "b"], ["$", "c"]
+            ],
+            [
+                {"value" : "<", "name" : "ComparisionOperator"},
+                ["$", "c"], ["$", "d"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "|", "name" : "'|'"},
+            [
+                {"value" : "&", "name" : "'&'"},
+                [{"value" : ">>", "name" : "ShiftOperator"},
+                    ["$", "b"],
+                    {"value" : "4", "name" : "Integer"}
+                ],
+                {"value" : "0x0f", "name" : "Integer"}
+            ],
+            [
+                {"value" : "&", "name" : "'&'"},
+                [
+                    {"value" : "<<", "name" : "ShiftOperator"},
+                    ["$", "b"],
+                    {"value" : "4", "name" : "Integer"}
+                ],
+                {"value" : "0xf0", "name" : "Integer"}
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "-", "name" : "'-'"},
+            [
+                {"value" : "+", "name" : "'+'"},
+                {"value" : "5", "name" : "Integer"},
+                [
+                    {"value" : "*", "name" : "'*'"},
+                    {"value" : "4", "name" : "Integer"},
+                    {"value" : "7", "name" : "Integer"}]],
+            [
+                {"value" : "/", "name" : "'/'"},
+                {"value" : "3", "name" : "Integer"},
+                {"value" : "6", "name" : "Integer"}
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "!", "name" : "'!'"},
+            ["$", "b"]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [{"value" : "instanceof", "name" : "'instanceof'"},
+            ["$", "b"],
+            {"value" : "Klass", "name" : "UnquotedString"}
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "==", "name" : "EqualityOperator"},
+            [
+                {"value" : "+", "name" : "'+'"},
+                [
+                    {"value" : "~", "name" : "'~'"},
+                    ["$", "b"]
+                ],
+                {"value" : "1", "name" : "Integer"}
+            ],
+            [
+                {"value" : "-", "name" : "'-'"},
+                ["$", "b"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "+", "name" : "'+'"},
+            [
+                {"value" : "Cast", "name" : "Cast"},
+                {"value" : "float", "name" : "PrimitiveType"},
+                ["$", "b"]
+            ],
+            {"value" : "3.5", "name" : "Real"}
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "+", "name" : "'+'"},
+            [
+                {"value" : "Prefix", "name" : "Prefix"},
+                {"value" : "++", "name" : "IncrementOperator"},
+                ["$", "b"]
+            ],
+            [
+                {"value" : "Postfix", "name" : "Postfix"},
+                {"value" : "--", "name" : "IncrementOperator"},
+                ["$", "c"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "[", "name" : "'['"},
+            [
+                {"value" : "[", "name" : "'['"},
+                ["$", "b"], 
+                [
+                    {"value" : ".", "name" : "'.'"},
+                    ["$", "firstname"], ["$", "lastname"]
+                ]
+            ],
+            {"value" : "\"phone\"", "name" : "DoubleQuotedString"}
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "new", "name" : "'new'"},
+            {"value" : "b", "name" : "UnquotedString"}
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"],
+        [
+            {"value" : "new", "name" : "'new'"},
+            [
+                {"value" : "Apply", "name" : "Apply"},
+                {"value" : "b", "name" : "UnquotedString"},
+                ["$", "c"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "clone", "name" : "'clone'"},
+            ["$", "c"]
+        ]
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        [
+            {"value" : "*", "name" : "'*'"},
+            {"value" : "23", "name" : "Integer"},
+            [
+                {"value" : "+", "name" : "'+'"},
+                {"value" : "5", "name" : "Integer"},
+                {"value" : "6", "name" : "Integer"}
+            ]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

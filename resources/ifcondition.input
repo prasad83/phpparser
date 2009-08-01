@@ -1,0 +1,13 @@
+<?php
+    if(true){
+        echo "Hello";
+    }
+
+    if(true){
+        echo "Yes";
+    }elseif(false){
+        echo "No";
+    }else{
+        echo "Maybe";
+    }
+?>

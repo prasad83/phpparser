@@ -1,0 +1,58 @@
+<?php
+//Test the weak logical operators
+$a or $b or $c;
+$a or $b xor $c and $d;
+
+//Assignment operators
+$a .= $b *= $c;
+
+//Ternary operator
+$a = $b ? $a and $b : $a or $b;
+
+//Logical operators
+$a = $b || $c && $d;
+
+//Bitwise operators
+$a = $b | $c & $d;
+
+//Equality Operators
+$a = $b == $c and $b != $d;
+
+//Comarision operators
+$a = $b < $c && $c < $d;
+
+//Bit shift operators
+$a = $b >> 4 & 0x0f | $b << 4 & 0xf0;
+
+//Arithmetic operators
+$a = 5+4*7-3/6;
+
+//Logical not
+$a = !$b;
+
+//Instanceof
+$a = $b instanceof Klass;
+
+
+//Negate operators
+$a = ~$b + 1 == -$b;
+
+//Cast
+$a = (float)$b + 3.5;
+
+//Increment operators
+$a = ++$b + $c--;
+
+//Array lookup
+$a = $b[$firstname.$lastname]["phone"];
+
+//New and clone
+$a = new b;
+$a = new b($c);
+$a = clone $c;
+
+
+//Bracketed Expressions
+$a = 23*(5+6);
+
+?>

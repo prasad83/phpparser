@@ -1,0 +1,22 @@
+<?php
+//Test me ?>
+<?php
+#Test me ?><?
+<?php
+//Test me too
+#Test me too
+ /*
+ * Hello World
+ */
+
+'Hello there
+how d\'you do\\'
+"Double truble \n\r\t\$\"\123\x4a"
+<<<TEST
+Something's wrong with the world today.
+TEST
+something
+1234 06 0x4a
+.123 12.34
+?><?php
+?>

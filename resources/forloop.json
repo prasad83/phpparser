@@ -1,0 +1,84 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "for", "name" : "'for'"},
+        [
+            {"value" : "ForInit", "name" : "ForInit"},
+            [{"value" : "=", "name" : "'='"},
+                ["$", "i"],
+                {"value" : "0", "name" : "Integer"}
+            ],
+            [
+                {"value" : "=", "name" : "'='"},
+                ["$", "n"],
+                {"value" : "10", "name" : "Integer"}
+            ]
+        ],
+        [
+            {"value" : "ForCondition", "name" : "ForCondition"},
+            {"value" : "false", "name" : "Boolean"},
+            [
+                {"value" : "<", "name" : "ComparisionOperator"},
+                ["$", "i"], ["$", "n"]
+            ]
+        ],
+        [
+            {"value" : "ForUpdate", "name" : "ForUpdate"},
+            [
+                {"value" : "Postfix", "name" : "Postfix"},
+                {"value" : "++", "name" : "IncrementOperator"},
+                ["$", "i"]
+            ],
+            [
+                {"value" : "Postfix", "name" : "Postfix"},
+                {"value" : "--", "name" : "IncrementOperator"},
+                ["$", "n"]
+            ]
+        ],
+        [
+            {"value" : "echo", "name" : "'echo'"},
+            {"value" : "\"Hello\"", "name" : "DoubleQuotedString"}
+        ]
+    ],
+    [
+        {"value" : "for", "name" : "'for'"},
+        [
+            {"value" : "ForInit", "name" : "ForInit"},
+            [{"value" : "=", "name" : "'='"},
+                ["$", "i"],
+                {"value" : "0", "name" : "Integer"}
+            ]
+        ],
+        [
+            {"value" : "ForCondition", "name" : "ForCondition"},
+            [
+                {"value" : "<", "name" : "ComparisionOperator"},
+                ["$", "i"], 
+                {"value" : "100", "name" : "Integer"}
+            ]
+        ],
+        [
+            {"value" : "ForUpdate", "name" : "ForUpdate"},
+            [
+                {"value" : "Postfix", "name" : "Postfix"},
+                {"value" : "++", "name" : "IncrementOperator"},
+                ["$", "i"]
+            ]
+        ],
+        [
+            {"value" : "echo", "name" : "'echo'"}, 
+            {"value" : "\"Hello\"", "name" : "DoubleQuotedString"}
+        ]
+    ],
+    [
+        {"value" : "for", "name" : "'for'"},
+        {"value" : "ForInit", "name" : "ForInit"},
+        {"value" : "ForCondition", "name" : "ForCondition"},
+        {"value" : "ForUpdate", "name" : "ForUpdate"},
+        [
+            {"value" : "echo", "name" : "'echo'"},
+            {"value" : "\"World\"", "name" : "DoubleQuotedString"}
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

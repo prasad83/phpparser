@@ -1,0 +1,11 @@
+[null,
+    {"value":"<?php", "name":"BodyString"},
+    [{"value":"while", "name":"'while'"},
+        {"value":"true", "name":"Boolean"},
+        [
+            {"value":"echo", "name":"'echo'"},
+            {"value":"\"hello\"", "name":"DoubleQuotedString"}
+        ]
+    ],
+    {"value":"?>", "name":"BodyString"}
+]

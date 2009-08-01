@@ -1,0 +1,62 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "interface", "name" : "'interface'"},
+        {"value" : "I", "name" : "UnquotedString"},
+        [
+            {"value" : "extends", "name" : "'extends'"},
+            {"value" : "A", "name" : "UnquotedString"},
+            {"value" : "B", "name" : "UnquotedString"}
+        ],
+        [
+            {"value" : "const", "name" : "'const'"},
+            {"value" : "c", "name" : "UnquotedString"},
+            {"value" : "100", "name" : "Integer"}
+        ],
+        [
+            {"value" : "Method", "name" : "Method"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "public", "name" : "AccessModifier"}
+            ],
+            {"value" : "f", "name" : "UnquotedString"},
+            [
+                {"value" : "Params", "name" : "Params"},
+                ["$", "a"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "interface", "name" : "'interface'"}, 
+        {"value" : "J", "name" : "UnquotedString"}
+    ],
+    [
+        {"value" : "class", "name" : "'class'"},
+        {"value" : "Modifiers", "name" : "Modifiers"},
+        {"value" : "C", "name" : "UnquotedString"},
+        [
+            {"value" : "implements", "name" : "'implements'"},
+            {"value" : "I", "name" : "UnquotedString"},
+            {"value" : "J", "name" : "UnquotedString"}
+        ],
+        [
+            {"value" : "Method", "name" : "Method"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "public", "name" : "AccessModifier"}
+            ],
+            {"value" : "f", "name" : "UnquotedString"},
+            [
+                {"value" : "Params", "name" : "Params"},
+                ["$", "a"]
+            ],
+            [
+                {"value" : "Block", "name" : "Block"},
+                [{"value" : "return", "name" : "'return'"},
+                    {"value" : "\"Aye!\"", "name" : "DoubleQuotedString"}
+                ]
+            ]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

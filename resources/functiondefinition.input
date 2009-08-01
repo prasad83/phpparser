@@ -1,0 +1,8 @@
+<?php
+function test($a, $b=6){
+    return $a;
+}
+function test(){
+    return 1;
+}
+?>

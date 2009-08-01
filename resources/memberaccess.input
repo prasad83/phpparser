@@ -1,0 +1,7 @@
+<?php
+    echo $a->b->c;
+    $a->b->c("hello");
+    echo A::$b;
+    A::b("hello");
+    $i = & A::b("hello");
+?>

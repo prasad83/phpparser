@@ -1,0 +1,22 @@
+<?php
+
+    for($i=0; $i<10;
+    $i++)
+        echo "hello world";
+        
+    for($i=0; $i<10; $i++){
+        echo "hello world";
+    }
+
+    class c{
+      function f(){
+     echo "Yo baby!";
+        }
+    }
+
+    function g(){
+        
+    }
+
+    g($a, $b);
+?>

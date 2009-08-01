@@ -1,0 +1,89 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "class", "name" : "'class'"},
+        [
+            {"value" : "Modifiers", "name" : "Modifiers"},
+            {"value" : "abstract", "name" : "'abstract'"}
+        ],
+        {"value" : "A", "name" : "UnquotedString"},
+        [
+            {"value" : "Method", "name" : "Method"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "abstract", "name" : "'abstract'"}],
+            {"value" : "f", "name" : "UnquotedString"},
+            [
+                {"value" : "Params", "name" : "Params"},
+                ["$", "a"]
+            ]
+        ]
+    ],
+    [
+        {"value" : "class", "name" : "'class'"},
+        {"value" : "Modifiers", "name" : "Modifiers"},
+        {"value" : "B", "name" : "UnquotedString"},
+        [
+            {"value" : "extends", "name" : "'extends'"},
+            {"value" : "A", "name" : "UnquotedString"}
+        ],
+        [
+            {"value" : "const", "name" : "'const'"},
+            {"value" : "e", "name" : "UnquotedString"},
+            {"value" : "\"hello\"", "name" : "DoubleQuotedString"}
+        ],
+        [
+            {"value" : "var", "name" : "'var'"},
+            ["$", "a"], 
+            {"value" : "5", "name" : "Integer"}
+        ],
+        [
+            {"value" : "Field", "name" : "Field"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "private", "name" : "AccessModifier"}
+            ],
+            ["$", "b"],
+            {"value" : "'hello'", "name" : "SingleQuotedString"}
+        ],
+        [
+            {"value" : "Field", "name" : "Field"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "protected", "name" : "AccessModifier"}],
+            ["$", "c"]
+        ],
+        [
+            {"value" : "Field", "name" : "Field"},
+            [
+                {"value" : "Modifiers", "name" : "Modifiers"},
+                {"value" : "public", "name" : "AccessModifier"}
+            ],
+            ["$", "d"],
+            [
+                {"value" : "array", "name" : "Array"},
+                {"value" : "1", "name" : "Integer"}
+            ]
+        ],
+        [
+            {"value" : "Method", "name" : "Method"},
+            {"value" : "Modifiers", "name" : "Modifiers"},
+            {"value" : "f", "name" : "UnquotedString"},
+            [
+                {"value" : "Params", "name" : "Params"},
+                ["$", "a"]
+            ],
+            [
+                {"value" : "Block", "name" : "Block"},
+                [
+                    {"value" : "return", "name" : "'return'"},
+                    [
+                        {"value" : "->", "name" : "'->'"},
+                        ["$", "this"], "c"]
+                ]
+            ]
+        ]
+    ],
+
+    {"value" : "?>", "name" : "BodyString"}
+]

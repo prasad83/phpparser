@@ -1,0 +1,5 @@
+Somewhere<?php
+$a = 4; $b = 5;
+?>Over the<?php
+echo $a + $b;
+?>Rainbow

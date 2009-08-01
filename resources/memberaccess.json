@@ -1,0 +1,60 @@
+[null,
+    {"value" : "<?php", "name" : "BodyString"},
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        [
+            {"value" : "->", "name" : "'->'"},
+            [
+                {"value" : "->", "name" : "'->'"},
+                ["$", "a"], "b"
+            ],
+            "c"
+        ]
+    ],
+    [
+        {"value" : "Apply", "name" : "Apply"},
+        [
+            {"value" : "->", "name" : "'->'"},
+            [
+                {"value" : "->", "name" : "'->'"},
+                ["$", "a"], "b"
+            ],
+            "c"
+        ],
+        {"value" : "\"hello\"", "name" : "DoubleQuotedString"}
+    ],
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        [
+            {"value" : "::", "name" : "'::'"},
+            {"value" : "A", "name" : "UnquotedString"},
+            ["$", "b"]
+        ]
+    ],
+    [
+        {"value" : "Apply", "name" : "Apply"},
+        [
+            {"value" : "::", "name" : "'::'"},
+            {"value" : "A", "name" : "UnquotedString"},
+            {"value" : "b", "name" : "UnquotedString"}
+        ],
+        {"value" : "\"hello\"", "name" : "DoubleQuotedString"}
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "i"],
+        [
+            {"value" : "&", "name" : "'&'"},
+            [
+                {"value" : "Apply", "name" : "Apply"},
+                [
+                    {"value" : "::", "name" : "'::'"},
+                    {"value" : "A", "name" : "UnquotedString"},
+                    {"value" : "b", "name" : "UnquotedString"}
+                ],
+                {"value" : "\"hello\"", "name" : "DoubleQuotedString"}
+            ]
+        ]
+    ],
+    {"value" : "?>", "name" : "BodyString"}
+]

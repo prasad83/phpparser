@@ -1,0 +1,9 @@
+<?php
+foreach ($arr as $e) {
+    echo $e;
+}
+
+foreach ($arr as $k=>$v) {
+    echo $k;
+}
+?>

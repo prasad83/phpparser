@@ -1,0 +1,23 @@
+[null,
+    {"value":"Somewhere<?php", "name":"BodyString"},
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "a"], 
+        {"value" : "4", "name" : "Integer"}
+    ],
+    [
+        {"value" : "=", "name" : "'='"},
+        ["$", "b"], 
+        {"value" : "5", "name" : "Integer"}
+    ],
+    {"value":"?>Over the<?php", "name":"BodyString"},
+    [
+        {"value" : "echo", "name" : "'echo'"},
+        [
+            {"value" : "+", "name" : "'+'"},
+            ["$", "a"],
+            ["$", "b"]
+        ]
+    ],
+    {"value":"?>Rainbow", "name":"BodyString"}
+]
