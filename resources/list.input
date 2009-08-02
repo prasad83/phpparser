@@ -1,0 +1,3 @@
+<?php
+list($a, $b) = list($c, $d) = array("a", "b");
+?> 

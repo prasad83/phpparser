@@ -1,0 +1,27 @@
+[
+	null,
+	{
+		"value" : "<?php", "name" : "BodyString"},
+	[
+		{"value" : "=", "name" : "'='"},
+		[
+			{"value" : "list", "name" : "'list'"},
+			["$", "a"],
+			["$", "b"]
+		],
+		[
+			{"value" : "=", "name" : "'='"},
+			[
+				{"value" : "list", "name" : "'list'"},
+				["$", "c"],
+				["$", "d"]
+			],
+			[
+				{"value" : "array", "name" : "Array"},
+				{"value" : "\"a\"", "name" : "DoubleQuotedString"},
+				{"value" : "\"b\"", "name" : "DoubleQuotedString"}
+			]
+		]
+	],
+	{"value" : "?> ", "name" : "BodyString"}
+]
