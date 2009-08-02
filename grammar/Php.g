@@ -63,6 +63,8 @@ tokens{
     Or = 'or';
     Xor = 'xor';
     Instanceof = 'instanceof';
+
+    List = 'list';
     
     Class = 'class';
     Interface = 'interface';
@@ -320,8 +322,13 @@ weakLogicalAnd
     ;
 
 assignment
-    : name ((Equals | AsignmentOperator)^ assignment)
+    : listVariables ((Equals | AsignmentOperator)^ assignment) 
     | ternary
+    ;
+
+listVariables
+    : List^ OpenRoundBracket! name (','! name)* CloseRoundBracket! 
+    | name
     ;
 
 ternary

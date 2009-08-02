@@ -131,8 +131,14 @@ public class PhpParserTest {
     public void testInterfaceDefinition() throws Exception{
         test("interfacedefinition");
     }
+
+		@Test
+		public void testList() throws Exception{
+				//System.out.println("Test list");
+				test("list");
+		}
     
-    @Test
+		//@Test
     public void testVtiger() throws Exception{
         PhpParser parser = res.parser("vtiger");
         CommonTree tree = (CommonTree)parser.prog().getTree();
