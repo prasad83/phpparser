@@ -3,7 +3,7 @@
 grammar Php;
 
 options {
-    backtrack = true; 
+backtrack = true; 
     memoize = true;
     k=2;
     output = AST;
@@ -13,12 +13,12 @@ options {
 tokens{
     SemiColon = ';';
     Comma = ',';
-    OpenBrace = '(';
-    CloseBrace = ')';
-    OpenSquareBrace = '[';
-    CloseSquareBrace = ']';
-    OpenCurlyBrace = '{';
-    CloseCurlyBrace = '}';
+    OpenRoundBracket = '(';
+    CloseRoundBracket = ')';
+    OpenSquareBracket = '[';
+    CloseSquareBracket = ']';
+    OpenCurlyBracket = '{';
+    CloseCurlyBracket = '}';
     ArrayAssign = '=>';
     LogicalOr = '||';
     LogicalAnd = '&&';
@@ -171,9 +171,9 @@ bracketedBlock
 
 interfaceDefinition
     : Interface interfaceName=UnquotedString interfaceExtends?
-        OpenCurlyBrace
+        OpenCurlyBracket
         interfaceMember*
-        CloseCurlyBrace
+        CloseCurlyBracket
         -> ^(Interface $interfaceName interfaceExtends? interfaceMember*)
     ;
 
@@ -192,9 +192,9 @@ classDefinition
         Class className=UnquotedString 
         (Extends extendsclass=UnquotedString)? 
         classImplements?
-        OpenCurlyBrace
+        OpenCurlyBracket
         classMember*
-        CloseCurlyBrace 
+        CloseCurlyBracket 
         -> ^(Class ^(Modifiers classModifier?) $className ^(Extends $extendsclass)? classImplements?
             classMember*
         )
@@ -287,7 +287,7 @@ functionDefinition
     ;
 
 parametersDefinition
-    : OpenBrace (paramDef (Comma paramDef)*)? CloseBrace -> ^(Params paramDef*) 
+    : OpenRoundBracket (paramDef (Comma paramDef)*)? CloseRoundBracket -> ^(Params paramDef*) 
     ;
 
 paramDef
@@ -376,8 +376,8 @@ instanceOf
 
 negateOrCast
     : (Tilde | Minus | SuppressWarnings)^ increment
-    | OpenBrace PrimitiveType CloseBrace increment -> ^(Cast PrimitiveType increment)
-    | OpenBrace! weakLogicalAnd CloseBrace!
+    | OpenRoundBracket PrimitiveType CloseRoundBracket increment -> ^(Cast PrimitiveType increment)
+    | OpenRoundBracket! weakLogicalAnd CloseRoundBracket!
     | increment
     ;
 
@@ -399,7 +399,7 @@ atomOrReference
     ;
 
 arrayDeclaration
-    : Array OpenBrace (arrayEntry (Comma arrayEntry)*)? CloseBrace -> ^(Array arrayEntry*)
+    : Array OpenRoundBracket (arrayEntry (Comma arrayEntry)*)? CloseRoundBracket -> ^(Array arrayEntry*)
     ;
 
 arrayEntry
@@ -420,7 +420,7 @@ reference
     ;
 
 nameOrFunctionCall
-    : name OpenBrace (expression (Comma expression)*)? CloseBrace -> ^(Apply name expression*)
+    : name OpenRoundBracket (expression (Comma expression)*)? CloseRoundBracket -> ^(Apply name expression*)
     | name
     ;
 
@@ -435,7 +435,7 @@ staticMemberAccess
 
 memberAccess
     : variable 
-        ( OpenSquareBrace^ expression CloseSquareBrace!
+        ( OpenSquareBracket^ expression CloseSquareBracket!
         | '->'^ UnquotedString)*
     ;
     

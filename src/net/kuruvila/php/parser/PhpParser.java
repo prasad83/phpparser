@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 Php.g 2009-05-31 23:11:29
+// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 /Users/sidharth/Documents/code/phpparser/grammar/Php.g 2009-08-02 16:09:19
 
 package net.kuruvila.php.parser; 
 
@@ -14,13 +14,14 @@ import org.antlr.runtime.tree.*;
 
 public class PhpParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "SemiColon", "Comma", "OpenBrace", "CloseBrace", "OpenSquareBrace", "CloseSquareBrace", "OpenCurlyBrace", "CloseCurlyBrace", "ArrayAssign", "LogicalOr", "LogicalAnd", "ClassMember", "InstanceMember", "SuppressWarnings", "QuestionMark", "Dollar", "Colon", "Dot", "Ampersand", "Pipe", "Bang", "Plus", "Minus", "Asterisk", "Percent", "Forwardslash", "Tilde", "Equals", "New", "Clone", "Echo", "If", "Else", "ElseIf", "For", "Foreach", "While", "Do", "Switch", "Case", "Default", "Function", "Break", "Continue", "Return", "Global", "Static", "And", "Or", "Xor", "Instanceof", "Class", "Interface", "Extends", "Implements", "Abstract", "Var", "Const", "Modifiers", "ClassDefinition", "Block", "Params", "Apply", "Member", "Reference", "Empty", "Prefix", "Postfix", "IfExpression", "Label", "Cast", "ForInit", "ForCondition", "ForUpdate", "Field", "Method", "BodyString", "UnquotedString", "AccessModifier", "Integer", "RequireOperator", "AsignmentOperator", "EqualityOperator", "ComparisionOperator", "ShiftOperator", "PrimitiveType", "IncrementOperator", "Array", "SingleQuotedString", "DoubleQuotedString", "HereDoc", "Real", "Boolean", "BodyStringRest", "BodyStringRestShortTag", "MultilineComment", "SinglelineComment", "UnixComment", "Decimal", "Hexadecimal", "Octal", "Digits", "DNum", "Exponent_DNum", "EscapeCharector", "HereDocContents", "Eol", "WhiteSpace", "'as'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "SemiColon", "Comma", "OpenRoundBracket", "CloseRoundBracket", "OpenSquareBracket", "CloseSquareBracket", "OpenCurlyBracket", "CloseCurlyBracket", "ArrayAssign", "LogicalOr", "LogicalAnd", "ClassMember", "InstanceMember", "SuppressWarnings", "QuestionMark", "Dollar", "Colon", "Dot", "Ampersand", "Pipe", "Bang", "Plus", "Minus", "Asterisk", "Percent", "Forwardslash", "Tilde", "Equals", "New", "Clone", "Echo", "If", "Else", "ElseIf", "For", "Foreach", "While", "Do", "Switch", "Case", "Default", "Function", "Break", "Continue", "Return", "Global", "Static", "And", "Or", "Xor", "Instanceof", "Class", "Interface", "Extends", "Implements", "Abstract", "Var", "Const", "Modifiers", "ClassDefinition", "Block", "Params", "Apply", "Member", "Reference", "Empty", "Prefix", "Postfix", "IfExpression", "Label", "Cast", "ForInit", "ForCondition", "ForUpdate", "Field", "Method", "BodyString", "UnquotedString", "AccessModifier", "Integer", "RequireOperator", "AsignmentOperator", "EqualityOperator", "ComparisionOperator", "ShiftOperator", "PrimitiveType", "IncrementOperator", "Array", "SingleQuotedString", "DoubleQuotedString", "HereDoc", "Real", "Boolean", "BodyStringRest", "BodyStringRestShortTag", "MultilineComment", "SinglelineComment", "UnixComment", "Decimal", "Hexadecimal", "Octal", "Digits", "DNum", "Exponent_DNum", "EscapeCharector", "HereDocContents", "Eol", "WhiteSpace", "'as'"
     };
     public static final int Switch=42;
     public static final int DoubleQuotedString=93;
     public static final int New=32;
     public static final int Class=55;
     public static final int Foreach=39;
+    public static final int OpenSquareBracket=8;
     public static final int Static=50;
     public static final int Plus=25;
     public static final int Params=65;
@@ -34,7 +35,6 @@ public class PhpParser extends Parser {
     public static final int Integer=83;
     public static final int T__112=112;
     public static final int HereDocContents=109;
-    public static final int CloseBrace=7;
     public static final int Colon=20;
     public static final int Var=60;
     public static final int EqualityOperator=86;
@@ -44,6 +44,7 @@ public class PhpParser extends Parser {
     public static final int QuestionMark=18;
     public static final int ForUpdate=77;
     public static final int Dollar=19;
+    public static final int OpenRoundBracket=6;
     public static final int ClassDefinition=63;
     public static final int UnixComment=101;
     public static final int Prefix=70;
@@ -63,6 +64,7 @@ public class PhpParser extends Parser {
     public static final int InstanceMember=16;
     public static final int Field=78;
     public static final int Reference=68;
+    public static final int CloseSquareBracket=9;
     public static final int EscapeCharector=108;
     public static final int Ampersand=22;
     public static final int For=38;
@@ -70,10 +72,10 @@ public class PhpParser extends Parser {
     public static final int DNum=106;
     public static final int LogicalAnd=14;
     public static final int SemiColon=4;
+    public static final int CloseRoundBracket=7;
     public static final int If=35;
     public static final int LogicalOr=13;
     public static final int Break=46;
-    public static final int OpenCurlyBrace=10;
     public static final int ArrayAssign=12;
     public static final int Array=91;
     public static final int Apply=66;
@@ -83,9 +85,8 @@ public class PhpParser extends Parser {
     public static final int IncrementOperator=90;
     public static final int Decimal=102;
     public static final int Interface=56;
+    public static final int CloseCurlyBracket=11;
     public static final int BodyStringRestShortTag=98;
-    public static final int CloseSquareBrace=9;
-    public static final int CloseCurlyBrace=11;
     public static final int PrimitiveType=89;
     public static final int ClassMember=15;
     public static final int ShiftOperator=88;
@@ -98,13 +99,13 @@ public class PhpParser extends Parser {
     public static final int IfExpression=72;
     public static final int Echo=34;
     public static final int Real=95;
-    public static final int OpenSquareBrace=8;
     public static final int Eol=110;
     public static final int AccessModifier=82;
     public static final int Or=52;
     public static final int Forwardslash=29;
     public static final int Else=36;
     public static final int BodyString=80;
+    public static final int OpenCurlyBracket=10;
     public static final int SuppressWarnings=17;
     public static final int Xor=53;
     public static final int ForCondition=76;
@@ -116,7 +117,6 @@ public class PhpParser extends Parser {
     public static final int Tilde=30;
     public static final int Block=64;
     public static final int Method=79;
-    public static final int OpenBrace=6;
     public static final int While=40;
     public static final int Bang=24;
     public static final int EOF=-1;
@@ -151,7 +151,7 @@ public class PhpParser extends Parser {
     }
 
     public String[] getTokenNames() { return PhpParser.tokenNames; }
-    public String getGrammarFileName() { return "Php.g"; }
+    public String getGrammarFileName() { return "/Users/sidharth/Documents/code/phpparser/grammar/Php.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -160,7 +160,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "prog"
-    // Php.g:155:1: prog : ( statement )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:155:1: prog : ( statement )* ;
     public final PhpParser.prog_return prog() throws RecognitionException {
         PhpParser.prog_return retval = new PhpParser.prog_return();
         retval.start = input.LT(1);
@@ -173,21 +173,21 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
-            // Php.g:155:6: ( ( statement )* )
-            // Php.g:155:8: ( statement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:155:6: ( ( statement )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:155:8: ( statement )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // Php.g:155:8: ( statement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:155:8: ( statement )*
             loop1:
             do {
                 int alt1=2;
                 alt1 = dfa1.predict(input);
                 switch (alt1) {
             	case 1 :
-            	    // Php.g:0:0: statement
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_prog876);
+            	    pushFollow(FOLLOW_statement_in_prog872);
             	    statement1=statement();
 
             	    state._fsp--;
@@ -232,7 +232,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // Php.g:157:1: statement : ( ( simpleStatement )? BodyString | '{' statement '}' -> statement | bracketedBlock | classDefinition | interfaceDefinition | complexStatement | simpleStatement ';' );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:157:1: statement : ( ( simpleStatement )? BodyString | '{' statement '}' -> statement | bracketedBlock | classDefinition | interfaceDefinition | complexStatement | simpleStatement ';' );
     public final PhpParser.statement_return statement() throws RecognitionException {
         PhpParser.statement_return retval = new PhpParser.statement_return();
         retval.start = input.LT(1);
@@ -262,28 +262,28 @@ public class PhpParser extends Parser {
         CommonTree char_literal4_tree=null;
         CommonTree char_literal6_tree=null;
         CommonTree char_literal12_tree=null;
-        RewriteRuleTokenStream stream_OpenCurlyBrace=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBrace");
-        RewriteRuleTokenStream stream_CloseCurlyBrace=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBrace");
+        RewriteRuleTokenStream stream_CloseCurlyBracket=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBracket");
+        RewriteRuleTokenStream stream_OpenCurlyBracket=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBracket");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
-            // Php.g:158:5: ( ( simpleStatement )? BodyString | '{' statement '}' -> statement | bracketedBlock | classDefinition | interfaceDefinition | complexStatement | simpleStatement ';' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:5: ( ( simpleStatement )? BodyString | '{' statement '}' -> statement | bracketedBlock | classDefinition | interfaceDefinition | complexStatement | simpleStatement ';' )
             int alt3=7;
             alt3 = dfa3.predict(input);
             switch (alt3) {
                 case 1 :
-                    // Php.g:158:7: ( simpleStatement )? BodyString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:7: ( simpleStatement )? BodyString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    // Php.g:158:7: ( simpleStatement )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:7: ( simpleStatement )?
                     int alt2=2;
                     alt2 = dfa2.predict(input);
                     switch (alt2) {
                         case 1 :
-                            // Php.g:0:0: simpleStatement
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: simpleStatement
                             {
-                            pushFollow(FOLLOW_simpleStatement_in_statement889);
+                            pushFollow(FOLLOW_simpleStatement_in_statement885);
                             simpleStatement2=simpleStatement();
 
                             state._fsp--;
@@ -295,7 +295,7 @@ public class PhpParser extends Parser {
 
                     }
 
-                    BodyString3=(Token)match(input,BodyString,FOLLOW_BodyString_in_statement892); if (state.failed) return retval;
+                    BodyString3=(Token)match(input,BodyString,FOLLOW_BodyString_in_statement888); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     BodyString3_tree = (CommonTree)adaptor.create(BodyString3);
                     adaptor.addChild(root_0, BodyString3_tree);
@@ -304,19 +304,19 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:159:7: '{' statement '}'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:159:7: '{' statement '}'
                     {
-                    char_literal4=(Token)match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_statement900); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenCurlyBrace.add(char_literal4);
+                    char_literal4=(Token)match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_statement896); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenCurlyBracket.add(char_literal4);
 
-                    pushFollow(FOLLOW_statement_in_statement902);
+                    pushFollow(FOLLOW_statement_in_statement898);
                     statement5=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(statement5.getTree());
-                    char_literal6=(Token)match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_statement904); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseCurlyBrace.add(char_literal6);
+                    char_literal6=(Token)match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_statement900); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseCurlyBracket.add(char_literal6);
 
 
 
@@ -342,11 +342,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:160:7: bracketedBlock
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:160:7: bracketedBlock
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_bracketedBlock_in_statement916);
+                    pushFollow(FOLLOW_bracketedBlock_in_statement912);
                     bracketedBlock7=bracketedBlock();
 
                     state._fsp--;
@@ -356,11 +356,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // Php.g:162:7: classDefinition
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:162:7: classDefinition
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_classDefinition_in_statement929);
+                    pushFollow(FOLLOW_classDefinition_in_statement925);
                     classDefinition8=classDefinition();
 
                     state._fsp--;
@@ -370,11 +370,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // Php.g:163:7: interfaceDefinition
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:163:7: interfaceDefinition
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_interfaceDefinition_in_statement937);
+                    pushFollow(FOLLOW_interfaceDefinition_in_statement933);
                     interfaceDefinition9=interfaceDefinition();
 
                     state._fsp--;
@@ -384,11 +384,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // Php.g:164:7: complexStatement
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:164:7: complexStatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_complexStatement_in_statement945);
+                    pushFollow(FOLLOW_complexStatement_in_statement941);
                     complexStatement10=complexStatement();
 
                     state._fsp--;
@@ -398,17 +398,17 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // Php.g:165:7: simpleStatement ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:165:7: simpleStatement ';'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_simpleStatement_in_statement953);
+                    pushFollow(FOLLOW_simpleStatement_in_statement949);
                     simpleStatement11=simpleStatement();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, simpleStatement11.getTree());
-                    char_literal12=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_statement955); if (state.failed) return retval;
+                    char_literal12=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_statement951); if (state.failed) return retval;
 
                     }
                     break;
@@ -441,7 +441,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "bracketedBlock"
-    // Php.g:168:1: bracketedBlock : '{' (stmts= statement )* '}' -> ^( Block $stmts) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:168:1: bracketedBlock : '{' (stmts= statement )* '}' -> ^( Block $stmts) ;
     public final PhpParser.bracketedBlock_return bracketedBlock() throws RecognitionException {
         PhpParser.bracketedBlock_return retval = new PhpParser.bracketedBlock_return();
         retval.start = input.LT(1);
@@ -455,27 +455,27 @@ public class PhpParser extends Parser {
 
         CommonTree char_literal13_tree=null;
         CommonTree char_literal14_tree=null;
-        RewriteRuleTokenStream stream_OpenCurlyBrace=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBrace");
-        RewriteRuleTokenStream stream_CloseCurlyBrace=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBrace");
+        RewriteRuleTokenStream stream_CloseCurlyBracket=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBracket");
+        RewriteRuleTokenStream stream_OpenCurlyBracket=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBracket");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
-            // Php.g:169:5: ( '{' (stmts= statement )* '}' -> ^( Block $stmts) )
-            // Php.g:169:7: '{' (stmts= statement )* '}'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:169:5: ( '{' (stmts= statement )* '}' -> ^( Block $stmts) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:169:7: '{' (stmts= statement )* '}'
             {
-            char_literal13=(Token)match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_bracketedBlock977); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_OpenCurlyBrace.add(char_literal13);
+            char_literal13=(Token)match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_bracketedBlock973); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_OpenCurlyBracket.add(char_literal13);
 
-            // Php.g:169:16: (stmts= statement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:169:16: (stmts= statement )*
             loop4:
             do {
                 int alt4=2;
                 alt4 = dfa4.predict(input);
                 switch (alt4) {
             	case 1 :
-            	    // Php.g:0:0: stmts= statement
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: stmts= statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_bracketedBlock981);
+            	    pushFollow(FOLLOW_statement_in_bracketedBlock977);
             	    stmts=statement();
 
             	    state._fsp--;
@@ -490,8 +490,8 @@ public class PhpParser extends Parser {
                 }
             } while (true);
 
-            char_literal14=(Token)match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_bracketedBlock984); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_CloseCurlyBrace.add(char_literal14);
+            char_literal14=(Token)match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_bracketedBlock980); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_CloseCurlyBracket.add(char_literal14);
 
 
 
@@ -510,7 +510,7 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 169:32: -> ^( Block $stmts)
             {
-                // Php.g:169:35: ^( Block $stmts)
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:169:35: ^( Block $stmts)
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Block, "Block"), root_1);
@@ -552,7 +552,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "interfaceDefinition"
-    // Php.g:172:1: interfaceDefinition : Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBrace ( interfaceMember )* CloseCurlyBrace -> ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:172:1: interfaceDefinition : Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBracket ( interfaceMember )* CloseCurlyBracket -> ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* ) ;
     public final PhpParser.interfaceDefinition_return interfaceDefinition() throws RecognitionException {
         PhpParser.interfaceDefinition_return retval = new PhpParser.interfaceDefinition_return();
         retval.start = input.LT(1);
@@ -561,8 +561,8 @@ public class PhpParser extends Parser {
 
         Token interfaceName=null;
         Token Interface15=null;
-        Token OpenCurlyBrace17=null;
-        Token CloseCurlyBrace19=null;
+        Token OpenCurlyBracket17=null;
+        Token CloseCurlyBracket19=null;
         PhpParser.interfaceExtends_return interfaceExtends16 = null;
 
         PhpParser.interfaceMember_return interfaceMember18 = null;
@@ -570,26 +570,26 @@ public class PhpParser extends Parser {
 
         CommonTree interfaceName_tree=null;
         CommonTree Interface15_tree=null;
-        CommonTree OpenCurlyBrace17_tree=null;
-        CommonTree CloseCurlyBrace19_tree=null;
-        RewriteRuleTokenStream stream_OpenCurlyBrace=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBrace");
-        RewriteRuleTokenStream stream_CloseCurlyBrace=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBrace");
+        CommonTree OpenCurlyBracket17_tree=null;
+        CommonTree CloseCurlyBracket19_tree=null;
+        RewriteRuleTokenStream stream_CloseCurlyBracket=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBracket");
         RewriteRuleTokenStream stream_Interface=new RewriteRuleTokenStream(adaptor,"token Interface");
         RewriteRuleTokenStream stream_UnquotedString=new RewriteRuleTokenStream(adaptor,"token UnquotedString");
+        RewriteRuleTokenStream stream_OpenCurlyBracket=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBracket");
         RewriteRuleSubtreeStream stream_interfaceExtends=new RewriteRuleSubtreeStream(adaptor,"rule interfaceExtends");
         RewriteRuleSubtreeStream stream_interfaceMember=new RewriteRuleSubtreeStream(adaptor,"rule interfaceMember");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // Php.g:173:5: ( Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBrace ( interfaceMember )* CloseCurlyBrace -> ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* ) )
-            // Php.g:173:7: Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBrace ( interfaceMember )* CloseCurlyBrace
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:173:5: ( Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBracket ( interfaceMember )* CloseCurlyBracket -> ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:173:7: Interface interfaceName= UnquotedString ( interfaceExtends )? OpenCurlyBracket ( interfaceMember )* CloseCurlyBracket
             {
-            Interface15=(Token)match(input,Interface,FOLLOW_Interface_in_interfaceDefinition1010); if (state.failed) return retval; 
+            Interface15=(Token)match(input,Interface,FOLLOW_Interface_in_interfaceDefinition1006); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_Interface.add(Interface15);
 
-            interfaceName=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceDefinition1014); if (state.failed) return retval; 
+            interfaceName=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceDefinition1010); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_UnquotedString.add(interfaceName);
 
-            // Php.g:173:46: ( interfaceExtends )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:173:46: ( interfaceExtends )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -598,9 +598,9 @@ public class PhpParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // Php.g:0:0: interfaceExtends
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: interfaceExtends
                     {
-                    pushFollow(FOLLOW_interfaceExtends_in_interfaceDefinition1016);
+                    pushFollow(FOLLOW_interfaceExtends_in_interfaceDefinition1012);
                     interfaceExtends16=interfaceExtends();
 
                     state._fsp--;
@@ -612,10 +612,10 @@ public class PhpParser extends Parser {
 
             }
 
-            OpenCurlyBrace17=(Token)match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_interfaceDefinition1027); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_OpenCurlyBrace.add(OpenCurlyBrace17);
+            OpenCurlyBracket17=(Token)match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_interfaceDefinition1023); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_OpenCurlyBracket.add(OpenCurlyBracket17);
 
-            // Php.g:175:9: ( interfaceMember )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:175:9: ( interfaceMember )*
             loop6:
             do {
                 int alt6=2;
@@ -628,9 +628,9 @@ public class PhpParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // Php.g:0:0: interfaceMember
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: interfaceMember
             	    {
-            	    pushFollow(FOLLOW_interfaceMember_in_interfaceDefinition1037);
+            	    pushFollow(FOLLOW_interfaceMember_in_interfaceDefinition1033);
             	    interfaceMember18=interfaceMember();
 
             	    state._fsp--;
@@ -645,13 +645,13 @@ public class PhpParser extends Parser {
                 }
             } while (true);
 
-            CloseCurlyBrace19=(Token)match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_interfaceDefinition1048); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_CloseCurlyBrace.add(CloseCurlyBrace19);
+            CloseCurlyBracket19=(Token)match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_interfaceDefinition1044); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_CloseCurlyBracket.add(CloseCurlyBracket19);
 
 
 
             // AST REWRITE
-            // elements: interfaceExtends, Interface, interfaceName, interfaceMember
+            // elements: Interface, interfaceName, interfaceExtends, interfaceMember
             // token labels: interfaceName
             // rule labels: retval
             // token list labels: 
@@ -665,19 +665,19 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 177:9: -> ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* )
             {
-                // Php.g:177:12: ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:177:12: ^( Interface $interfaceName ( interfaceExtends )? ( interfaceMember )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_Interface.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_interfaceName.nextNode());
-                // Php.g:177:39: ( interfaceExtends )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:177:39: ( interfaceExtends )?
                 if ( stream_interfaceExtends.hasNext() ) {
                     adaptor.addChild(root_1, stream_interfaceExtends.nextTree());
 
                 }
                 stream_interfaceExtends.reset();
-                // Php.g:177:57: ( interfaceMember )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:177:57: ( interfaceMember )*
                 while ( stream_interfaceMember.hasNext() ) {
                     adaptor.addChild(root_1, stream_interfaceMember.nextTree());
 
@@ -719,7 +719,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "interfaceExtends"
-    // Php.g:180:1: interfaceExtends : Extends UnquotedString ( Comma UnquotedString )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:180:1: interfaceExtends : Extends UnquotedString ( Comma UnquotedString )* ;
     public final PhpParser.interfaceExtends_return interfaceExtends() throws RecognitionException {
         PhpParser.interfaceExtends_return retval = new PhpParser.interfaceExtends_return();
         retval.start = input.LT(1);
@@ -738,22 +738,22 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // Php.g:181:5: ( Extends UnquotedString ( Comma UnquotedString )* )
-            // Php.g:181:7: Extends UnquotedString ( Comma UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:181:5: ( Extends UnquotedString ( Comma UnquotedString )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:181:7: Extends UnquotedString ( Comma UnquotedString )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            Extends20=(Token)match(input,Extends,FOLLOW_Extends_in_interfaceExtends1088); if (state.failed) return retval;
+            Extends20=(Token)match(input,Extends,FOLLOW_Extends_in_interfaceExtends1084); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             Extends20_tree = (CommonTree)adaptor.create(Extends20);
             root_0 = (CommonTree)adaptor.becomeRoot(Extends20_tree, root_0);
             }
-            UnquotedString21=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceExtends1091); if (state.failed) return retval;
+            UnquotedString21=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceExtends1087); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             UnquotedString21_tree = (CommonTree)adaptor.create(UnquotedString21);
             adaptor.addChild(root_0, UnquotedString21_tree);
             }
-            // Php.g:181:31: ( Comma UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:181:31: ( Comma UnquotedString )*
             loop7:
             do {
                 int alt7=2;
@@ -766,10 +766,10 @@ public class PhpParser extends Parser {
 
                 switch (alt7) {
             	case 1 :
-            	    // Php.g:181:32: Comma UnquotedString
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:181:32: Comma UnquotedString
             	    {
-            	    Comma22=(Token)match(input,Comma,FOLLOW_Comma_in_interfaceExtends1094); if (state.failed) return retval;
-            	    UnquotedString23=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceExtends1097); if (state.failed) return retval;
+            	    Comma22=(Token)match(input,Comma,FOLLOW_Comma_in_interfaceExtends1090); if (state.failed) return retval;
+            	    UnquotedString23=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceExtends1093); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    UnquotedString23_tree = (CommonTree)adaptor.create(UnquotedString23);
             	    adaptor.addChild(root_0, UnquotedString23_tree);
@@ -813,7 +813,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "interfaceMember"
-    // Php.g:183:1: interfaceMember : ( Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* Function UnquotedString parametersDefinition ';' -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ) );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:183:1: interfaceMember : ( Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* Function UnquotedString parametersDefinition ';' -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ) );
     public final PhpParser.interfaceMember_return interfaceMember() throws RecognitionException {
         PhpParser.interfaceMember_return retval = new PhpParser.interfaceMember_return();
         retval.start = input.LT(1);
@@ -851,7 +851,7 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // Php.g:184:5: ( Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* Function UnquotedString parametersDefinition ';' -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:184:5: ( Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* Function UnquotedString parametersDefinition ';' -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -870,15 +870,15 @@ public class PhpParser extends Parser {
             }
             switch (alt10) {
                 case 1 :
-                    // Php.g:184:7: Const UnquotedString ( Equals atom )? ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:184:7: Const UnquotedString ( Equals atom )? ';'
                     {
-                    Const24=(Token)match(input,Const,FOLLOW_Const_in_interfaceMember1115); if (state.failed) return retval; 
+                    Const24=(Token)match(input,Const,FOLLOW_Const_in_interfaceMember1111); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Const.add(Const24);
 
-                    UnquotedString25=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceMember1117); if (state.failed) return retval; 
+                    UnquotedString25=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceMember1113); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString25);
 
-                    // Php.g:184:28: ( Equals atom )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:184:28: ( Equals atom )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -887,12 +887,12 @@ public class PhpParser extends Parser {
                     }
                     switch (alt8) {
                         case 1 :
-                            // Php.g:184:29: Equals atom
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:184:29: Equals atom
                             {
-                            Equals26=(Token)match(input,Equals,FOLLOW_Equals_in_interfaceMember1120); if (state.failed) return retval; 
+                            Equals26=(Token)match(input,Equals,FOLLOW_Equals_in_interfaceMember1116); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_Equals.add(Equals26);
 
-                            pushFollow(FOLLOW_atom_in_interfaceMember1122);
+                            pushFollow(FOLLOW_atom_in_interfaceMember1118);
                             atom27=atom();
 
                             state._fsp--;
@@ -904,13 +904,13 @@ public class PhpParser extends Parser {
 
                     }
 
-                    char_literal28=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_interfaceMember1126); if (state.failed) return retval; 
+                    char_literal28=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_interfaceMember1122); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal28);
 
 
 
                     // AST REWRITE
-                    // elements: atom, UnquotedString, Const
+                    // elements: atom, Const, UnquotedString
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -923,13 +923,13 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 185:9: -> ^( Const UnquotedString ( atom )? )
                     {
-                        // Php.g:185:12: ^( Const UnquotedString ( atom )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:185:12: ^( Const UnquotedString ( atom )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Const.nextNode(), root_1);
 
                         adaptor.addChild(root_1, stream_UnquotedString.nextNode());
-                        // Php.g:185:35: ( atom )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:185:35: ( atom )?
                         if ( stream_atom.hasNext() ) {
                             adaptor.addChild(root_1, stream_atom.nextTree());
 
@@ -945,9 +945,9 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:186:7: ( fieldModifier )* Function UnquotedString parametersDefinition ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:186:7: ( fieldModifier )* Function UnquotedString parametersDefinition ';'
                     {
-                    // Php.g:186:7: ( fieldModifier )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:186:7: ( fieldModifier )*
                     loop9:
                     do {
                         int alt9=2;
@@ -960,9 +960,9 @@ public class PhpParser extends Parser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // Php.g:0:0: fieldModifier
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: fieldModifier
                     	    {
-                    	    pushFollow(FOLLOW_fieldModifier_in_interfaceMember1154);
+                    	    pushFollow(FOLLOW_fieldModifier_in_interfaceMember1150);
                     	    fieldModifier29=fieldModifier();
 
                     	    state._fsp--;
@@ -977,25 +977,25 @@ public class PhpParser extends Parser {
                         }
                     } while (true);
 
-                    Function30=(Token)match(input,Function,FOLLOW_Function_in_interfaceMember1157); if (state.failed) return retval; 
+                    Function30=(Token)match(input,Function,FOLLOW_Function_in_interfaceMember1153); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Function.add(Function30);
 
-                    UnquotedString31=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceMember1159); if (state.failed) return retval; 
+                    UnquotedString31=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_interfaceMember1155); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString31);
 
-                    pushFollow(FOLLOW_parametersDefinition_in_interfaceMember1161);
+                    pushFollow(FOLLOW_parametersDefinition_in_interfaceMember1157);
                     parametersDefinition32=parametersDefinition();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_parametersDefinition.add(parametersDefinition32.getTree());
-                    char_literal33=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_interfaceMember1163); if (state.failed) return retval; 
+                    char_literal33=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_interfaceMember1159); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal33);
 
 
 
                     // AST REWRITE
-                    // elements: fieldModifier, UnquotedString, parametersDefinition
+                    // elements: parametersDefinition, fieldModifier, UnquotedString
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1008,17 +1008,17 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 187:9: -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition )
                     {
-                        // Php.g:187:12: ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:187:12: ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Method, "Method"), root_1);
 
-                        // Php.g:187:21: ^( Modifiers ( fieldModifier )* )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:187:21: ^( Modifiers ( fieldModifier )* )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Modifiers, "Modifiers"), root_2);
 
-                        // Php.g:187:33: ( fieldModifier )*
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:187:33: ( fieldModifier )*
                         while ( stream_fieldModifier.hasNext() ) {
                             adaptor.addChild(root_2, stream_fieldModifier.nextTree());
 
@@ -1067,7 +1067,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "classDefinition"
-    // Php.g:190:1: classDefinition : ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBrace ( classMember )* CloseCurlyBrace -> ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:190:1: classDefinition : ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBracket ( classMember )* CloseCurlyBracket -> ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* ) ;
     public final PhpParser.classDefinition_return classDefinition() throws RecognitionException {
         PhpParser.classDefinition_return retval = new PhpParser.classDefinition_return();
         retval.start = input.LT(1);
@@ -1078,8 +1078,8 @@ public class PhpParser extends Parser {
         Token extendsclass=null;
         Token Class35=null;
         Token Extends36=null;
-        Token OpenCurlyBrace38=null;
-        Token CloseCurlyBrace40=null;
+        Token OpenCurlyBracket38=null;
+        Token CloseCurlyBracket40=null;
         PhpParser.classModifier_return classModifier34 = null;
 
         PhpParser.classImplements_return classImplements37 = null;
@@ -1091,22 +1091,22 @@ public class PhpParser extends Parser {
         CommonTree extendsclass_tree=null;
         CommonTree Class35_tree=null;
         CommonTree Extends36_tree=null;
-        CommonTree OpenCurlyBrace38_tree=null;
-        CommonTree CloseCurlyBrace40_tree=null;
-        RewriteRuleTokenStream stream_OpenCurlyBrace=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBrace");
-        RewriteRuleTokenStream stream_CloseCurlyBrace=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBrace");
+        CommonTree OpenCurlyBracket38_tree=null;
+        CommonTree CloseCurlyBracket40_tree=null;
+        RewriteRuleTokenStream stream_CloseCurlyBracket=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBracket");
         RewriteRuleTokenStream stream_Class=new RewriteRuleTokenStream(adaptor,"token Class");
         RewriteRuleTokenStream stream_Extends=new RewriteRuleTokenStream(adaptor,"token Extends");
         RewriteRuleTokenStream stream_UnquotedString=new RewriteRuleTokenStream(adaptor,"token UnquotedString");
+        RewriteRuleTokenStream stream_OpenCurlyBracket=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBracket");
         RewriteRuleSubtreeStream stream_classImplements=new RewriteRuleSubtreeStream(adaptor,"rule classImplements");
         RewriteRuleSubtreeStream stream_classMember=new RewriteRuleSubtreeStream(adaptor,"rule classMember");
         RewriteRuleSubtreeStream stream_classModifier=new RewriteRuleSubtreeStream(adaptor,"rule classModifier");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
-            // Php.g:191:5: ( ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBrace ( classMember )* CloseCurlyBrace -> ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* ) )
-            // Php.g:191:9: ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBrace ( classMember )* CloseCurlyBrace
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:191:5: ( ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBracket ( classMember )* CloseCurlyBracket -> ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:191:9: ( classModifier )? Class className= UnquotedString ( Extends extendsclass= UnquotedString )? ( classImplements )? OpenCurlyBracket ( classMember )* CloseCurlyBracket
             {
-            // Php.g:191:9: ( classModifier )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:191:9: ( classModifier )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1115,9 +1115,9 @@ public class PhpParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // Php.g:0:0: classModifier
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: classModifier
                     {
-                    pushFollow(FOLLOW_classModifier_in_classDefinition1207);
+                    pushFollow(FOLLOW_classModifier_in_classDefinition1203);
                     classModifier34=classModifier();
 
                     state._fsp--;
@@ -1129,13 +1129,13 @@ public class PhpParser extends Parser {
 
             }
 
-            Class35=(Token)match(input,Class,FOLLOW_Class_in_classDefinition1219); if (state.failed) return retval; 
+            Class35=(Token)match(input,Class,FOLLOW_Class_in_classDefinition1215); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_Class.add(Class35);
 
-            className=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classDefinition1223); if (state.failed) return retval; 
+            className=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classDefinition1219); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_UnquotedString.add(className);
 
-            // Php.g:193:9: ( Extends extendsclass= UnquotedString )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:193:9: ( Extends extendsclass= UnquotedString )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1144,12 +1144,12 @@ public class PhpParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // Php.g:193:10: Extends extendsclass= UnquotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:193:10: Extends extendsclass= UnquotedString
                     {
-                    Extends36=(Token)match(input,Extends,FOLLOW_Extends_in_classDefinition1235); if (state.failed) return retval; 
+                    Extends36=(Token)match(input,Extends,FOLLOW_Extends_in_classDefinition1231); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Extends.add(Extends36);
 
-                    extendsclass=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classDefinition1239); if (state.failed) return retval; 
+                    extendsclass=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classDefinition1235); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(extendsclass);
 
 
@@ -1158,7 +1158,7 @@ public class PhpParser extends Parser {
 
             }
 
-            // Php.g:194:9: ( classImplements )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:194:9: ( classImplements )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1167,9 +1167,9 @@ public class PhpParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // Php.g:0:0: classImplements
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: classImplements
                     {
-                    pushFollow(FOLLOW_classImplements_in_classDefinition1252);
+                    pushFollow(FOLLOW_classImplements_in_classDefinition1248);
                     classImplements37=classImplements();
 
                     state._fsp--;
@@ -1181,10 +1181,10 @@ public class PhpParser extends Parser {
 
             }
 
-            OpenCurlyBrace38=(Token)match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_classDefinition1263); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_OpenCurlyBrace.add(OpenCurlyBrace38);
+            OpenCurlyBracket38=(Token)match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_classDefinition1259); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_OpenCurlyBracket.add(OpenCurlyBracket38);
 
-            // Php.g:196:9: ( classMember )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:196:9: ( classMember )*
             loop14:
             do {
                 int alt14=2;
@@ -1197,9 +1197,9 @@ public class PhpParser extends Parser {
 
                 switch (alt14) {
             	case 1 :
-            	    // Php.g:0:0: classMember
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: classMember
             	    {
-            	    pushFollow(FOLLOW_classMember_in_classDefinition1273);
+            	    pushFollow(FOLLOW_classMember_in_classDefinition1269);
             	    classMember39=classMember();
 
             	    state._fsp--;
@@ -1214,13 +1214,13 @@ public class PhpParser extends Parser {
                 }
             } while (true);
 
-            CloseCurlyBrace40=(Token)match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_classDefinition1284); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_CloseCurlyBrace.add(CloseCurlyBrace40);
+            CloseCurlyBracket40=(Token)match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_classDefinition1280); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_CloseCurlyBracket.add(CloseCurlyBracket40);
 
 
 
             // AST REWRITE
-            // elements: classModifier, Class, classImplements, className, classMember, Extends, extendsclass
+            // elements: classMember, classImplements, classModifier, Class, Extends, extendsclass, className
             // token labels: extendsclass, className
             // rule labels: retval
             // token list labels: 
@@ -1235,17 +1235,17 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 198:9: -> ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* )
             {
-                // Php.g:198:12: ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:12: ^( Class ^( Modifiers ( classModifier )? ) $className ( ^( Extends $extendsclass) )? ( classImplements )? ( classMember )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_Class.nextNode(), root_1);
 
-                // Php.g:198:20: ^( Modifiers ( classModifier )? )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:20: ^( Modifiers ( classModifier )? )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Modifiers, "Modifiers"), root_2);
 
-                // Php.g:198:32: ( classModifier )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:32: ( classModifier )?
                 if ( stream_classModifier.hasNext() ) {
                     adaptor.addChild(root_2, stream_classModifier.nextTree());
 
@@ -1255,9 +1255,9 @@ public class PhpParser extends Parser {
                 adaptor.addChild(root_1, root_2);
                 }
                 adaptor.addChild(root_1, stream_className.nextNode());
-                // Php.g:198:59: ( ^( Extends $extendsclass) )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:59: ( ^( Extends $extendsclass) )?
                 if ( stream_Extends.hasNext()||stream_extendsclass.hasNext() ) {
-                    // Php.g:198:59: ^( Extends $extendsclass)
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:59: ^( Extends $extendsclass)
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
                     root_2 = (CommonTree)adaptor.becomeRoot(stream_Extends.nextNode(), root_2);
@@ -1270,13 +1270,13 @@ public class PhpParser extends Parser {
                 }
                 stream_Extends.reset();
                 stream_extendsclass.reset();
-                // Php.g:198:85: ( classImplements )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:198:85: ( classImplements )?
                 if ( stream_classImplements.hasNext() ) {
                     adaptor.addChild(root_1, stream_classImplements.nextTree());
 
                 }
                 stream_classImplements.reset();
-                // Php.g:199:13: ( classMember )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:199:13: ( classMember )*
                 while ( stream_classMember.hasNext() ) {
                     adaptor.addChild(root_1, stream_classMember.nextTree());
 
@@ -1318,7 +1318,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "classImplements"
-    // Php.g:203:1: classImplements : Implements ( UnquotedString ( Comma UnquotedString )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:203:1: classImplements : Implements ( UnquotedString ( Comma UnquotedString )* ) ;
     public final PhpParser.classImplements_return classImplements() throws RecognitionException {
         PhpParser.classImplements_return retval = new PhpParser.classImplements_return();
         retval.start = input.LT(1);
@@ -1337,25 +1337,25 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
-            // Php.g:204:5: ( Implements ( UnquotedString ( Comma UnquotedString )* ) )
-            // Php.g:204:8: Implements ( UnquotedString ( Comma UnquotedString )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:5: ( Implements ( UnquotedString ( Comma UnquotedString )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:8: Implements ( UnquotedString ( Comma UnquotedString )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            Implements41=(Token)match(input,Implements,FOLLOW_Implements_in_classImplements1366); if (state.failed) return retval;
+            Implements41=(Token)match(input,Implements,FOLLOW_Implements_in_classImplements1362); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             Implements41_tree = (CommonTree)adaptor.create(Implements41);
             root_0 = (CommonTree)adaptor.becomeRoot(Implements41_tree, root_0);
             }
-            // Php.g:204:20: ( UnquotedString ( Comma UnquotedString )* )
-            // Php.g:204:21: UnquotedString ( Comma UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:20: ( UnquotedString ( Comma UnquotedString )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:21: UnquotedString ( Comma UnquotedString )*
             {
-            UnquotedString42=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classImplements1370); if (state.failed) return retval;
+            UnquotedString42=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classImplements1366); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             UnquotedString42_tree = (CommonTree)adaptor.create(UnquotedString42);
             adaptor.addChild(root_0, UnquotedString42_tree);
             }
-            // Php.g:204:36: ( Comma UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:36: ( Comma UnquotedString )*
             loop15:
             do {
                 int alt15=2;
@@ -1368,10 +1368,10 @@ public class PhpParser extends Parser {
 
                 switch (alt15) {
             	case 1 :
-            	    // Php.g:204:37: Comma UnquotedString
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:204:37: Comma UnquotedString
             	    {
-            	    Comma43=(Token)match(input,Comma,FOLLOW_Comma_in_classImplements1373); if (state.failed) return retval;
-            	    UnquotedString44=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classImplements1376); if (state.failed) return retval;
+            	    Comma43=(Token)match(input,Comma,FOLLOW_Comma_in_classImplements1369); if (state.failed) return retval;
+            	    UnquotedString44=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classImplements1372); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    UnquotedString44_tree = (CommonTree)adaptor.create(UnquotedString44);
             	    adaptor.addChild(root_0, UnquotedString44_tree);
@@ -1418,7 +1418,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "classMember"
-    // Php.g:207:1: classMember : ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? ) | Var Dollar UnquotedString ( Equals atom )? ';' -> ^( Var ^( Dollar UnquotedString ) ( atom )? ) | Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';' -> ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? ) );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:207:1: classMember : ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? ) | Var Dollar UnquotedString ( Equals atom )? ';' -> ^( Var ^( Dollar UnquotedString ) ( atom )? ) | Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';' -> ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? ) );
     public final PhpParser.classMember_return classMember() throws RecognitionException {
         PhpParser.classMember_return retval = new PhpParser.classMember_return();
         retval.start = input.LT(1);
@@ -1485,7 +1485,7 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_bracketedBlock=new RewriteRuleSubtreeStream(adaptor,"rule bracketedBlock");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
-            // Php.g:208:5: ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? ) | Var Dollar UnquotedString ( Equals atom )? ';' -> ^( Var ^( Dollar UnquotedString ) ( atom )? ) | Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';' -> ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:5: ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? ) | Var Dollar UnquotedString ( Equals atom )? ';' -> ^( Var ^( Dollar UnquotedString ) ( atom )? ) | Const UnquotedString ( Equals atom )? ';' -> ^( Const UnquotedString ( atom )? ) | ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';' -> ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? ) )
             int alt22=4;
             switch ( input.LA(1) ) {
             case Static:
@@ -1564,9 +1564,9 @@ public class PhpParser extends Parser {
 
             switch (alt22) {
                 case 1 :
-                    // Php.g:208:7: ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:7: ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' )
                     {
-                    // Php.g:208:7: ( fieldModifier )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:7: ( fieldModifier )*
                     loop16:
                     do {
                         int alt16=2;
@@ -1579,9 +1579,9 @@ public class PhpParser extends Parser {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // Php.g:0:0: fieldModifier
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: fieldModifier
                     	    {
-                    	    pushFollow(FOLLOW_fieldModifier_in_classMember1396);
+                    	    pushFollow(FOLLOW_fieldModifier_in_classMember1392);
                     	    fieldModifier45=fieldModifier();
 
                     	    state._fsp--;
@@ -1596,23 +1596,23 @@ public class PhpParser extends Parser {
                         }
                     } while (true);
 
-                    Function46=(Token)match(input,Function,FOLLOW_Function_in_classMember1399); if (state.failed) return retval; 
+                    Function46=(Token)match(input,Function,FOLLOW_Function_in_classMember1395); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Function.add(Function46);
 
-                    UnquotedString47=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1401); if (state.failed) return retval; 
+                    UnquotedString47=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1397); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString47);
 
-                    pushFollow(FOLLOW_parametersDefinition_in_classMember1403);
+                    pushFollow(FOLLOW_parametersDefinition_in_classMember1399);
                     parametersDefinition48=parametersDefinition();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_parametersDefinition.add(parametersDefinition48.getTree());
-                    // Php.g:209:9: ( bracketedBlock | ';' )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:9: ( bracketedBlock | ';' )
                     int alt17=2;
                     int LA17_0 = input.LA(1);
 
-                    if ( (LA17_0==OpenCurlyBrace) ) {
+                    if ( (LA17_0==OpenCurlyBracket) ) {
                         alt17=1;
                     }
                     else if ( (LA17_0==SemiColon) ) {
@@ -1627,9 +1627,9 @@ public class PhpParser extends Parser {
                     }
                     switch (alt17) {
                         case 1 :
-                            // Php.g:209:10: bracketedBlock
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:10: bracketedBlock
                             {
-                            pushFollow(FOLLOW_bracketedBlock_in_classMember1415);
+                            pushFollow(FOLLOW_bracketedBlock_in_classMember1411);
                             bracketedBlock49=bracketedBlock();
 
                             state._fsp--;
@@ -1639,9 +1639,9 @@ public class PhpParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // Php.g:209:27: ';'
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:27: ';'
                             {
-                            char_literal50=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1419); if (state.failed) return retval; 
+                            char_literal50=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1415); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_SemiColon.add(char_literal50);
 
 
@@ -1653,7 +1653,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: fieldModifier, bracketedBlock, parametersDefinition, UnquotedString
+                    // elements: UnquotedString, fieldModifier, bracketedBlock, parametersDefinition
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1666,17 +1666,17 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 210:9: -> ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? )
                     {
-                        // Php.g:210:12: ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:210:12: ^( Method ^( Modifiers ( fieldModifier )* ) UnquotedString parametersDefinition ( bracketedBlock )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Method, "Method"), root_1);
 
-                        // Php.g:210:21: ^( Modifiers ( fieldModifier )* )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:210:21: ^( Modifiers ( fieldModifier )* )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Modifiers, "Modifiers"), root_2);
 
-                        // Php.g:210:33: ( fieldModifier )*
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:210:33: ( fieldModifier )*
                         while ( stream_fieldModifier.hasNext() ) {
                             adaptor.addChild(root_2, stream_fieldModifier.nextTree());
 
@@ -1687,7 +1687,7 @@ public class PhpParser extends Parser {
                         }
                         adaptor.addChild(root_1, stream_UnquotedString.nextNode());
                         adaptor.addChild(root_1, stream_parametersDefinition.nextTree());
-                        // Php.g:210:85: ( bracketedBlock )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:210:85: ( bracketedBlock )?
                         if ( stream_bracketedBlock.hasNext() ) {
                             adaptor.addChild(root_1, stream_bracketedBlock.nextTree());
 
@@ -1703,18 +1703,18 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:211:7: Var Dollar UnquotedString ( Equals atom )? ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:211:7: Var Dollar UnquotedString ( Equals atom )? ';'
                     {
-                    Var51=(Token)match(input,Var,FOLLOW_Var_in_classMember1456); if (state.failed) return retval; 
+                    Var51=(Token)match(input,Var,FOLLOW_Var_in_classMember1452); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Var.add(Var51);
 
-                    Dollar52=(Token)match(input,Dollar,FOLLOW_Dollar_in_classMember1458); if (state.failed) return retval; 
+                    Dollar52=(Token)match(input,Dollar,FOLLOW_Dollar_in_classMember1454); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Dollar.add(Dollar52);
 
-                    UnquotedString53=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1460); if (state.failed) return retval; 
+                    UnquotedString53=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1456); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString53);
 
-                    // Php.g:211:33: ( Equals atom )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:211:33: ( Equals atom )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -1723,12 +1723,12 @@ public class PhpParser extends Parser {
                     }
                     switch (alt18) {
                         case 1 :
-                            // Php.g:211:34: Equals atom
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:211:34: Equals atom
                             {
-                            Equals54=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1463); if (state.failed) return retval; 
+                            Equals54=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1459); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_Equals.add(Equals54);
 
-                            pushFollow(FOLLOW_atom_in_classMember1465);
+                            pushFollow(FOLLOW_atom_in_classMember1461);
                             atom55=atom();
 
                             state._fsp--;
@@ -1740,13 +1740,13 @@ public class PhpParser extends Parser {
 
                     }
 
-                    char_literal56=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1469); if (state.failed) return retval; 
+                    char_literal56=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1465); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal56);
 
 
 
                     // AST REWRITE
-                    // elements: atom, UnquotedString, Var, Dollar
+                    // elements: atom, Dollar, UnquotedString, Var
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1759,12 +1759,12 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 212:9: -> ^( Var ^( Dollar UnquotedString ) ( atom )? )
                     {
-                        // Php.g:212:12: ^( Var ^( Dollar UnquotedString ) ( atom )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:212:12: ^( Var ^( Dollar UnquotedString ) ( atom )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Var.nextNode(), root_1);
 
-                        // Php.g:212:18: ^( Dollar UnquotedString )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:212:18: ^( Dollar UnquotedString )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot(stream_Dollar.nextNode(), root_2);
@@ -1773,7 +1773,7 @@ public class PhpParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // Php.g:212:43: ( atom )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:212:43: ( atom )?
                         if ( stream_atom.hasNext() ) {
                             adaptor.addChild(root_1, stream_atom.nextTree());
 
@@ -1789,15 +1789,15 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:213:7: Const UnquotedString ( Equals atom )? ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:213:7: Const UnquotedString ( Equals atom )? ';'
                     {
-                    Const57=(Token)match(input,Const,FOLLOW_Const_in_classMember1502); if (state.failed) return retval; 
+                    Const57=(Token)match(input,Const,FOLLOW_Const_in_classMember1498); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Const.add(Const57);
 
-                    UnquotedString58=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1504); if (state.failed) return retval; 
+                    UnquotedString58=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1500); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString58);
 
-                    // Php.g:213:28: ( Equals atom )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:213:28: ( Equals atom )?
                     int alt19=2;
                     int LA19_0 = input.LA(1);
 
@@ -1806,12 +1806,12 @@ public class PhpParser extends Parser {
                     }
                     switch (alt19) {
                         case 1 :
-                            // Php.g:213:29: Equals atom
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:213:29: Equals atom
                             {
-                            Equals59=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1507); if (state.failed) return retval; 
+                            Equals59=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1503); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_Equals.add(Equals59);
 
-                            pushFollow(FOLLOW_atom_in_classMember1509);
+                            pushFollow(FOLLOW_atom_in_classMember1505);
                             atom60=atom();
 
                             state._fsp--;
@@ -1823,13 +1823,13 @@ public class PhpParser extends Parser {
 
                     }
 
-                    char_literal61=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1513); if (state.failed) return retval; 
+                    char_literal61=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1509); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal61);
 
 
 
                     // AST REWRITE
-                    // elements: atom, Const, UnquotedString
+                    // elements: atom, UnquotedString, Const
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1842,13 +1842,13 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 214:9: -> ^( Const UnquotedString ( atom )? )
                     {
-                        // Php.g:214:12: ^( Const UnquotedString ( atom )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:214:12: ^( Const UnquotedString ( atom )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Const.nextNode(), root_1);
 
                         adaptor.addChild(root_1, stream_UnquotedString.nextNode());
-                        // Php.g:214:35: ( atom )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:214:35: ( atom )?
                         if ( stream_atom.hasNext() ) {
                             adaptor.addChild(root_1, stream_atom.nextTree());
 
@@ -1864,9 +1864,9 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // Php.g:215:7: ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:7: ( fieldModifier )* ( Dollar UnquotedString ) ( Equals atom )? ';'
                     {
-                    // Php.g:215:7: ( fieldModifier )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:7: ( fieldModifier )*
                     loop20:
                     do {
                         int alt20=2;
@@ -1879,9 +1879,9 @@ public class PhpParser extends Parser {
 
                         switch (alt20) {
                     	case 1 :
-                    	    // Php.g:0:0: fieldModifier
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: fieldModifier
                     	    {
-                    	    pushFollow(FOLLOW_fieldModifier_in_classMember1541);
+                    	    pushFollow(FOLLOW_fieldModifier_in_classMember1537);
                     	    fieldModifier62=fieldModifier();
 
                     	    state._fsp--;
@@ -1896,19 +1896,19 @@ public class PhpParser extends Parser {
                         }
                     } while (true);
 
-                    // Php.g:215:22: ( Dollar UnquotedString )
-                    // Php.g:215:23: Dollar UnquotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:22: ( Dollar UnquotedString )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:23: Dollar UnquotedString
                     {
-                    Dollar63=(Token)match(input,Dollar,FOLLOW_Dollar_in_classMember1545); if (state.failed) return retval; 
+                    Dollar63=(Token)match(input,Dollar,FOLLOW_Dollar_in_classMember1541); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Dollar.add(Dollar63);
 
-                    UnquotedString64=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1547); if (state.failed) return retval; 
+                    UnquotedString64=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_classMember1543); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString64);
 
 
                     }
 
-                    // Php.g:215:46: ( Equals atom )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:46: ( Equals atom )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -1917,12 +1917,12 @@ public class PhpParser extends Parser {
                     }
                     switch (alt21) {
                         case 1 :
-                            // Php.g:215:47: Equals atom
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:215:47: Equals atom
                             {
-                            Equals65=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1551); if (state.failed) return retval; 
+                            Equals65=(Token)match(input,Equals,FOLLOW_Equals_in_classMember1547); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_Equals.add(Equals65);
 
-                            pushFollow(FOLLOW_atom_in_classMember1553);
+                            pushFollow(FOLLOW_atom_in_classMember1549);
                             atom66=atom();
 
                             state._fsp--;
@@ -1934,13 +1934,13 @@ public class PhpParser extends Parser {
 
                     }
 
-                    char_literal67=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1557); if (state.failed) return retval; 
+                    char_literal67=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_classMember1553); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal67);
 
 
 
                     // AST REWRITE
-                    // elements: Dollar, atom, fieldModifier, UnquotedString
+                    // elements: fieldModifier, UnquotedString, Dollar, atom
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1953,17 +1953,17 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 216:9: -> ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? )
                     {
-                        // Php.g:216:12: ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:216:12: ^( Field ^( Modifiers ( fieldModifier )* ) ^( Dollar UnquotedString ) ( atom )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Field, "Field"), root_1);
 
-                        // Php.g:216:20: ^( Modifiers ( fieldModifier )* )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:216:20: ^( Modifiers ( fieldModifier )* )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Modifiers, "Modifiers"), root_2);
 
-                        // Php.g:216:32: ( fieldModifier )*
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:216:32: ( fieldModifier )*
                         while ( stream_fieldModifier.hasNext() ) {
                             adaptor.addChild(root_2, stream_fieldModifier.nextTree());
 
@@ -1972,7 +1972,7 @@ public class PhpParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // Php.g:216:48: ^( Dollar UnquotedString )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:216:48: ^( Dollar UnquotedString )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot(stream_Dollar.nextNode(), root_2);
@@ -1981,7 +1981,7 @@ public class PhpParser extends Parser {
 
                         adaptor.addChild(root_1, root_2);
                         }
-                        // Php.g:216:73: ( atom )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:216:73: ( atom )?
                         if ( stream_atom.hasNext() ) {
                             adaptor.addChild(root_1, stream_atom.nextTree());
 
@@ -2025,7 +2025,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "fieldDefinition"
-    // Php.g:219:1: fieldDefinition : Dollar UnquotedString ( Equals atom )? ';' -> ^( Field ^( Dollar UnquotedString ) ( atom )? ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:219:1: fieldDefinition : Dollar UnquotedString ( Equals atom )? ';' -> ^( Field ^( Dollar UnquotedString ) ( atom )? ) ;
     public final PhpParser.fieldDefinition_return fieldDefinition() throws RecognitionException {
         PhpParser.fieldDefinition_return retval = new PhpParser.fieldDefinition_return();
         retval.start = input.LT(1);
@@ -2050,16 +2050,16 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
-            // Php.g:220:5: ( Dollar UnquotedString ( Equals atom )? ';' -> ^( Field ^( Dollar UnquotedString ) ( atom )? ) )
-            // Php.g:220:7: Dollar UnquotedString ( Equals atom )? ';'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:5: ( Dollar UnquotedString ( Equals atom )? ';' -> ^( Field ^( Dollar UnquotedString ) ( atom )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:7: Dollar UnquotedString ( Equals atom )? ';'
             {
-            Dollar68=(Token)match(input,Dollar,FOLLOW_Dollar_in_fieldDefinition1605); if (state.failed) return retval; 
+            Dollar68=(Token)match(input,Dollar,FOLLOW_Dollar_in_fieldDefinition1601); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_Dollar.add(Dollar68);
 
-            UnquotedString69=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_fieldDefinition1607); if (state.failed) return retval; 
+            UnquotedString69=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_fieldDefinition1603); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString69);
 
-            // Php.g:220:29: ( Equals atom )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:29: ( Equals atom )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2068,12 +2068,12 @@ public class PhpParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // Php.g:220:30: Equals atom
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:30: Equals atom
                     {
-                    Equals70=(Token)match(input,Equals,FOLLOW_Equals_in_fieldDefinition1610); if (state.failed) return retval; 
+                    Equals70=(Token)match(input,Equals,FOLLOW_Equals_in_fieldDefinition1606); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Equals.add(Equals70);
 
-                    pushFollow(FOLLOW_atom_in_fieldDefinition1612);
+                    pushFollow(FOLLOW_atom_in_fieldDefinition1608);
                     atom71=atom();
 
                     state._fsp--;
@@ -2085,13 +2085,13 @@ public class PhpParser extends Parser {
 
             }
 
-            char_literal72=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_fieldDefinition1616); if (state.failed) return retval; 
+            char_literal72=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_fieldDefinition1612); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SemiColon.add(char_literal72);
 
 
 
             // AST REWRITE
-            // elements: UnquotedString, Dollar, atom
+            // elements: atom, Dollar, UnquotedString
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2104,12 +2104,12 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 220:47: -> ^( Field ^( Dollar UnquotedString ) ( atom )? )
             {
-                // Php.g:220:50: ^( Field ^( Dollar UnquotedString ) ( atom )? )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:50: ^( Field ^( Dollar UnquotedString ) ( atom )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Field, "Field"), root_1);
 
-                // Php.g:220:58: ^( Dollar UnquotedString )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:58: ^( Dollar UnquotedString )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_Dollar.nextNode(), root_2);
@@ -2118,7 +2118,7 @@ public class PhpParser extends Parser {
 
                 adaptor.addChild(root_1, root_2);
                 }
-                // Php.g:220:83: ( atom )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:220:83: ( atom )?
                 if ( stream_atom.hasNext() ) {
                     adaptor.addChild(root_1, stream_atom.nextTree());
 
@@ -2160,7 +2160,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "classModifier"
-    // Php.g:223:1: classModifier : 'abstract' ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:223:1: classModifier : 'abstract' ;
     public final PhpParser.classModifier_return classModifier() throws RecognitionException {
         PhpParser.classModifier_return retval = new PhpParser.classModifier_return();
         retval.start = input.LT(1);
@@ -2173,12 +2173,12 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
-            // Php.g:224:5: ( 'abstract' )
-            // Php.g:224:7: 'abstract'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:224:5: ( 'abstract' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:224:7: 'abstract'
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            string_literal73=(Token)match(input,Abstract,FOLLOW_Abstract_in_classModifier1651); if (state.failed) return retval;
+            string_literal73=(Token)match(input,Abstract,FOLLOW_Abstract_in_classModifier1647); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             string_literal73_tree = (CommonTree)adaptor.create(string_literal73);
             adaptor.addChild(root_0, string_literal73_tree);
@@ -2213,7 +2213,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "fieldModifier"
-    // Php.g:226:1: fieldModifier : ( AccessModifier | 'abstract' | 'static' );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:226:1: fieldModifier : ( AccessModifier | 'abstract' | 'static' );
     public final PhpParser.fieldModifier_return fieldModifier() throws RecognitionException {
         PhpParser.fieldModifier_return retval = new PhpParser.fieldModifier_return();
         retval.start = input.LT(1);
@@ -2226,8 +2226,8 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
-            // Php.g:227:5: ( AccessModifier | 'abstract' | 'static' )
-            // Php.g:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:227:5: ( AccessModifier | 'abstract' | 'static' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2273,7 +2273,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "complexStatement"
-    // Php.g:231:1: complexStatement : ( If '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( 'if' expression $ifTrue ( conditional )? ) | For '(' forInit forCondition forUpdate ')' statement -> ^( For forInit forCondition forUpdate statement ) | Foreach '(' variable 'as' arrayEntry ')' statement -> ^( Foreach variable arrayEntry statement ) | While '(' (whileCondition= expression )? ')' statement -> ^( While $whileCondition statement ) | Do statement While '(' doCondition= expression ')' ';' -> ^( Do statement $doCondition) | Switch '(' expression ')' '{' cases '}' -> ^( Switch expression cases ) | functionDefinition );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:231:1: complexStatement : ( If '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( 'if' expression $ifTrue ( conditional )? ) | For '(' forInit forCondition forUpdate ')' statement -> ^( For forInit forCondition forUpdate statement ) | Foreach '(' variable 'as' arrayEntry ')' statement -> ^( Foreach variable arrayEntry statement ) | While '(' (whileCondition= expression )? ')' statement -> ^( While $whileCondition statement ) | Do statement While '(' doCondition= expression ')' ';' -> ^( Do statement $doCondition) | Switch '(' expression ')' '{' cases '}' -> ^( Switch expression cases ) | functionDefinition );
     public final PhpParser.complexStatement_return complexStatement() throws RecognitionException {
         PhpParser.complexStatement_return retval = new PhpParser.complexStatement_return();
         retval.start = input.LT(1);
@@ -2361,16 +2361,16 @@ public class PhpParser extends Parser {
         CommonTree char_literal106_tree=null;
         CommonTree char_literal107_tree=null;
         CommonTree char_literal109_tree=null;
-        RewriteRuleTokenStream stream_OpenCurlyBrace=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBrace");
+        RewriteRuleTokenStream stream_CloseCurlyBracket=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBracket");
         RewriteRuleTokenStream stream_Switch=new RewriteRuleTokenStream(adaptor,"token Switch");
-        RewriteRuleTokenStream stream_CloseCurlyBrace=new RewriteRuleTokenStream(adaptor,"token CloseCurlyBrace");
         RewriteRuleTokenStream stream_112=new RewriteRuleTokenStream(adaptor,"token 112");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
         RewriteRuleTokenStream stream_Do=new RewriteRuleTokenStream(adaptor,"token Do");
         RewriteRuleTokenStream stream_Foreach=new RewriteRuleTokenStream(adaptor,"token Foreach");
         RewriteRuleTokenStream stream_SemiColon=new RewriteRuleTokenStream(adaptor,"token SemiColon");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleTokenStream stream_If=new RewriteRuleTokenStream(adaptor,"token If");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenCurlyBracket=new RewriteRuleTokenStream(adaptor,"token OpenCurlyBracket");
         RewriteRuleTokenStream stream_While=new RewriteRuleTokenStream(adaptor,"token While");
         RewriteRuleTokenStream stream_For=new RewriteRuleTokenStream(adaptor,"token For");
         RewriteRuleSubtreeStream stream_cases=new RewriteRuleSubtreeStream(adaptor,"rule cases");
@@ -2384,7 +2384,7 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_arrayEntry=new RewriteRuleSubtreeStream(adaptor,"rule arrayEntry");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
-            // Php.g:232:5: ( If '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( 'if' expression $ifTrue ( conditional )? ) | For '(' forInit forCondition forUpdate ')' statement -> ^( For forInit forCondition forUpdate statement ) | Foreach '(' variable 'as' arrayEntry ')' statement -> ^( Foreach variable arrayEntry statement ) | While '(' (whileCondition= expression )? ')' statement -> ^( While $whileCondition statement ) | Do statement While '(' doCondition= expression ')' ';' -> ^( Do statement $doCondition) | Switch '(' expression ')' '{' cases '}' -> ^( Switch expression cases ) | functionDefinition )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:232:5: ( If '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( 'if' expression $ifTrue ( conditional )? ) | For '(' forInit forCondition forUpdate ')' statement -> ^( For forInit forCondition forUpdate statement ) | Foreach '(' variable 'as' arrayEntry ')' statement -> ^( Foreach variable arrayEntry statement ) | While '(' (whileCondition= expression )? ')' statement -> ^( While $whileCondition statement ) | Do statement While '(' doCondition= expression ')' ';' -> ^( Do statement $doCondition) | Switch '(' expression ')' '{' cases '}' -> ^( Switch expression cases ) | functionDefinition )
             int alt26=7;
             switch ( input.LA(1) ) {
             case If:
@@ -2432,37 +2432,37 @@ public class PhpParser extends Parser {
 
             switch (alt26) {
                 case 1 :
-                    // Php.g:232:7: If '(' ifCondition= expression ')' ifTrue= statement ( conditional )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:232:7: If '(' ifCondition= expression ')' ifTrue= statement ( conditional )?
                     {
-                    If75=(Token)match(input,If,FOLLOW_If_in_complexStatement1694); if (state.failed) return retval; 
+                    If75=(Token)match(input,If,FOLLOW_If_in_complexStatement1690); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_If.add(If75);
 
-                    char_literal76=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1696); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal76);
+                    char_literal76=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1692); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal76);
 
-                    pushFollow(FOLLOW_expression_in_complexStatement1700);
+                    pushFollow(FOLLOW_expression_in_complexStatement1696);
                     ifCondition=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(ifCondition.getTree());
-                    char_literal77=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1702); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal77);
+                    char_literal77=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1698); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal77);
 
-                    pushFollow(FOLLOW_statement_in_complexStatement1706);
+                    pushFollow(FOLLOW_statement_in_complexStatement1702);
                     ifTrue=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(ifTrue.getTree());
-                    // Php.g:232:58: ( conditional )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:232:58: ( conditional )?
                     int alt24=2;
                     alt24 = dfa24.predict(input);
                     switch (alt24) {
                         case 1 :
-                            // Php.g:0:0: conditional
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: conditional
                             {
-                            pushFollow(FOLLOW_conditional_in_complexStatement1708);
+                            pushFollow(FOLLOW_conditional_in_complexStatement1704);
                             conditional78=conditional();
 
                             state._fsp--;
@@ -2477,7 +2477,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: If, ifTrue, conditional, expression
+                    // elements: If, ifTrue, expression, conditional
                     // token labels: 
                     // rule labels: retval, ifTrue
                     // token list labels: 
@@ -2491,14 +2491,14 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 233:9: -> ^( 'if' expression $ifTrue ( conditional )? )
                     {
-                        // Php.g:233:12: ^( 'if' expression $ifTrue ( conditional )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:233:12: ^( 'if' expression $ifTrue ( conditional )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(If, "If"), root_1);
 
                         adaptor.addChild(root_1, stream_expression.nextTree());
                         adaptor.addChild(root_1, stream_ifTrue.nextTree());
-                        // Php.g:233:38: ( conditional )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:233:38: ( conditional )?
                         if ( stream_conditional.hasNext() ) {
                             adaptor.addChild(root_1, stream_conditional.nextTree());
 
@@ -2514,36 +2514,36 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:234:7: For '(' forInit forCondition forUpdate ')' statement
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:234:7: For '(' forInit forCondition forUpdate ')' statement
                     {
-                    For79=(Token)match(input,For,FOLLOW_For_in_complexStatement1739); if (state.failed) return retval; 
+                    For79=(Token)match(input,For,FOLLOW_For_in_complexStatement1735); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_For.add(For79);
 
-                    char_literal80=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1741); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal80);
+                    char_literal80=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1737); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal80);
 
-                    pushFollow(FOLLOW_forInit_in_complexStatement1743);
+                    pushFollow(FOLLOW_forInit_in_complexStatement1739);
                     forInit81=forInit();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_forInit.add(forInit81.getTree());
-                    pushFollow(FOLLOW_forCondition_in_complexStatement1745);
+                    pushFollow(FOLLOW_forCondition_in_complexStatement1741);
                     forCondition82=forCondition();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_forCondition.add(forCondition82.getTree());
-                    pushFollow(FOLLOW_forUpdate_in_complexStatement1747);
+                    pushFollow(FOLLOW_forUpdate_in_complexStatement1743);
                     forUpdate83=forUpdate();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_forUpdate.add(forUpdate83.getTree());
-                    char_literal84=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1749); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal84);
+                    char_literal84=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1745); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal84);
 
-                    pushFollow(FOLLOW_statement_in_complexStatement1751);
+                    pushFollow(FOLLOW_statement_in_complexStatement1747);
                     statement85=statement();
 
                     state._fsp--;
@@ -2552,7 +2552,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: statement, forUpdate, forCondition, forInit, For
+                    // elements: forUpdate, forCondition, forInit, For, statement
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2565,7 +2565,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 234:60: -> ^( For forInit forCondition forUpdate statement )
                     {
-                        // Php.g:234:63: ^( For forInit forCondition forUpdate statement )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:234:63: ^( For forInit forCondition forUpdate statement )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_For.nextNode(), root_1);
@@ -2584,33 +2584,33 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:235:7: Foreach '(' variable 'as' arrayEntry ')' statement
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:235:7: Foreach '(' variable 'as' arrayEntry ')' statement
                     {
-                    Foreach86=(Token)match(input,Foreach,FOLLOW_Foreach_in_complexStatement1773); if (state.failed) return retval; 
+                    Foreach86=(Token)match(input,Foreach,FOLLOW_Foreach_in_complexStatement1769); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Foreach.add(Foreach86);
 
-                    char_literal87=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1775); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal87);
+                    char_literal87=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1771); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal87);
 
-                    pushFollow(FOLLOW_variable_in_complexStatement1777);
+                    pushFollow(FOLLOW_variable_in_complexStatement1773);
                     variable88=variable();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_variable.add(variable88.getTree());
-                    string_literal89=(Token)match(input,112,FOLLOW_112_in_complexStatement1779); if (state.failed) return retval; 
+                    string_literal89=(Token)match(input,112,FOLLOW_112_in_complexStatement1775); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_112.add(string_literal89);
 
-                    pushFollow(FOLLOW_arrayEntry_in_complexStatement1781);
+                    pushFollow(FOLLOW_arrayEntry_in_complexStatement1777);
                     arrayEntry90=arrayEntry();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_arrayEntry.add(arrayEntry90.getTree());
-                    char_literal91=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1783); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal91);
+                    char_literal91=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1779); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal91);
 
-                    pushFollow(FOLLOW_statement_in_complexStatement1785);
+                    pushFollow(FOLLOW_statement_in_complexStatement1781);
                     statement92=statement();
 
                     state._fsp--;
@@ -2619,7 +2619,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: arrayEntry, statement, variable, Foreach
+                    // elements: variable, arrayEntry, Foreach, statement
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2632,7 +2632,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 235:58: -> ^( Foreach variable arrayEntry statement )
                     {
-                        // Php.g:235:61: ^( Foreach variable arrayEntry statement )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:235:61: ^( Foreach variable arrayEntry statement )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Foreach.nextNode(), root_1);
@@ -2650,22 +2650,22 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // Php.g:236:7: While '(' (whileCondition= expression )? ')' statement
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:236:7: While '(' (whileCondition= expression )? ')' statement
                     {
-                    While93=(Token)match(input,While,FOLLOW_While_in_complexStatement1805); if (state.failed) return retval; 
+                    While93=(Token)match(input,While,FOLLOW_While_in_complexStatement1801); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_While.add(While93);
 
-                    char_literal94=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1807); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal94);
+                    char_literal94=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1803); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal94);
 
-                    // Php.g:236:31: (whileCondition= expression )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:236:31: (whileCondition= expression )?
                     int alt25=2;
                     alt25 = dfa25.predict(input);
                     switch (alt25) {
                         case 1 :
-                            // Php.g:0:0: whileCondition= expression
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: whileCondition= expression
                             {
-                            pushFollow(FOLLOW_expression_in_complexStatement1811);
+                            pushFollow(FOLLOW_expression_in_complexStatement1807);
                             whileCondition=expression();
 
                             state._fsp--;
@@ -2677,10 +2677,10 @@ public class PhpParser extends Parser {
 
                     }
 
-                    char_literal95=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1814); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal95);
+                    char_literal95=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1810); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal95);
 
-                    pushFollow(FOLLOW_statement_in_complexStatement1816);
+                    pushFollow(FOLLOW_statement_in_complexStatement1812);
                     statement96=statement();
 
                     state._fsp--;
@@ -2703,7 +2703,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 236:58: -> ^( While $whileCondition statement )
                     {
-                        // Php.g:236:61: ^( While $whileCondition statement )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:236:61: ^( While $whileCondition statement )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_While.nextNode(), root_1);
@@ -2720,39 +2720,39 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // Php.g:237:7: Do statement While '(' doCondition= expression ')' ';'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:237:7: Do statement While '(' doCondition= expression ')' ';'
                     {
-                    Do97=(Token)match(input,Do,FOLLOW_Do_in_complexStatement1835); if (state.failed) return retval; 
+                    Do97=(Token)match(input,Do,FOLLOW_Do_in_complexStatement1831); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Do.add(Do97);
 
-                    pushFollow(FOLLOW_statement_in_complexStatement1837);
+                    pushFollow(FOLLOW_statement_in_complexStatement1833);
                     statement98=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(statement98.getTree());
-                    While99=(Token)match(input,While,FOLLOW_While_in_complexStatement1839); if (state.failed) return retval; 
+                    While99=(Token)match(input,While,FOLLOW_While_in_complexStatement1835); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_While.add(While99);
 
-                    char_literal100=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1841); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal100);
+                    char_literal100=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1837); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal100);
 
-                    pushFollow(FOLLOW_expression_in_complexStatement1845);
+                    pushFollow(FOLLOW_expression_in_complexStatement1841);
                     doCondition=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(doCondition.getTree());
-                    char_literal101=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1847); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal101);
+                    char_literal101=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1843); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal101);
 
-                    char_literal102=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_complexStatement1849); if (state.failed) return retval; 
+                    char_literal102=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_complexStatement1845); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SemiColon.add(char_literal102);
 
 
 
                     // AST REWRITE
-                    // elements: doCondition, statement, Do
+                    // elements: Do, doCondition, statement
                     // token labels: 
                     // rule labels: doCondition, retval
                     // token list labels: 
@@ -2766,7 +2766,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 237:61: -> ^( Do statement $doCondition)
                     {
-                        // Php.g:237:64: ^( Do statement $doCondition)
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:237:64: ^( Do statement $doCondition)
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Do.nextNode(), root_1);
@@ -2783,39 +2783,39 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // Php.g:238:7: Switch '(' expression ')' '{' cases '}'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:238:7: Switch '(' expression ')' '{' cases '}'
                     {
-                    Switch103=(Token)match(input,Switch,FOLLOW_Switch_in_complexStatement1868); if (state.failed) return retval; 
+                    Switch103=(Token)match(input,Switch,FOLLOW_Switch_in_complexStatement1864); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Switch.add(Switch103);
 
-                    char_literal104=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_complexStatement1870); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal104);
+                    char_literal104=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_complexStatement1866); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal104);
 
-                    pushFollow(FOLLOW_expression_in_complexStatement1872);
+                    pushFollow(FOLLOW_expression_in_complexStatement1868);
                     expression105=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(expression105.getTree());
-                    char_literal106=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_complexStatement1874); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal106);
+                    char_literal106=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_complexStatement1870); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal106);
 
-                    char_literal107=(Token)match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_complexStatement1876); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenCurlyBrace.add(char_literal107);
+                    char_literal107=(Token)match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_complexStatement1872); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenCurlyBracket.add(char_literal107);
 
-                    pushFollow(FOLLOW_cases_in_complexStatement1877);
+                    pushFollow(FOLLOW_cases_in_complexStatement1873);
                     cases108=cases();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_cases.add(cases108.getTree());
-                    char_literal109=(Token)match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_complexStatement1878); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseCurlyBrace.add(char_literal109);
+                    char_literal109=(Token)match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_complexStatement1874); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseCurlyBracket.add(char_literal109);
 
 
 
                     // AST REWRITE
-                    // elements: Switch, expression, cases
+                    // elements: expression, cases, Switch
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2828,7 +2828,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 238:45: -> ^( Switch expression cases )
                     {
-                        // Php.g:238:48: ^( Switch expression cases )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:238:48: ^( Switch expression cases )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Switch.nextNode(), root_1);
@@ -2845,11 +2845,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // Php.g:239:7: functionDefinition
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:239:7: functionDefinition
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_functionDefinition_in_complexStatement1896);
+                    pushFollow(FOLLOW_functionDefinition_in_complexStatement1892);
                     functionDefinition110=functionDefinition();
 
                     state._fsp--;
@@ -2887,7 +2887,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "simpleStatement"
-    // Php.g:242:1: simpleStatement : ( Echo commaList | Global name ( ',' name )* | Static variable Equals atom | Break ( Integer )? | Continue ( Integer )? | Return ( expression )? | RequireOperator expression | expression );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:242:1: simpleStatement : ( Echo commaList | Global name ( ',' name )* | Static variable Equals atom | Break ( Integer )? | Continue ( Integer )? | Return ( expression )? | RequireOperator expression | expression );
     public final PhpParser.simpleStatement_return simpleStatement() throws RecognitionException {
         PhpParser.simpleStatement_return retval = new PhpParser.simpleStatement_return();
         retval.start = input.LT(1);
@@ -2936,21 +2936,21 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
-            // Php.g:243:5: ( Echo commaList | Global name ( ',' name )* | Static variable Equals atom | Break ( Integer )? | Continue ( Integer )? | Return ( expression )? | RequireOperator expression | expression )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:243:5: ( Echo commaList | Global name ( ',' name )* | Static variable Equals atom | Break ( Integer )? | Continue ( Integer )? | Return ( expression )? | RequireOperator expression | expression )
             int alt31=8;
             alt31 = dfa31.predict(input);
             switch (alt31) {
                 case 1 :
-                    // Php.g:243:7: Echo commaList
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:243:7: Echo commaList
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Echo111=(Token)match(input,Echo,FOLLOW_Echo_in_simpleStatement1913); if (state.failed) return retval;
+                    Echo111=(Token)match(input,Echo,FOLLOW_Echo_in_simpleStatement1909); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Echo111_tree = (CommonTree)adaptor.create(Echo111);
                     root_0 = (CommonTree)adaptor.becomeRoot(Echo111_tree, root_0);
                     }
-                    pushFollow(FOLLOW_commaList_in_simpleStatement1916);
+                    pushFollow(FOLLOW_commaList_in_simpleStatement1912);
                     commaList112=commaList();
 
                     state._fsp--;
@@ -2960,22 +2960,22 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:244:7: Global name ( ',' name )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:244:7: Global name ( ',' name )*
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Global113=(Token)match(input,Global,FOLLOW_Global_in_simpleStatement1924); if (state.failed) return retval;
+                    Global113=(Token)match(input,Global,FOLLOW_Global_in_simpleStatement1920); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Global113_tree = (CommonTree)adaptor.create(Global113);
                     root_0 = (CommonTree)adaptor.becomeRoot(Global113_tree, root_0);
                     }
-                    pushFollow(FOLLOW_name_in_simpleStatement1927);
+                    pushFollow(FOLLOW_name_in_simpleStatement1923);
                     name114=name();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, name114.getTree());
-                    // Php.g:244:20: ( ',' name )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:244:20: ( ',' name )*
                     loop27:
                     do {
                         int alt27=2;
@@ -2988,10 +2988,10 @@ public class PhpParser extends Parser {
 
                         switch (alt27) {
                     	case 1 :
-                    	    // Php.g:244:21: ',' name
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:244:21: ',' name
                     	    {
-                    	    char_literal115=(Token)match(input,Comma,FOLLOW_Comma_in_simpleStatement1930); if (state.failed) return retval;
-                    	    pushFollow(FOLLOW_name_in_simpleStatement1933);
+                    	    char_literal115=(Token)match(input,Comma,FOLLOW_Comma_in_simpleStatement1926); if (state.failed) return retval;
+                    	    pushFollow(FOLLOW_name_in_simpleStatement1929);
                     	    name116=name();
 
                     	    state._fsp--;
@@ -3010,23 +3010,23 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:245:7: Static variable Equals atom
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:245:7: Static variable Equals atom
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Static117=(Token)match(input,Static,FOLLOW_Static_in_simpleStatement1943); if (state.failed) return retval;
+                    Static117=(Token)match(input,Static,FOLLOW_Static_in_simpleStatement1939); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Static117_tree = (CommonTree)adaptor.create(Static117);
                     root_0 = (CommonTree)adaptor.becomeRoot(Static117_tree, root_0);
                     }
-                    pushFollow(FOLLOW_variable_in_simpleStatement1946);
+                    pushFollow(FOLLOW_variable_in_simpleStatement1942);
                     variable118=variable();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, variable118.getTree());
-                    Equals119=(Token)match(input,Equals,FOLLOW_Equals_in_simpleStatement1948); if (state.failed) return retval;
-                    pushFollow(FOLLOW_atom_in_simpleStatement1951);
+                    Equals119=(Token)match(input,Equals,FOLLOW_Equals_in_simpleStatement1944); if (state.failed) return retval;
+                    pushFollow(FOLLOW_atom_in_simpleStatement1947);
                     atom120=atom();
 
                     state._fsp--;
@@ -3036,16 +3036,16 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // Php.g:246:7: Break ( Integer )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:246:7: Break ( Integer )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Break121=(Token)match(input,Break,FOLLOW_Break_in_simpleStatement1959); if (state.failed) return retval;
+                    Break121=(Token)match(input,Break,FOLLOW_Break_in_simpleStatement1955); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Break121_tree = (CommonTree)adaptor.create(Break121);
                     root_0 = (CommonTree)adaptor.becomeRoot(Break121_tree, root_0);
                     }
-                    // Php.g:246:14: ( Integer )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:246:14: ( Integer )?
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -3054,9 +3054,9 @@ public class PhpParser extends Parser {
                     }
                     switch (alt28) {
                         case 1 :
-                            // Php.g:0:0: Integer
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: Integer
                             {
-                            Integer122=(Token)match(input,Integer,FOLLOW_Integer_in_simpleStatement1962); if (state.failed) return retval;
+                            Integer122=(Token)match(input,Integer,FOLLOW_Integer_in_simpleStatement1958); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             Integer122_tree = (CommonTree)adaptor.create(Integer122);
                             adaptor.addChild(root_0, Integer122_tree);
@@ -3071,16 +3071,16 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // Php.g:247:7: Continue ( Integer )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:247:7: Continue ( Integer )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Continue123=(Token)match(input,Continue,FOLLOW_Continue_in_simpleStatement1971); if (state.failed) return retval;
+                    Continue123=(Token)match(input,Continue,FOLLOW_Continue_in_simpleStatement1967); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Continue123_tree = (CommonTree)adaptor.create(Continue123);
                     root_0 = (CommonTree)adaptor.becomeRoot(Continue123_tree, root_0);
                     }
-                    // Php.g:247:17: ( Integer )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:247:17: ( Integer )?
                     int alt29=2;
                     int LA29_0 = input.LA(1);
 
@@ -3089,9 +3089,9 @@ public class PhpParser extends Parser {
                     }
                     switch (alt29) {
                         case 1 :
-                            // Php.g:0:0: Integer
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: Integer
                             {
-                            Integer124=(Token)match(input,Integer,FOLLOW_Integer_in_simpleStatement1974); if (state.failed) return retval;
+                            Integer124=(Token)match(input,Integer,FOLLOW_Integer_in_simpleStatement1970); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             Integer124_tree = (CommonTree)adaptor.create(Integer124);
                             adaptor.addChild(root_0, Integer124_tree);
@@ -3106,23 +3106,23 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // Php.g:249:7: Return ( expression )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:249:7: Return ( expression )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Return125=(Token)match(input,Return,FOLLOW_Return_in_simpleStatement1988); if (state.failed) return retval;
+                    Return125=(Token)match(input,Return,FOLLOW_Return_in_simpleStatement1984); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Return125_tree = (CommonTree)adaptor.create(Return125);
                     root_0 = (CommonTree)adaptor.becomeRoot(Return125_tree, root_0);
                     }
-                    // Php.g:249:15: ( expression )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:249:15: ( expression )?
                     int alt30=2;
                     alt30 = dfa30.predict(input);
                     switch (alt30) {
                         case 1 :
-                            // Php.g:0:0: expression
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: expression
                             {
-                            pushFollow(FOLLOW_expression_in_simpleStatement1991);
+                            pushFollow(FOLLOW_expression_in_simpleStatement1987);
                             expression126=expression();
 
                             state._fsp--;
@@ -3138,16 +3138,16 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // Php.g:250:7: RequireOperator expression
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:250:7: RequireOperator expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    RequireOperator127=(Token)match(input,RequireOperator,FOLLOW_RequireOperator_in_simpleStatement2000); if (state.failed) return retval;
+                    RequireOperator127=(Token)match(input,RequireOperator,FOLLOW_RequireOperator_in_simpleStatement1996); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     RequireOperator127_tree = (CommonTree)adaptor.create(RequireOperator127);
                     root_0 = (CommonTree)adaptor.becomeRoot(RequireOperator127_tree, root_0);
                     }
-                    pushFollow(FOLLOW_expression_in_simpleStatement2003);
+                    pushFollow(FOLLOW_expression_in_simpleStatement1999);
                     expression128=expression();
 
                     state._fsp--;
@@ -3157,11 +3157,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // Php.g:251:7: expression
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:251:7: expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_expression_in_simpleStatement2011);
+                    pushFollow(FOLLOW_expression_in_simpleStatement2007);
                     expression129=expression();
 
                     state._fsp--;
@@ -3199,7 +3199,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "conditional"
-    // Php.g:255:1: conditional : ( ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( If $ifCondition $ifTrue ( conditional )? ) | Else statement -> statement );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:255:1: conditional : ( ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( If $ifCondition $ifTrue ( conditional )? ) | Else statement -> statement );
     public final PhpParser.conditional_return conditional() throws RecognitionException {
         PhpParser.conditional_return retval = new PhpParser.conditional_return();
         retval.start = input.LT(1);
@@ -3225,14 +3225,14 @@ public class PhpParser extends Parser {
         CommonTree Else134_tree=null;
         RewriteRuleTokenStream stream_ElseIf=new RewriteRuleTokenStream(adaptor,"token ElseIf");
         RewriteRuleTokenStream stream_Else=new RewriteRuleTokenStream(adaptor,"token Else");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleSubtreeStream stream_conditional=new RewriteRuleSubtreeStream(adaptor,"rule conditional");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
-            // Php.g:256:5: ( ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( If $ifCondition $ifTrue ( conditional )? ) | Else statement -> statement )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:5: ( ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )? -> ^( If $ifCondition $ifTrue ( conditional )? ) | Else statement -> statement )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -3251,37 +3251,37 @@ public class PhpParser extends Parser {
             }
             switch (alt33) {
                 case 1 :
-                    // Php.g:256:7: ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:7: ElseIf '(' ifCondition= expression ')' ifTrue= statement ( conditional )?
                     {
-                    ElseIf130=(Token)match(input,ElseIf,FOLLOW_ElseIf_in_conditional2029); if (state.failed) return retval; 
+                    ElseIf130=(Token)match(input,ElseIf,FOLLOW_ElseIf_in_conditional2025); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ElseIf.add(ElseIf130);
 
-                    char_literal131=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_conditional2031); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(char_literal131);
+                    char_literal131=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_conditional2027); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(char_literal131);
 
-                    pushFollow(FOLLOW_expression_in_conditional2035);
+                    pushFollow(FOLLOW_expression_in_conditional2031);
                     ifCondition=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(ifCondition.getTree());
-                    char_literal132=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_conditional2037); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(char_literal132);
+                    char_literal132=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_conditional2033); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(char_literal132);
 
-                    pushFollow(FOLLOW_statement_in_conditional2041);
+                    pushFollow(FOLLOW_statement_in_conditional2037);
                     ifTrue=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(ifTrue.getTree());
-                    // Php.g:256:62: ( conditional )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:62: ( conditional )?
                     int alt32=2;
                     alt32 = dfa32.predict(input);
                     switch (alt32) {
                         case 1 :
-                            // Php.g:0:0: conditional
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: conditional
                             {
-                            pushFollow(FOLLOW_conditional_in_conditional2043);
+                            pushFollow(FOLLOW_conditional_in_conditional2039);
                             conditional133=conditional();
 
                             state._fsp--;
@@ -3311,14 +3311,14 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 256:75: -> ^( If $ifCondition $ifTrue ( conditional )? )
                     {
-                        // Php.g:256:78: ^( If $ifCondition $ifTrue ( conditional )? )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:78: ^( If $ifCondition $ifTrue ( conditional )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(If, "If"), root_1);
 
                         adaptor.addChild(root_1, stream_ifCondition.nextTree());
                         adaptor.addChild(root_1, stream_ifTrue.nextTree());
-                        // Php.g:256:104: ( conditional )?
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:104: ( conditional )?
                         if ( stream_conditional.hasNext() ) {
                             adaptor.addChild(root_1, stream_conditional.nextTree());
 
@@ -3334,12 +3334,12 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:257:7: Else statement
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:257:7: Else statement
                     {
-                    Else134=(Token)match(input,Else,FOLLOW_Else_in_conditional2067); if (state.failed) return retval; 
+                    Else134=(Token)match(input,Else,FOLLOW_Else_in_conditional2063); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Else.add(Else134);
 
-                    pushFollow(FOLLOW_statement_in_conditional2069);
+                    pushFollow(FOLLOW_statement_in_conditional2065);
                     statement135=statement();
 
                     state._fsp--;
@@ -3397,7 +3397,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "forInit"
-    // Php.g:260:1: forInit : ( commaList )? ';' -> ^( ForInit ( commaList )? ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:260:1: forInit : ( commaList )? ';' -> ^( ForInit ( commaList )? ) ;
     public final PhpParser.forInit_return forInit() throws RecognitionException {
         PhpParser.forInit_return retval = new PhpParser.forInit_return();
         retval.start = input.LT(1);
@@ -3413,17 +3413,17 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_commaList=new RewriteRuleSubtreeStream(adaptor,"rule commaList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
-            // Php.g:261:5: ( ( commaList )? ';' -> ^( ForInit ( commaList )? ) )
-            // Php.g:261:7: ( commaList )? ';'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:261:5: ( ( commaList )? ';' -> ^( ForInit ( commaList )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:261:7: ( commaList )? ';'
             {
-            // Php.g:261:7: ( commaList )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:261:7: ( commaList )?
             int alt34=2;
             alt34 = dfa34.predict(input);
             switch (alt34) {
                 case 1 :
-                    // Php.g:0:0: commaList
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: commaList
                     {
-                    pushFollow(FOLLOW_commaList_in_forInit2090);
+                    pushFollow(FOLLOW_commaList_in_forInit2086);
                     commaList136=commaList();
 
                     state._fsp--;
@@ -3435,7 +3435,7 @@ public class PhpParser extends Parser {
 
             }
 
-            char_literal137=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_forInit2093); if (state.failed) return retval; 
+            char_literal137=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_forInit2089); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SemiColon.add(char_literal137);
 
 
@@ -3454,12 +3454,12 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 261:22: -> ^( ForInit ( commaList )? )
             {
-                // Php.g:261:25: ^( ForInit ( commaList )? )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:261:25: ^( ForInit ( commaList )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ForInit, "ForInit"), root_1);
 
-                // Php.g:261:35: ( commaList )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:261:35: ( commaList )?
                 if ( stream_commaList.hasNext() ) {
                     adaptor.addChild(root_1, stream_commaList.nextTree());
 
@@ -3501,7 +3501,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "forCondition"
-    // Php.g:264:1: forCondition : ( commaList )? ';' -> ^( ForCondition ( commaList )? ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:264:1: forCondition : ( commaList )? ';' -> ^( ForCondition ( commaList )? ) ;
     public final PhpParser.forCondition_return forCondition() throws RecognitionException {
         PhpParser.forCondition_return retval = new PhpParser.forCondition_return();
         retval.start = input.LT(1);
@@ -3517,17 +3517,17 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_commaList=new RewriteRuleSubtreeStream(adaptor,"rule commaList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
-            // Php.g:265:5: ( ( commaList )? ';' -> ^( ForCondition ( commaList )? ) )
-            // Php.g:265:7: ( commaList )? ';'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:265:5: ( ( commaList )? ';' -> ^( ForCondition ( commaList )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:265:7: ( commaList )? ';'
             {
-            // Php.g:265:7: ( commaList )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:265:7: ( commaList )?
             int alt35=2;
             alt35 = dfa35.predict(input);
             switch (alt35) {
                 case 1 :
-                    // Php.g:0:0: commaList
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: commaList
                     {
-                    pushFollow(FOLLOW_commaList_in_forCondition2119);
+                    pushFollow(FOLLOW_commaList_in_forCondition2115);
                     commaList138=commaList();
 
                     state._fsp--;
@@ -3539,7 +3539,7 @@ public class PhpParser extends Parser {
 
             }
 
-            char_literal139=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_forCondition2122); if (state.failed) return retval; 
+            char_literal139=(Token)match(input,SemiColon,FOLLOW_SemiColon_in_forCondition2118); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SemiColon.add(char_literal139);
 
 
@@ -3558,12 +3558,12 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 265:22: -> ^( ForCondition ( commaList )? )
             {
-                // Php.g:265:25: ^( ForCondition ( commaList )? )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:265:25: ^( ForCondition ( commaList )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ForCondition, "ForCondition"), root_1);
 
-                // Php.g:265:40: ( commaList )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:265:40: ( commaList )?
                 if ( stream_commaList.hasNext() ) {
                     adaptor.addChild(root_1, stream_commaList.nextTree());
 
@@ -3605,7 +3605,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "forUpdate"
-    // Php.g:268:1: forUpdate : ( commaList )? -> ^( ForUpdate ( commaList )? ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:268:1: forUpdate : ( commaList )? -> ^( ForUpdate ( commaList )? ) ;
     public final PhpParser.forUpdate_return forUpdate() throws RecognitionException {
         PhpParser.forUpdate_return retval = new PhpParser.forUpdate_return();
         retval.start = input.LT(1);
@@ -3618,17 +3618,17 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_commaList=new RewriteRuleSubtreeStream(adaptor,"rule commaList");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
-            // Php.g:269:5: ( ( commaList )? -> ^( ForUpdate ( commaList )? ) )
-            // Php.g:269:7: ( commaList )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:269:5: ( ( commaList )? -> ^( ForUpdate ( commaList )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:269:7: ( commaList )?
             {
-            // Php.g:269:7: ( commaList )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:269:7: ( commaList )?
             int alt36=2;
             alt36 = dfa36.predict(input);
             switch (alt36) {
                 case 1 :
-                    // Php.g:0:0: commaList
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: commaList
                     {
-                    pushFollow(FOLLOW_commaList_in_forUpdate2152);
+                    pushFollow(FOLLOW_commaList_in_forUpdate2148);
                     commaList140=commaList();
 
                     state._fsp--;
@@ -3656,12 +3656,12 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 269:18: -> ^( ForUpdate ( commaList )? )
             {
-                // Php.g:269:21: ^( ForUpdate ( commaList )? )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:269:21: ^( ForUpdate ( commaList )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ForUpdate, "ForUpdate"), root_1);
 
-                // Php.g:269:33: ( commaList )?
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:269:33: ( commaList )?
                 if ( stream_commaList.hasNext() ) {
                     adaptor.addChild(root_1, stream_commaList.nextTree());
 
@@ -3703,7 +3703,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "cases"
-    // Php.g:272:1: cases : ( casestatement )* defaultcase ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:272:1: cases : ( casestatement )* defaultcase ;
     public final PhpParser.cases_return cases() throws RecognitionException {
         PhpParser.cases_return retval = new PhpParser.cases_return();
         retval.start = input.LT(1);
@@ -3718,12 +3718,12 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
-            // Php.g:273:5: ( ( casestatement )* defaultcase )
-            // Php.g:273:7: ( casestatement )* defaultcase
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:273:5: ( ( casestatement )* defaultcase )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:273:7: ( casestatement )* defaultcase
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // Php.g:273:7: ( casestatement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:273:7: ( casestatement )*
             loop37:
             do {
                 int alt37=2;
@@ -3736,9 +3736,9 @@ public class PhpParser extends Parser {
 
                 switch (alt37) {
             	case 1 :
-            	    // Php.g:0:0: casestatement
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: casestatement
             	    {
-            	    pushFollow(FOLLOW_casestatement_in_cases2180);
+            	    pushFollow(FOLLOW_casestatement_in_cases2176);
             	    casestatement141=casestatement();
 
             	    state._fsp--;
@@ -3753,7 +3753,7 @@ public class PhpParser extends Parser {
                 }
             } while (true);
 
-            pushFollow(FOLLOW_defaultcase_in_cases2184);
+            pushFollow(FOLLOW_defaultcase_in_cases2180);
             defaultcase142=defaultcase();
 
             state._fsp--;
@@ -3789,7 +3789,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "casestatement"
-    // Php.g:276:1: casestatement : Case expression ':' ( statement )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:276:1: casestatement : Case expression ':' ( statement )* ;
     public final PhpParser.casestatement_return casestatement() throws RecognitionException {
         PhpParser.casestatement_return retval = new PhpParser.casestatement_return();
         retval.start = input.LT(1);
@@ -3808,33 +3808,33 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
-            // Php.g:277:5: ( Case expression ':' ( statement )* )
-            // Php.g:277:7: Case expression ':' ( statement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:277:5: ( Case expression ':' ( statement )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:277:7: Case expression ':' ( statement )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            Case143=(Token)match(input,Case,FOLLOW_Case_in_casestatement2201); if (state.failed) return retval;
+            Case143=(Token)match(input,Case,FOLLOW_Case_in_casestatement2197); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             Case143_tree = (CommonTree)adaptor.create(Case143);
             root_0 = (CommonTree)adaptor.becomeRoot(Case143_tree, root_0);
             }
-            pushFollow(FOLLOW_expression_in_casestatement2204);
+            pushFollow(FOLLOW_expression_in_casestatement2200);
             expression144=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression144.getTree());
-            char_literal145=(Token)match(input,Colon,FOLLOW_Colon_in_casestatement2206); if (state.failed) return retval;
-            // Php.g:277:29: ( statement )*
+            char_literal145=(Token)match(input,Colon,FOLLOW_Colon_in_casestatement2202); if (state.failed) return retval;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:277:29: ( statement )*
             loop38:
             do {
                 int alt38=2;
                 alt38 = dfa38.predict(input);
                 switch (alt38) {
             	case 1 :
-            	    // Php.g:0:0: statement
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_casestatement2209);
+            	    pushFollow(FOLLOW_statement_in_casestatement2205);
             	    statement146=statement();
 
             	    state._fsp--;
@@ -3879,7 +3879,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "defaultcase"
-    // Php.g:280:1: defaultcase : ( Default ':' ( statement )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:280:1: defaultcase : ( Default ':' ( statement )* ) ;
     public final PhpParser.defaultcase_return defaultcase() throws RecognitionException {
         PhpParser.defaultcase_return retval = new PhpParser.defaultcase_return();
         retval.start = input.LT(1);
@@ -3896,30 +3896,30 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
-            // Php.g:281:5: ( ( Default ':' ( statement )* ) )
-            // Php.g:281:7: ( Default ':' ( statement )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:281:5: ( ( Default ':' ( statement )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:281:7: ( Default ':' ( statement )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // Php.g:281:7: ( Default ':' ( statement )* )
-            // Php.g:281:8: Default ':' ( statement )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:281:7: ( Default ':' ( statement )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:281:8: Default ':' ( statement )*
             {
-            Default147=(Token)match(input,Default,FOLLOW_Default_in_defaultcase2229); if (state.failed) return retval;
+            Default147=(Token)match(input,Default,FOLLOW_Default_in_defaultcase2225); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             Default147_tree = (CommonTree)adaptor.create(Default147);
             root_0 = (CommonTree)adaptor.becomeRoot(Default147_tree, root_0);
             }
-            char_literal148=(Token)match(input,Colon,FOLLOW_Colon_in_defaultcase2232); if (state.failed) return retval;
-            // Php.g:281:22: ( statement )*
+            char_literal148=(Token)match(input,Colon,FOLLOW_Colon_in_defaultcase2228); if (state.failed) return retval;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:281:22: ( statement )*
             loop39:
             do {
                 int alt39=2;
                 alt39 = dfa39.predict(input);
                 switch (alt39) {
             	case 1 :
-            	    // Php.g:0:0: statement
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_defaultcase2235);
+            	    pushFollow(FOLLOW_statement_in_defaultcase2231);
             	    statement149=statement();
 
             	    state._fsp--;
@@ -3967,7 +3967,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "functionDefinition"
-    // Php.g:284:1: functionDefinition : Function UnquotedString parametersDefinition bracketedBlock -> ^( Function UnquotedString parametersDefinition bracketedBlock ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:284:1: functionDefinition : Function UnquotedString parametersDefinition bracketedBlock -> ^( Function UnquotedString parametersDefinition bracketedBlock ) ;
     public final PhpParser.functionDefinition_return functionDefinition() throws RecognitionException {
         PhpParser.functionDefinition_return retval = new PhpParser.functionDefinition_return();
         retval.start = input.LT(1);
@@ -3989,22 +3989,22 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_bracketedBlock=new RewriteRuleSubtreeStream(adaptor,"rule bracketedBlock");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
-            // Php.g:285:5: ( Function UnquotedString parametersDefinition bracketedBlock -> ^( Function UnquotedString parametersDefinition bracketedBlock ) )
-            // Php.g:285:7: Function UnquotedString parametersDefinition bracketedBlock
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:285:5: ( Function UnquotedString parametersDefinition bracketedBlock -> ^( Function UnquotedString parametersDefinition bracketedBlock ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:285:7: Function UnquotedString parametersDefinition bracketedBlock
             {
-            Function150=(Token)match(input,Function,FOLLOW_Function_in_functionDefinition2254); if (state.failed) return retval; 
+            Function150=(Token)match(input,Function,FOLLOW_Function_in_functionDefinition2250); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_Function.add(Function150);
 
-            UnquotedString151=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_functionDefinition2256); if (state.failed) return retval; 
+            UnquotedString151=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_functionDefinition2252); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString151);
 
-            pushFollow(FOLLOW_parametersDefinition_in_functionDefinition2258);
+            pushFollow(FOLLOW_parametersDefinition_in_functionDefinition2254);
             parametersDefinition152=parametersDefinition();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_parametersDefinition.add(parametersDefinition152.getTree());
-            pushFollow(FOLLOW_bracketedBlock_in_functionDefinition2260);
+            pushFollow(FOLLOW_bracketedBlock_in_functionDefinition2256);
             bracketedBlock153=bracketedBlock();
 
             state._fsp--;
@@ -4013,7 +4013,7 @@ public class PhpParser extends Parser {
 
 
             // AST REWRITE
-            // elements: Function, parametersDefinition, bracketedBlock, UnquotedString
+            // elements: bracketedBlock, Function, UnquotedString, parametersDefinition
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4026,7 +4026,7 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 285:67: -> ^( Function UnquotedString parametersDefinition bracketedBlock )
             {
-                // Php.g:286:9: ^( Function UnquotedString parametersDefinition bracketedBlock )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:286:9: ^( Function UnquotedString parametersDefinition bracketedBlock )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_Function.nextNode(), root_1);
@@ -4070,37 +4070,37 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "parametersDefinition"
-    // Php.g:289:1: parametersDefinition : OpenBrace ( paramDef ( Comma paramDef )* )? CloseBrace -> ^( Params ( paramDef )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:289:1: parametersDefinition : OpenRoundBracket ( paramDef ( Comma paramDef )* )? CloseRoundBracket -> ^( Params ( paramDef )* ) ;
     public final PhpParser.parametersDefinition_return parametersDefinition() throws RecognitionException {
         PhpParser.parametersDefinition_return retval = new PhpParser.parametersDefinition_return();
         retval.start = input.LT(1);
         int parametersDefinition_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token OpenBrace154=null;
+        Token OpenRoundBracket154=null;
         Token Comma156=null;
-        Token CloseBrace158=null;
+        Token CloseRoundBracket158=null;
         PhpParser.paramDef_return paramDef155 = null;
 
         PhpParser.paramDef_return paramDef157 = null;
 
 
-        CommonTree OpenBrace154_tree=null;
+        CommonTree OpenRoundBracket154_tree=null;
         CommonTree Comma156_tree=null;
-        CommonTree CloseBrace158_tree=null;
+        CommonTree CloseRoundBracket158_tree=null;
         RewriteRuleTokenStream stream_Comma=new RewriteRuleTokenStream(adaptor,"token Comma");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleSubtreeStream stream_paramDef=new RewriteRuleSubtreeStream(adaptor,"rule paramDef");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
-            // Php.g:290:5: ( OpenBrace ( paramDef ( Comma paramDef )* )? CloseBrace -> ^( Params ( paramDef )* ) )
-            // Php.g:290:7: OpenBrace ( paramDef ( Comma paramDef )* )? CloseBrace
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:5: ( OpenRoundBracket ( paramDef ( Comma paramDef )* )? CloseRoundBracket -> ^( Params ( paramDef )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:7: OpenRoundBracket ( paramDef ( Comma paramDef )* )? CloseRoundBracket
             {
-            OpenBrace154=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_parametersDefinition2298); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_OpenBrace.add(OpenBrace154);
+            OpenRoundBracket154=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_parametersDefinition2294); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_OpenRoundBracket.add(OpenRoundBracket154);
 
-            // Php.g:290:17: ( paramDef ( Comma paramDef )* )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:24: ( paramDef ( Comma paramDef )* )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -4109,15 +4109,15 @@ public class PhpParser extends Parser {
             }
             switch (alt41) {
                 case 1 :
-                    // Php.g:290:18: paramDef ( Comma paramDef )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:25: paramDef ( Comma paramDef )*
                     {
-                    pushFollow(FOLLOW_paramDef_in_parametersDefinition2301);
+                    pushFollow(FOLLOW_paramDef_in_parametersDefinition2297);
                     paramDef155=paramDef();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_paramDef.add(paramDef155.getTree());
-                    // Php.g:290:27: ( Comma paramDef )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:34: ( Comma paramDef )*
                     loop40:
                     do {
                         int alt40=2;
@@ -4130,12 +4130,12 @@ public class PhpParser extends Parser {
 
                         switch (alt40) {
                     	case 1 :
-                    	    // Php.g:290:28: Comma paramDef
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:35: Comma paramDef
                     	    {
-                    	    Comma156=(Token)match(input,Comma,FOLLOW_Comma_in_parametersDefinition2304); if (state.failed) return retval; 
+                    	    Comma156=(Token)match(input,Comma,FOLLOW_Comma_in_parametersDefinition2300); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_Comma.add(Comma156);
 
-                    	    pushFollow(FOLLOW_paramDef_in_parametersDefinition2306);
+                    	    pushFollow(FOLLOW_paramDef_in_parametersDefinition2302);
                     	    paramDef157=paramDef();
 
                     	    state._fsp--;
@@ -4156,8 +4156,8 @@ public class PhpParser extends Parser {
 
             }
 
-            CloseBrace158=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_parametersDefinition2312); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_CloseBrace.add(CloseBrace158);
+            CloseRoundBracket158=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_parametersDefinition2308); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_CloseRoundBracket.add(CloseRoundBracket158);
 
 
 
@@ -4173,14 +4173,14 @@ public class PhpParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 290:58: -> ^( Params ( paramDef )* )
+            // 290:72: -> ^( Params ( paramDef )* )
             {
-                // Php.g:290:61: ^( Params ( paramDef )* )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:75: ^( Params ( paramDef )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Params, "Params"), root_1);
 
-                // Php.g:290:70: ( paramDef )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:290:84: ( paramDef )*
                 while ( stream_paramDef.hasNext() ) {
                     adaptor.addChild(root_1, stream_paramDef.nextTree());
 
@@ -4222,7 +4222,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "paramDef"
-    // Php.g:293:1: paramDef : paramName ( Equals atom )? ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:293:1: paramDef : paramName ( Equals atom )? ;
     public final PhpParser.paramDef_return paramDef() throws RecognitionException {
         PhpParser.paramDef_return retval = new PhpParser.paramDef_return();
         retval.start = input.LT(1);
@@ -4239,18 +4239,18 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
-            // Php.g:294:5: ( paramName ( Equals atom )? )
-            // Php.g:294:7: paramName ( Equals atom )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:294:5: ( paramName ( Equals atom )? )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:294:7: paramName ( Equals atom )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_paramName_in_paramDef2339);
+            pushFollow(FOLLOW_paramName_in_paramDef2335);
             paramName159=paramName();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, paramName159.getTree());
-            // Php.g:294:17: ( Equals atom )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:294:17: ( Equals atom )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -4259,14 +4259,14 @@ public class PhpParser extends Parser {
             }
             switch (alt42) {
                 case 1 :
-                    // Php.g:294:18: Equals atom
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:294:18: Equals atom
                     {
-                    Equals160=(Token)match(input,Equals,FOLLOW_Equals_in_paramDef2342); if (state.failed) return retval;
+                    Equals160=(Token)match(input,Equals,FOLLOW_Equals_in_paramDef2338); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Equals160_tree = (CommonTree)adaptor.create(Equals160);
                     root_0 = (CommonTree)adaptor.becomeRoot(Equals160_tree, root_0);
                     }
-                    pushFollow(FOLLOW_atom_in_paramDef2345);
+                    pushFollow(FOLLOW_atom_in_paramDef2341);
                     atom161=atom();
 
                     state._fsp--;
@@ -4308,7 +4308,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "paramName"
-    // Php.g:297:1: paramName : ( Dollar UnquotedString | Ampersand Dollar UnquotedString -> ^( Ampersand ^( Dollar UnquotedString ) ) );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:297:1: paramName : ( Dollar UnquotedString | Ampersand Dollar UnquotedString -> ^( Ampersand ^( Dollar UnquotedString ) ) );
     public final PhpParser.paramName_return paramName() throws RecognitionException {
         PhpParser.paramName_return retval = new PhpParser.paramName_return();
         retval.start = input.LT(1);
@@ -4332,7 +4332,7 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
-            // Php.g:298:5: ( Dollar UnquotedString | Ampersand Dollar UnquotedString -> ^( Ampersand ^( Dollar UnquotedString ) ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:298:5: ( Dollar UnquotedString | Ampersand Dollar UnquotedString -> ^( Ampersand ^( Dollar UnquotedString ) ) )
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -4351,16 +4351,16 @@ public class PhpParser extends Parser {
             }
             switch (alt43) {
                 case 1 :
-                    // Php.g:298:7: Dollar UnquotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:298:7: Dollar UnquotedString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Dollar162=(Token)match(input,Dollar,FOLLOW_Dollar_in_paramName2364); if (state.failed) return retval;
+                    Dollar162=(Token)match(input,Dollar,FOLLOW_Dollar_in_paramName2360); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Dollar162_tree = (CommonTree)adaptor.create(Dollar162);
                     root_0 = (CommonTree)adaptor.becomeRoot(Dollar162_tree, root_0);
                     }
-                    UnquotedString163=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_paramName2367); if (state.failed) return retval;
+                    UnquotedString163=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_paramName2363); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     UnquotedString163_tree = (CommonTree)adaptor.create(UnquotedString163);
                     adaptor.addChild(root_0, UnquotedString163_tree);
@@ -4369,21 +4369,21 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:299:7: Ampersand Dollar UnquotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:299:7: Ampersand Dollar UnquotedString
                     {
-                    Ampersand164=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_paramName2375); if (state.failed) return retval; 
+                    Ampersand164=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_paramName2371); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Ampersand.add(Ampersand164);
 
-                    Dollar165=(Token)match(input,Dollar,FOLLOW_Dollar_in_paramName2377); if (state.failed) return retval; 
+                    Dollar165=(Token)match(input,Dollar,FOLLOW_Dollar_in_paramName2373); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Dollar.add(Dollar165);
 
-                    UnquotedString166=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_paramName2379); if (state.failed) return retval; 
+                    UnquotedString166=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_paramName2375); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_UnquotedString.add(UnquotedString166);
 
 
 
                     // AST REWRITE
-                    // elements: Dollar, UnquotedString, Ampersand
+                    // elements: UnquotedString, Ampersand, Dollar
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4396,12 +4396,12 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 299:39: -> ^( Ampersand ^( Dollar UnquotedString ) )
                     {
-                        // Php.g:299:42: ^( Ampersand ^( Dollar UnquotedString ) )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:299:42: ^( Ampersand ^( Dollar UnquotedString ) )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(stream_Ampersand.nextNode(), root_1);
 
-                        // Php.g:299:54: ^( Dollar UnquotedString )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:299:54: ^( Dollar UnquotedString )
                         {
                         CommonTree root_2 = (CommonTree)adaptor.nil();
                         root_2 = (CommonTree)adaptor.becomeRoot(stream_Dollar.nextNode(), root_2);
@@ -4448,7 +4448,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "commaList"
-    // Php.g:302:1: commaList : expression ( ',' expression )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:302:1: commaList : expression ( ',' expression )* ;
     public final PhpParser.commaList_return commaList() throws RecognitionException {
         PhpParser.commaList_return retval = new PhpParser.commaList_return();
         retval.start = input.LT(1);
@@ -4465,18 +4465,18 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
-            // Php.g:303:5: ( expression ( ',' expression )* )
-            // Php.g:303:7: expression ( ',' expression )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:303:5: ( expression ( ',' expression )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:303:7: expression ( ',' expression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_expression_in_commaList2408);
+            pushFollow(FOLLOW_expression_in_commaList2404);
             expression167=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression167.getTree());
-            // Php.g:303:18: ( ',' expression )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:303:18: ( ',' expression )*
             loop44:
             do {
                 int alt44=2;
@@ -4489,10 +4489,10 @@ public class PhpParser extends Parser {
 
                 switch (alt44) {
             	case 1 :
-            	    // Php.g:303:19: ',' expression
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:303:19: ',' expression
             	    {
-            	    char_literal168=(Token)match(input,Comma,FOLLOW_Comma_in_commaList2411); if (state.failed) return retval;
-            	    pushFollow(FOLLOW_expression_in_commaList2414);
+            	    char_literal168=(Token)match(input,Comma,FOLLOW_Comma_in_commaList2407); if (state.failed) return retval;
+            	    pushFollow(FOLLOW_expression_in_commaList2410);
             	    expression169=expression();
 
             	    state._fsp--;
@@ -4537,7 +4537,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // Php.g:306:1: expression : weakLogicalOr ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:306:1: expression : weakLogicalOr ;
     public final PhpParser.expression_return expression() throws RecognitionException {
         PhpParser.expression_return retval = new PhpParser.expression_return();
         retval.start = input.LT(1);
@@ -4550,12 +4550,12 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
-            // Php.g:307:5: ( weakLogicalOr )
-            // Php.g:307:7: weakLogicalOr
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:307:5: ( weakLogicalOr )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:307:7: weakLogicalOr
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_weakLogicalOr_in_expression2438);
+            pushFollow(FOLLOW_weakLogicalOr_in_expression2434);
             weakLogicalOr170=weakLogicalOr();
 
             state._fsp--;
@@ -4591,7 +4591,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "weakLogicalOr"
-    // Php.g:310:1: weakLogicalOr : weakLogicalXor ( Or weakLogicalXor )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:310:1: weakLogicalOr : weakLogicalXor ( Or weakLogicalXor )* ;
     public final PhpParser.weakLogicalOr_return weakLogicalOr() throws RecognitionException {
         PhpParser.weakLogicalOr_return retval = new PhpParser.weakLogicalOr_return();
         retval.start = input.LT(1);
@@ -4608,32 +4608,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
-            // Php.g:311:5: ( weakLogicalXor ( Or weakLogicalXor )* )
-            // Php.g:311:7: weakLogicalXor ( Or weakLogicalXor )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:5: ( weakLogicalXor ( Or weakLogicalXor )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:7: weakLogicalXor ( Or weakLogicalXor )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_weakLogicalXor_in_weakLogicalOr2455);
+            pushFollow(FOLLOW_weakLogicalXor_in_weakLogicalOr2451);
             weakLogicalXor171=weakLogicalXor();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, weakLogicalXor171.getTree());
-            // Php.g:311:22: ( Or weakLogicalXor )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:22: ( Or weakLogicalXor )*
             loop45:
             do {
                 int alt45=2;
                 alt45 = dfa45.predict(input);
                 switch (alt45) {
             	case 1 :
-            	    // Php.g:311:23: Or weakLogicalXor
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:23: Or weakLogicalXor
             	    {
-            	    Or172=(Token)match(input,Or,FOLLOW_Or_in_weakLogicalOr2458); if (state.failed) return retval;
+            	    Or172=(Token)match(input,Or,FOLLOW_Or_in_weakLogicalOr2454); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    Or172_tree = (CommonTree)adaptor.create(Or172);
             	    root_0 = (CommonTree)adaptor.becomeRoot(Or172_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_weakLogicalXor_in_weakLogicalOr2461);
+            	    pushFollow(FOLLOW_weakLogicalXor_in_weakLogicalOr2457);
             	    weakLogicalXor173=weakLogicalXor();
 
             	    state._fsp--;
@@ -4678,7 +4678,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "weakLogicalXor"
-    // Php.g:314:1: weakLogicalXor : weakLogicalAnd ( Xor weakLogicalAnd )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:314:1: weakLogicalXor : weakLogicalAnd ( Xor weakLogicalAnd )* ;
     public final PhpParser.weakLogicalXor_return weakLogicalXor() throws RecognitionException {
         PhpParser.weakLogicalXor_return retval = new PhpParser.weakLogicalXor_return();
         retval.start = input.LT(1);
@@ -4695,32 +4695,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
-            // Php.g:315:5: ( weakLogicalAnd ( Xor weakLogicalAnd )* )
-            // Php.g:315:7: weakLogicalAnd ( Xor weakLogicalAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:5: ( weakLogicalAnd ( Xor weakLogicalAnd )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:7: weakLogicalAnd ( Xor weakLogicalAnd )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_weakLogicalAnd_in_weakLogicalXor2480);
+            pushFollow(FOLLOW_weakLogicalAnd_in_weakLogicalXor2476);
             weakLogicalAnd174=weakLogicalAnd();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, weakLogicalAnd174.getTree());
-            // Php.g:315:22: ( Xor weakLogicalAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:22: ( Xor weakLogicalAnd )*
             loop46:
             do {
                 int alt46=2;
                 alt46 = dfa46.predict(input);
                 switch (alt46) {
             	case 1 :
-            	    // Php.g:315:23: Xor weakLogicalAnd
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:23: Xor weakLogicalAnd
             	    {
-            	    Xor175=(Token)match(input,Xor,FOLLOW_Xor_in_weakLogicalXor2483); if (state.failed) return retval;
+            	    Xor175=(Token)match(input,Xor,FOLLOW_Xor_in_weakLogicalXor2479); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    Xor175_tree = (CommonTree)adaptor.create(Xor175);
             	    root_0 = (CommonTree)adaptor.becomeRoot(Xor175_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_weakLogicalAnd_in_weakLogicalXor2486);
+            	    pushFollow(FOLLOW_weakLogicalAnd_in_weakLogicalXor2482);
             	    weakLogicalAnd176=weakLogicalAnd();
 
             	    state._fsp--;
@@ -4765,7 +4765,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "weakLogicalAnd"
-    // Php.g:318:1: weakLogicalAnd : assignment ( And assignment )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:318:1: weakLogicalAnd : assignment ( And assignment )* ;
     public final PhpParser.weakLogicalAnd_return weakLogicalAnd() throws RecognitionException {
         PhpParser.weakLogicalAnd_return retval = new PhpParser.weakLogicalAnd_return();
         retval.start = input.LT(1);
@@ -4782,32 +4782,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
-            // Php.g:319:5: ( assignment ( And assignment )* )
-            // Php.g:319:7: assignment ( And assignment )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:5: ( assignment ( And assignment )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:7: assignment ( And assignment )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_assignment_in_weakLogicalAnd2509);
+            pushFollow(FOLLOW_assignment_in_weakLogicalAnd2505);
             assignment177=assignment();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment177.getTree());
-            // Php.g:319:18: ( And assignment )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:18: ( And assignment )*
             loop47:
             do {
                 int alt47=2;
                 alt47 = dfa47.predict(input);
                 switch (alt47) {
             	case 1 :
-            	    // Php.g:319:19: And assignment
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:19: And assignment
             	    {
-            	    And178=(Token)match(input,And,FOLLOW_And_in_weakLogicalAnd2512); if (state.failed) return retval;
+            	    And178=(Token)match(input,And,FOLLOW_And_in_weakLogicalAnd2508); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    And178_tree = (CommonTree)adaptor.create(And178);
             	    root_0 = (CommonTree)adaptor.becomeRoot(And178_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_assignment_in_weakLogicalAnd2515);
+            	    pushFollow(FOLLOW_assignment_in_weakLogicalAnd2511);
             	    assignment179=assignment();
 
             	    state._fsp--;
@@ -4852,7 +4852,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "assignment"
-    // Php.g:322:1: assignment : ( name ( ( Equals | AsignmentOperator ) assignment ) | ternary );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:322:1: assignment : ( name ( ( Equals | AsignmentOperator ) assignment ) | ternary );
     public final PhpParser.assignment_return assignment() throws RecognitionException {
         PhpParser.assignment_return retval = new PhpParser.assignment_return();
         retval.start = input.LT(1);
@@ -4871,23 +4871,23 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
-            // Php.g:323:5: ( name ( ( Equals | AsignmentOperator ) assignment ) | ternary )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:5: ( name ( ( Equals | AsignmentOperator ) assignment ) | ternary )
             int alt48=2;
             alt48 = dfa48.predict(input);
             switch (alt48) {
                 case 1 :
-                    // Php.g:323:7: name ( ( Equals | AsignmentOperator ) assignment )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:7: name ( ( Equals | AsignmentOperator ) assignment )
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_assignment2534);
+                    pushFollow(FOLLOW_name_in_assignment2530);
                     name180=name();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, name180.getTree());
-                    // Php.g:323:12: ( ( Equals | AsignmentOperator ) assignment )
-                    // Php.g:323:13: ( Equals | AsignmentOperator ) assignment
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:12: ( ( Equals | AsignmentOperator ) assignment )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:13: ( Equals | AsignmentOperator ) assignment
                     {
                     set181=(Token)input.LT(1);
                     set181=(Token)input.LT(1);
@@ -4902,7 +4902,7 @@ public class PhpParser extends Parser {
                         throw mse;
                     }
 
-                    pushFollow(FOLLOW_assignment_in_assignment2546);
+                    pushFollow(FOLLOW_assignment_in_assignment2542);
                     assignment182=assignment();
 
                     state._fsp--;
@@ -4915,11 +4915,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:324:7: ternary
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:324:7: ternary
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_ternary_in_assignment2555);
+                    pushFollow(FOLLOW_ternary_in_assignment2551);
                     ternary183=ternary();
 
                     state._fsp--;
@@ -4957,7 +4957,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "ternary"
-    // Php.g:327:1: ternary : ( logicalOr QuestionMark expression Colon expression -> ^( IfExpression logicalOr ( expression )* ) | logicalOr );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:327:1: ternary : ( logicalOr QuestionMark expression Colon expression -> ^( IfExpression logicalOr ( expression )* ) | logicalOr );
     public final PhpParser.ternary_return ternary() throws RecognitionException {
         PhpParser.ternary_return retval = new PhpParser.ternary_return();
         retval.start = input.LT(1);
@@ -4983,32 +4983,32 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
-            // Php.g:328:5: ( logicalOr QuestionMark expression Colon expression -> ^( IfExpression logicalOr ( expression )* ) | logicalOr )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:5: ( logicalOr QuestionMark expression Colon expression -> ^( IfExpression logicalOr ( expression )* ) | logicalOr )
             int alt49=2;
             alt49 = dfa49.predict(input);
             switch (alt49) {
                 case 1 :
-                    // Php.g:328:7: logicalOr QuestionMark expression Colon expression
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:7: logicalOr QuestionMark expression Colon expression
                     {
-                    pushFollow(FOLLOW_logicalOr_in_ternary2572);
+                    pushFollow(FOLLOW_logicalOr_in_ternary2568);
                     logicalOr184=logicalOr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_logicalOr.add(logicalOr184.getTree());
-                    QuestionMark185=(Token)match(input,QuestionMark,FOLLOW_QuestionMark_in_ternary2574); if (state.failed) return retval; 
+                    QuestionMark185=(Token)match(input,QuestionMark,FOLLOW_QuestionMark_in_ternary2570); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_QuestionMark.add(QuestionMark185);
 
-                    pushFollow(FOLLOW_expression_in_ternary2576);
+                    pushFollow(FOLLOW_expression_in_ternary2572);
                     expression186=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(expression186.getTree());
-                    Colon187=(Token)match(input,Colon,FOLLOW_Colon_in_ternary2578); if (state.failed) return retval; 
+                    Colon187=(Token)match(input,Colon,FOLLOW_Colon_in_ternary2574); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_Colon.add(Colon187);
 
-                    pushFollow(FOLLOW_expression_in_ternary2580);
+                    pushFollow(FOLLOW_expression_in_ternary2576);
                     expression188=expression();
 
                     state._fsp--;
@@ -5017,7 +5017,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression, logicalOr
+                    // elements: logicalOr, expression
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -5030,13 +5030,13 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 328:58: -> ^( IfExpression logicalOr ( expression )* )
                     {
-                        // Php.g:328:61: ^( IfExpression logicalOr ( expression )* )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:61: ^( IfExpression logicalOr ( expression )* )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(IfExpression, "IfExpression"), root_1);
 
                         adaptor.addChild(root_1, stream_logicalOr.nextTree());
-                        // Php.g:328:86: ( expression )*
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:86: ( expression )*
                         while ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -5052,11 +5052,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:329:7: logicalOr
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:329:7: logicalOr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_logicalOr_in_ternary2599);
+                    pushFollow(FOLLOW_logicalOr_in_ternary2595);
                     logicalOr189=logicalOr();
 
                     state._fsp--;
@@ -5094,7 +5094,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "logicalOr"
-    // Php.g:332:1: logicalOr : logicalAnd ( LogicalOr logicalAnd )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:332:1: logicalOr : logicalAnd ( LogicalOr logicalAnd )* ;
     public final PhpParser.logicalOr_return logicalOr() throws RecognitionException {
         PhpParser.logicalOr_return retval = new PhpParser.logicalOr_return();
         retval.start = input.LT(1);
@@ -5111,32 +5111,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
-            // Php.g:333:5: ( logicalAnd ( LogicalOr logicalAnd )* )
-            // Php.g:333:7: logicalAnd ( LogicalOr logicalAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:333:5: ( logicalAnd ( LogicalOr logicalAnd )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:333:7: logicalAnd ( LogicalOr logicalAnd )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_logicalAnd_in_logicalOr2620);
+            pushFollow(FOLLOW_logicalAnd_in_logicalOr2616);
             logicalAnd190=logicalAnd();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, logicalAnd190.getTree());
-            // Php.g:333:18: ( LogicalOr logicalAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:333:18: ( LogicalOr logicalAnd )*
             loop50:
             do {
                 int alt50=2;
                 alt50 = dfa50.predict(input);
                 switch (alt50) {
             	case 1 :
-            	    // Php.g:333:19: LogicalOr logicalAnd
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:333:19: LogicalOr logicalAnd
             	    {
-            	    LogicalOr191=(Token)match(input,LogicalOr,FOLLOW_LogicalOr_in_logicalOr2623); if (state.failed) return retval;
+            	    LogicalOr191=(Token)match(input,LogicalOr,FOLLOW_LogicalOr_in_logicalOr2619); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    LogicalOr191_tree = (CommonTree)adaptor.create(LogicalOr191);
             	    root_0 = (CommonTree)adaptor.becomeRoot(LogicalOr191_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_logicalAnd_in_logicalOr2626);
+            	    pushFollow(FOLLOW_logicalAnd_in_logicalOr2622);
             	    logicalAnd192=logicalAnd();
 
             	    state._fsp--;
@@ -5181,7 +5181,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "logicalAnd"
-    // Php.g:336:1: logicalAnd : bitwiseOr ( LogicalAnd bitwiseOr )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:336:1: logicalAnd : bitwiseOr ( LogicalAnd bitwiseOr )* ;
     public final PhpParser.logicalAnd_return logicalAnd() throws RecognitionException {
         PhpParser.logicalAnd_return retval = new PhpParser.logicalAnd_return();
         retval.start = input.LT(1);
@@ -5198,32 +5198,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
-            // Php.g:337:5: ( bitwiseOr ( LogicalAnd bitwiseOr )* )
-            // Php.g:337:7: bitwiseOr ( LogicalAnd bitwiseOr )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:337:5: ( bitwiseOr ( LogicalAnd bitwiseOr )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:337:7: bitwiseOr ( LogicalAnd bitwiseOr )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_bitwiseOr_in_logicalAnd2645);
+            pushFollow(FOLLOW_bitwiseOr_in_logicalAnd2641);
             bitwiseOr193=bitwiseOr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, bitwiseOr193.getTree());
-            // Php.g:337:17: ( LogicalAnd bitwiseOr )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:337:17: ( LogicalAnd bitwiseOr )*
             loop51:
             do {
                 int alt51=2;
                 alt51 = dfa51.predict(input);
                 switch (alt51) {
             	case 1 :
-            	    // Php.g:337:18: LogicalAnd bitwiseOr
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:337:18: LogicalAnd bitwiseOr
             	    {
-            	    LogicalAnd194=(Token)match(input,LogicalAnd,FOLLOW_LogicalAnd_in_logicalAnd2648); if (state.failed) return retval;
+            	    LogicalAnd194=(Token)match(input,LogicalAnd,FOLLOW_LogicalAnd_in_logicalAnd2644); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    LogicalAnd194_tree = (CommonTree)adaptor.create(LogicalAnd194);
             	    root_0 = (CommonTree)adaptor.becomeRoot(LogicalAnd194_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_bitwiseOr_in_logicalAnd2651);
+            	    pushFollow(FOLLOW_bitwiseOr_in_logicalAnd2647);
             	    bitwiseOr195=bitwiseOr();
 
             	    state._fsp--;
@@ -5268,7 +5268,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "bitwiseOr"
-    // Php.g:340:1: bitwiseOr : bitWiseAnd ( Pipe bitWiseAnd )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:340:1: bitwiseOr : bitWiseAnd ( Pipe bitWiseAnd )* ;
     public final PhpParser.bitwiseOr_return bitwiseOr() throws RecognitionException {
         PhpParser.bitwiseOr_return retval = new PhpParser.bitwiseOr_return();
         retval.start = input.LT(1);
@@ -5285,32 +5285,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
-            // Php.g:341:5: ( bitWiseAnd ( Pipe bitWiseAnd )* )
-            // Php.g:341:7: bitWiseAnd ( Pipe bitWiseAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:341:5: ( bitWiseAnd ( Pipe bitWiseAnd )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:341:7: bitWiseAnd ( Pipe bitWiseAnd )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_bitWiseAnd_in_bitwiseOr2674);
+            pushFollow(FOLLOW_bitWiseAnd_in_bitwiseOr2670);
             bitWiseAnd196=bitWiseAnd();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, bitWiseAnd196.getTree());
-            // Php.g:341:18: ( Pipe bitWiseAnd )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:341:18: ( Pipe bitWiseAnd )*
             loop52:
             do {
                 int alt52=2;
                 alt52 = dfa52.predict(input);
                 switch (alt52) {
             	case 1 :
-            	    // Php.g:341:19: Pipe bitWiseAnd
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:341:19: Pipe bitWiseAnd
             	    {
-            	    Pipe197=(Token)match(input,Pipe,FOLLOW_Pipe_in_bitwiseOr2677); if (state.failed) return retval;
+            	    Pipe197=(Token)match(input,Pipe,FOLLOW_Pipe_in_bitwiseOr2673); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    Pipe197_tree = (CommonTree)adaptor.create(Pipe197);
             	    root_0 = (CommonTree)adaptor.becomeRoot(Pipe197_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_bitWiseAnd_in_bitwiseOr2680);
+            	    pushFollow(FOLLOW_bitWiseAnd_in_bitwiseOr2676);
             	    bitWiseAnd198=bitWiseAnd();
 
             	    state._fsp--;
@@ -5355,7 +5355,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "bitWiseAnd"
-    // Php.g:344:1: bitWiseAnd : equalityCheck ( Ampersand equalityCheck )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:344:1: bitWiseAnd : equalityCheck ( Ampersand equalityCheck )* ;
     public final PhpParser.bitWiseAnd_return bitWiseAnd() throws RecognitionException {
         PhpParser.bitWiseAnd_return retval = new PhpParser.bitWiseAnd_return();
         retval.start = input.LT(1);
@@ -5372,32 +5372,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
-            // Php.g:345:5: ( equalityCheck ( Ampersand equalityCheck )* )
-            // Php.g:345:7: equalityCheck ( Ampersand equalityCheck )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:345:5: ( equalityCheck ( Ampersand equalityCheck )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:345:7: equalityCheck ( Ampersand equalityCheck )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_equalityCheck_in_bitWiseAnd2699);
+            pushFollow(FOLLOW_equalityCheck_in_bitWiseAnd2695);
             equalityCheck199=equalityCheck();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, equalityCheck199.getTree());
-            // Php.g:345:21: ( Ampersand equalityCheck )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:345:21: ( Ampersand equalityCheck )*
             loop53:
             do {
                 int alt53=2;
                 alt53 = dfa53.predict(input);
                 switch (alt53) {
             	case 1 :
-            	    // Php.g:345:22: Ampersand equalityCheck
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:345:22: Ampersand equalityCheck
             	    {
-            	    Ampersand200=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_bitWiseAnd2702); if (state.failed) return retval;
+            	    Ampersand200=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_bitWiseAnd2698); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    Ampersand200_tree = (CommonTree)adaptor.create(Ampersand200);
             	    root_0 = (CommonTree)adaptor.becomeRoot(Ampersand200_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_equalityCheck_in_bitWiseAnd2705);
+            	    pushFollow(FOLLOW_equalityCheck_in_bitWiseAnd2701);
             	    equalityCheck201=equalityCheck();
 
             	    state._fsp--;
@@ -5442,7 +5442,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "equalityCheck"
-    // Php.g:348:1: equalityCheck : comparisionCheck ( EqualityOperator comparisionCheck )? ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:348:1: equalityCheck : comparisionCheck ( EqualityOperator comparisionCheck )? ;
     public final PhpParser.equalityCheck_return equalityCheck() throws RecognitionException {
         PhpParser.equalityCheck_return retval = new PhpParser.equalityCheck_return();
         retval.start = input.LT(1);
@@ -5459,30 +5459,30 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
-            // Php.g:349:5: ( comparisionCheck ( EqualityOperator comparisionCheck )? )
-            // Php.g:349:7: comparisionCheck ( EqualityOperator comparisionCheck )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:349:5: ( comparisionCheck ( EqualityOperator comparisionCheck )? )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:349:7: comparisionCheck ( EqualityOperator comparisionCheck )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_comparisionCheck_in_equalityCheck2724);
+            pushFollow(FOLLOW_comparisionCheck_in_equalityCheck2720);
             comparisionCheck202=comparisionCheck();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, comparisionCheck202.getTree());
-            // Php.g:349:24: ( EqualityOperator comparisionCheck )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:349:24: ( EqualityOperator comparisionCheck )?
             int alt54=2;
             alt54 = dfa54.predict(input);
             switch (alt54) {
                 case 1 :
-                    // Php.g:349:25: EqualityOperator comparisionCheck
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:349:25: EqualityOperator comparisionCheck
                     {
-                    EqualityOperator203=(Token)match(input,EqualityOperator,FOLLOW_EqualityOperator_in_equalityCheck2727); if (state.failed) return retval;
+                    EqualityOperator203=(Token)match(input,EqualityOperator,FOLLOW_EqualityOperator_in_equalityCheck2723); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     EqualityOperator203_tree = (CommonTree)adaptor.create(EqualityOperator203);
                     root_0 = (CommonTree)adaptor.becomeRoot(EqualityOperator203_tree, root_0);
                     }
-                    pushFollow(FOLLOW_comparisionCheck_in_equalityCheck2730);
+                    pushFollow(FOLLOW_comparisionCheck_in_equalityCheck2726);
                     comparisionCheck204=comparisionCheck();
 
                     state._fsp--;
@@ -5524,7 +5524,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "comparisionCheck"
-    // Php.g:352:1: comparisionCheck : bitWiseShift ( ComparisionOperator bitWiseShift )? ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:352:1: comparisionCheck : bitWiseShift ( ComparisionOperator bitWiseShift )? ;
     public final PhpParser.comparisionCheck_return comparisionCheck() throws RecognitionException {
         PhpParser.comparisionCheck_return retval = new PhpParser.comparisionCheck_return();
         retval.start = input.LT(1);
@@ -5541,30 +5541,30 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
-            // Php.g:353:5: ( bitWiseShift ( ComparisionOperator bitWiseShift )? )
-            // Php.g:353:7: bitWiseShift ( ComparisionOperator bitWiseShift )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:353:5: ( bitWiseShift ( ComparisionOperator bitWiseShift )? )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:353:7: bitWiseShift ( ComparisionOperator bitWiseShift )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_bitWiseShift_in_comparisionCheck2753);
+            pushFollow(FOLLOW_bitWiseShift_in_comparisionCheck2749);
             bitWiseShift205=bitWiseShift();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, bitWiseShift205.getTree());
-            // Php.g:353:20: ( ComparisionOperator bitWiseShift )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:353:20: ( ComparisionOperator bitWiseShift )?
             int alt55=2;
             alt55 = dfa55.predict(input);
             switch (alt55) {
                 case 1 :
-                    // Php.g:353:21: ComparisionOperator bitWiseShift
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:353:21: ComparisionOperator bitWiseShift
                     {
-                    ComparisionOperator206=(Token)match(input,ComparisionOperator,FOLLOW_ComparisionOperator_in_comparisionCheck2756); if (state.failed) return retval;
+                    ComparisionOperator206=(Token)match(input,ComparisionOperator,FOLLOW_ComparisionOperator_in_comparisionCheck2752); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     ComparisionOperator206_tree = (CommonTree)adaptor.create(ComparisionOperator206);
                     root_0 = (CommonTree)adaptor.becomeRoot(ComparisionOperator206_tree, root_0);
                     }
-                    pushFollow(FOLLOW_bitWiseShift_in_comparisionCheck2759);
+                    pushFollow(FOLLOW_bitWiseShift_in_comparisionCheck2755);
                     bitWiseShift207=bitWiseShift();
 
                     state._fsp--;
@@ -5606,7 +5606,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "bitWiseShift"
-    // Php.g:356:1: bitWiseShift : addition ( ShiftOperator addition )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:356:1: bitWiseShift : addition ( ShiftOperator addition )* ;
     public final PhpParser.bitWiseShift_return bitWiseShift() throws RecognitionException {
         PhpParser.bitWiseShift_return retval = new PhpParser.bitWiseShift_return();
         retval.start = input.LT(1);
@@ -5623,32 +5623,32 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
-            // Php.g:357:5: ( addition ( ShiftOperator addition )* )
-            // Php.g:357:7: addition ( ShiftOperator addition )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:357:5: ( addition ( ShiftOperator addition )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:357:7: addition ( ShiftOperator addition )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_addition_in_bitWiseShift2778);
+            pushFollow(FOLLOW_addition_in_bitWiseShift2774);
             addition208=addition();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, addition208.getTree());
-            // Php.g:357:16: ( ShiftOperator addition )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:357:16: ( ShiftOperator addition )*
             loop56:
             do {
                 int alt56=2;
                 alt56 = dfa56.predict(input);
                 switch (alt56) {
             	case 1 :
-            	    // Php.g:357:17: ShiftOperator addition
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:357:17: ShiftOperator addition
             	    {
-            	    ShiftOperator209=(Token)match(input,ShiftOperator,FOLLOW_ShiftOperator_in_bitWiseShift2781); if (state.failed) return retval;
+            	    ShiftOperator209=(Token)match(input,ShiftOperator,FOLLOW_ShiftOperator_in_bitWiseShift2777); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    ShiftOperator209_tree = (CommonTree)adaptor.create(ShiftOperator209);
             	    root_0 = (CommonTree)adaptor.becomeRoot(ShiftOperator209_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_addition_in_bitWiseShift2784);
+            	    pushFollow(FOLLOW_addition_in_bitWiseShift2780);
             	    addition210=addition();
 
             	    state._fsp--;
@@ -5693,7 +5693,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "addition"
-    // Php.g:360:1: addition : multiplication ( ( Plus | Minus | Dot ) multiplication )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:360:1: addition : multiplication ( ( Plus | Minus | Dot ) multiplication )* ;
     public final PhpParser.addition_return addition() throws RecognitionException {
         PhpParser.addition_return retval = new PhpParser.addition_return();
         retval.start = input.LT(1);
@@ -5710,25 +5710,25 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
-            // Php.g:361:5: ( multiplication ( ( Plus | Minus | Dot ) multiplication )* )
-            // Php.g:361:7: multiplication ( ( Plus | Minus | Dot ) multiplication )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:361:5: ( multiplication ( ( Plus | Minus | Dot ) multiplication )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:361:7: multiplication ( ( Plus | Minus | Dot ) multiplication )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_multiplication_in_addition2807);
+            pushFollow(FOLLOW_multiplication_in_addition2803);
             multiplication211=multiplication();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplication211.getTree());
-            // Php.g:361:22: ( ( Plus | Minus | Dot ) multiplication )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:361:22: ( ( Plus | Minus | Dot ) multiplication )*
             loop57:
             do {
                 int alt57=2;
                 alt57 = dfa57.predict(input);
                 switch (alt57) {
             	case 1 :
-            	    // Php.g:361:23: ( Plus | Minus | Dot ) multiplication
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:361:23: ( Plus | Minus | Dot ) multiplication
             	    {
             	    set212=(Token)input.LT(1);
             	    set212=(Token)input.LT(1);
@@ -5743,7 +5743,7 @@ public class PhpParser extends Parser {
             	        throw mse;
             	    }
 
-            	    pushFollow(FOLLOW_multiplication_in_addition2823);
+            	    pushFollow(FOLLOW_multiplication_in_addition2819);
             	    multiplication213=multiplication();
 
             	    state._fsp--;
@@ -5788,7 +5788,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "multiplication"
-    // Php.g:364:1: multiplication : logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:364:1: multiplication : logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )* ;
     public final PhpParser.multiplication_return multiplication() throws RecognitionException {
         PhpParser.multiplication_return retval = new PhpParser.multiplication_return();
         retval.start = input.LT(1);
@@ -5805,25 +5805,25 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
-            // Php.g:365:5: ( logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )* )
-            // Php.g:365:7: logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:365:5: ( logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:365:7: logicalNot ( ( Asterisk | Forwardslash | Percent ) logicalNot )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_logicalNot_in_multiplication2842);
+            pushFollow(FOLLOW_logicalNot_in_multiplication2838);
             logicalNot214=logicalNot();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, logicalNot214.getTree());
-            // Php.g:365:18: ( ( Asterisk | Forwardslash | Percent ) logicalNot )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:365:18: ( ( Asterisk | Forwardslash | Percent ) logicalNot )*
             loop58:
             do {
                 int alt58=2;
                 alt58 = dfa58.predict(input);
                 switch (alt58) {
             	case 1 :
-            	    // Php.g:365:19: ( Asterisk | Forwardslash | Percent ) logicalNot
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:365:19: ( Asterisk | Forwardslash | Percent ) logicalNot
             	    {
             	    set215=(Token)input.LT(1);
             	    set215=(Token)input.LT(1);
@@ -5838,7 +5838,7 @@ public class PhpParser extends Parser {
             	        throw mse;
             	    }
 
-            	    pushFollow(FOLLOW_logicalNot_in_multiplication2858);
+            	    pushFollow(FOLLOW_logicalNot_in_multiplication2854);
             	    logicalNot216=logicalNot();
 
             	    state._fsp--;
@@ -5883,7 +5883,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "logicalNot"
-    // Php.g:368:1: logicalNot : ( Bang logicalNot | instanceOf );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:368:1: logicalNot : ( Bang logicalNot | instanceOf );
     public final PhpParser.logicalNot_return logicalNot() throws RecognitionException {
         PhpParser.logicalNot_return retval = new PhpParser.logicalNot_return();
         retval.start = input.LT(1);
@@ -5900,21 +5900,21 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
-            // Php.g:369:5: ( Bang logicalNot | instanceOf )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:369:5: ( Bang logicalNot | instanceOf )
             int alt59=2;
             alt59 = dfa59.predict(input);
             switch (alt59) {
                 case 1 :
-                    // Php.g:369:7: Bang logicalNot
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:369:7: Bang logicalNot
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Bang217=(Token)match(input,Bang,FOLLOW_Bang_in_logicalNot2877); if (state.failed) return retval;
+                    Bang217=(Token)match(input,Bang,FOLLOW_Bang_in_logicalNot2873); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Bang217_tree = (CommonTree)adaptor.create(Bang217);
                     root_0 = (CommonTree)adaptor.becomeRoot(Bang217_tree, root_0);
                     }
-                    pushFollow(FOLLOW_logicalNot_in_logicalNot2880);
+                    pushFollow(FOLLOW_logicalNot_in_logicalNot2876);
                     logicalNot218=logicalNot();
 
                     state._fsp--;
@@ -5924,11 +5924,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:370:7: instanceOf
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:370:7: instanceOf
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceOf_in_logicalNot2888);
+                    pushFollow(FOLLOW_instanceOf_in_logicalNot2884);
                     instanceOf219=instanceOf();
 
                     state._fsp--;
@@ -5966,7 +5966,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "instanceOf"
-    // Php.g:373:1: instanceOf : negateOrCast ( Instanceof negateOrCast )? ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:373:1: instanceOf : negateOrCast ( Instanceof negateOrCast )? ;
     public final PhpParser.instanceOf_return instanceOf() throws RecognitionException {
         PhpParser.instanceOf_return retval = new PhpParser.instanceOf_return();
         retval.start = input.LT(1);
@@ -5983,30 +5983,30 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return retval; }
-            // Php.g:374:5: ( negateOrCast ( Instanceof negateOrCast )? )
-            // Php.g:374:7: negateOrCast ( Instanceof negateOrCast )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:374:5: ( negateOrCast ( Instanceof negateOrCast )? )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:374:7: negateOrCast ( Instanceof negateOrCast )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_negateOrCast_in_instanceOf2905);
+            pushFollow(FOLLOW_negateOrCast_in_instanceOf2901);
             negateOrCast220=negateOrCast();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, negateOrCast220.getTree());
-            // Php.g:374:20: ( Instanceof negateOrCast )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:374:20: ( Instanceof negateOrCast )?
             int alt60=2;
             alt60 = dfa60.predict(input);
             switch (alt60) {
                 case 1 :
-                    // Php.g:374:21: Instanceof negateOrCast
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:374:21: Instanceof negateOrCast
                     {
-                    Instanceof221=(Token)match(input,Instanceof,FOLLOW_Instanceof_in_instanceOf2908); if (state.failed) return retval;
+                    Instanceof221=(Token)match(input,Instanceof,FOLLOW_Instanceof_in_instanceOf2904); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Instanceof221_tree = (CommonTree)adaptor.create(Instanceof221);
                     root_0 = (CommonTree)adaptor.becomeRoot(Instanceof221_tree, root_0);
                     }
-                    pushFollow(FOLLOW_negateOrCast_in_instanceOf2911);
+                    pushFollow(FOLLOW_negateOrCast_in_instanceOf2907);
                     negateOrCast222=negateOrCast();
 
                     state._fsp--;
@@ -6048,7 +6048,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "negateOrCast"
-    // Php.g:377:1: negateOrCast : ( ( Tilde | Minus | SuppressWarnings ) increment | OpenBrace PrimitiveType CloseBrace increment -> ^( Cast PrimitiveType increment ) | OpenBrace weakLogicalAnd CloseBrace | increment );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:377:1: negateOrCast : ( ( Tilde | Minus | SuppressWarnings ) increment | OpenRoundBracket PrimitiveType CloseRoundBracket increment -> ^( Cast PrimitiveType increment ) | OpenRoundBracket weakLogicalAnd CloseRoundBracket | increment );
     public final PhpParser.negateOrCast_return negateOrCast() throws RecognitionException {
         PhpParser.negateOrCast_return retval = new PhpParser.negateOrCast_return();
         retval.start = input.LT(1);
@@ -6056,11 +6056,11 @@ public class PhpParser extends Parser {
         CommonTree root_0 = null;
 
         Token set223=null;
-        Token OpenBrace225=null;
+        Token OpenRoundBracket225=null;
         Token PrimitiveType226=null;
-        Token CloseBrace227=null;
-        Token OpenBrace229=null;
-        Token CloseBrace231=null;
+        Token CloseRoundBracket227=null;
+        Token OpenRoundBracket229=null;
+        Token CloseRoundBracket231=null;
         PhpParser.increment_return increment224 = null;
 
         PhpParser.increment_return increment228 = null;
@@ -6071,23 +6071,23 @@ public class PhpParser extends Parser {
 
 
         CommonTree set223_tree=null;
-        CommonTree OpenBrace225_tree=null;
+        CommonTree OpenRoundBracket225_tree=null;
         CommonTree PrimitiveType226_tree=null;
-        CommonTree CloseBrace227_tree=null;
-        CommonTree OpenBrace229_tree=null;
-        CommonTree CloseBrace231_tree=null;
+        CommonTree CloseRoundBracket227_tree=null;
+        CommonTree OpenRoundBracket229_tree=null;
+        CommonTree CloseRoundBracket231_tree=null;
         RewriteRuleTokenStream stream_PrimitiveType=new RewriteRuleTokenStream(adaptor,"token PrimitiveType");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleSubtreeStream stream_increment=new RewriteRuleSubtreeStream(adaptor,"rule increment");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return retval; }
-            // Php.g:378:5: ( ( Tilde | Minus | SuppressWarnings ) increment | OpenBrace PrimitiveType CloseBrace increment -> ^( Cast PrimitiveType increment ) | OpenBrace weakLogicalAnd CloseBrace | increment )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:378:5: ( ( Tilde | Minus | SuppressWarnings ) increment | OpenRoundBracket PrimitiveType CloseRoundBracket increment -> ^( Cast PrimitiveType increment ) | OpenRoundBracket weakLogicalAnd CloseRoundBracket | increment )
             int alt61=4;
             alt61 = dfa61.predict(input);
             switch (alt61) {
                 case 1 :
-                    // Php.g:378:7: ( Tilde | Minus | SuppressWarnings ) increment
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:378:7: ( Tilde | Minus | SuppressWarnings ) increment
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -6104,7 +6104,7 @@ public class PhpParser extends Parser {
                         throw mse;
                     }
 
-                    pushFollow(FOLLOW_increment_in_negateOrCast2943);
+                    pushFollow(FOLLOW_increment_in_negateOrCast2939);
                     increment224=increment();
 
                     state._fsp--;
@@ -6114,18 +6114,18 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:379:7: OpenBrace PrimitiveType CloseBrace increment
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:379:7: OpenRoundBracket PrimitiveType CloseRoundBracket increment
                     {
-                    OpenBrace225=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_negateOrCast2951); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(OpenBrace225);
+                    OpenRoundBracket225=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_negateOrCast2947); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(OpenRoundBracket225);
 
-                    PrimitiveType226=(Token)match(input,PrimitiveType,FOLLOW_PrimitiveType_in_negateOrCast2953); if (state.failed) return retval; 
+                    PrimitiveType226=(Token)match(input,PrimitiveType,FOLLOW_PrimitiveType_in_negateOrCast2949); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_PrimitiveType.add(PrimitiveType226);
 
-                    CloseBrace227=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_negateOrCast2955); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(CloseBrace227);
+                    CloseRoundBracket227=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_negateOrCast2951); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(CloseRoundBracket227);
 
-                    pushFollow(FOLLOW_increment_in_negateOrCast2957);
+                    pushFollow(FOLLOW_increment_in_negateOrCast2953);
                     increment228=increment();
 
                     state._fsp--;
@@ -6134,7 +6134,7 @@ public class PhpParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: increment, PrimitiveType
+                    // elements: PrimitiveType, increment
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -6145,9 +6145,9 @@ public class PhpParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 379:52: -> ^( Cast PrimitiveType increment )
+                    // 379:66: -> ^( Cast PrimitiveType increment )
                     {
-                        // Php.g:379:55: ^( Cast PrimitiveType increment )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:379:69: ^( Cast PrimitiveType increment )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Cast, "Cast"), root_1);
@@ -6164,27 +6164,27 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:380:7: OpenBrace weakLogicalAnd CloseBrace
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:380:7: OpenRoundBracket weakLogicalAnd CloseRoundBracket
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    OpenBrace229=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_negateOrCast2975); if (state.failed) return retval;
-                    pushFollow(FOLLOW_weakLogicalAnd_in_negateOrCast2978);
+                    OpenRoundBracket229=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_negateOrCast2971); if (state.failed) return retval;
+                    pushFollow(FOLLOW_weakLogicalAnd_in_negateOrCast2974);
                     weakLogicalAnd230=weakLogicalAnd();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, weakLogicalAnd230.getTree());
-                    CloseBrace231=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_negateOrCast2980); if (state.failed) return retval;
+                    CloseRoundBracket231=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_negateOrCast2976); if (state.failed) return retval;
 
                     }
                     break;
                 case 4 :
-                    // Php.g:381:7: increment
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:381:7: increment
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_increment_in_negateOrCast2989);
+                    pushFollow(FOLLOW_increment_in_negateOrCast2985);
                     increment232=increment();
 
                     state._fsp--;
@@ -6222,7 +6222,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "increment"
-    // Php.g:384:1: increment : ( IncrementOperator name -> ^( Prefix IncrementOperator name ) | name IncrementOperator -> ^( Postfix IncrementOperator name ) | newOrClone );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:384:1: increment : ( IncrementOperator name -> ^( Prefix IncrementOperator name ) | name IncrementOperator -> ^( Postfix IncrementOperator name ) | newOrClone );
     public final PhpParser.increment_return increment() throws RecognitionException {
         PhpParser.increment_return retval = new PhpParser.increment_return();
         retval.start = input.LT(1);
@@ -6244,17 +6244,17 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return retval; }
-            // Php.g:385:5: ( IncrementOperator name -> ^( Prefix IncrementOperator name ) | name IncrementOperator -> ^( Postfix IncrementOperator name ) | newOrClone )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:385:5: ( IncrementOperator name -> ^( Prefix IncrementOperator name ) | name IncrementOperator -> ^( Postfix IncrementOperator name ) | newOrClone )
             int alt62=3;
             alt62 = dfa62.predict(input);
             switch (alt62) {
                 case 1 :
-                    // Php.g:385:7: IncrementOperator name
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:385:7: IncrementOperator name
                     {
-                    IncrementOperator233=(Token)match(input,IncrementOperator,FOLLOW_IncrementOperator_in_increment3006); if (state.failed) return retval; 
+                    IncrementOperator233=(Token)match(input,IncrementOperator,FOLLOW_IncrementOperator_in_increment3002); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IncrementOperator.add(IncrementOperator233);
 
-                    pushFollow(FOLLOW_name_in_increment3008);
+                    pushFollow(FOLLOW_name_in_increment3004);
                     name234=name();
 
                     state._fsp--;
@@ -6276,7 +6276,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 385:30: -> ^( Prefix IncrementOperator name )
                     {
-                        // Php.g:385:33: ^( Prefix IncrementOperator name )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:385:33: ^( Prefix IncrementOperator name )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Prefix, "Prefix"), root_1);
@@ -6293,15 +6293,15 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:386:7: name IncrementOperator
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:386:7: name IncrementOperator
                     {
-                    pushFollow(FOLLOW_name_in_increment3026);
+                    pushFollow(FOLLOW_name_in_increment3022);
                     name235=name();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_name.add(name235.getTree());
-                    IncrementOperator236=(Token)match(input,IncrementOperator,FOLLOW_IncrementOperator_in_increment3028); if (state.failed) return retval; 
+                    IncrementOperator236=(Token)match(input,IncrementOperator,FOLLOW_IncrementOperator_in_increment3024); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IncrementOperator.add(IncrementOperator236);
 
 
@@ -6320,7 +6320,7 @@ public class PhpParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 386:30: -> ^( Postfix IncrementOperator name )
                     {
-                        // Php.g:386:33: ^( Postfix IncrementOperator name )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:386:33: ^( Postfix IncrementOperator name )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Postfix, "Postfix"), root_1);
@@ -6337,11 +6337,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:387:7: newOrClone
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:387:7: newOrClone
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_newOrClone_in_increment3046);
+                    pushFollow(FOLLOW_newOrClone_in_increment3042);
                     newOrClone237=newOrClone();
 
                     state._fsp--;
@@ -6379,7 +6379,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "newOrClone"
-    // Php.g:390:1: newOrClone : ( New nameOrFunctionCall | Clone name | atomOrReference );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:390:1: newOrClone : ( New nameOrFunctionCall | Clone name | atomOrReference );
     public final PhpParser.newOrClone_return newOrClone() throws RecognitionException {
         PhpParser.newOrClone_return retval = new PhpParser.newOrClone_return();
         retval.start = input.LT(1);
@@ -6400,21 +6400,21 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return retval; }
-            // Php.g:391:5: ( New nameOrFunctionCall | Clone name | atomOrReference )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:391:5: ( New nameOrFunctionCall | Clone name | atomOrReference )
             int alt63=3;
             alt63 = dfa63.predict(input);
             switch (alt63) {
                 case 1 :
-                    // Php.g:391:7: New nameOrFunctionCall
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:391:7: New nameOrFunctionCall
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    New238=(Token)match(input,New,FOLLOW_New_in_newOrClone3063); if (state.failed) return retval;
+                    New238=(Token)match(input,New,FOLLOW_New_in_newOrClone3059); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     New238_tree = (CommonTree)adaptor.create(New238);
                     root_0 = (CommonTree)adaptor.becomeRoot(New238_tree, root_0);
                     }
-                    pushFollow(FOLLOW_nameOrFunctionCall_in_newOrClone3066);
+                    pushFollow(FOLLOW_nameOrFunctionCall_in_newOrClone3062);
                     nameOrFunctionCall239=nameOrFunctionCall();
 
                     state._fsp--;
@@ -6424,16 +6424,16 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:392:7: Clone name
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:392:7: Clone name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Clone240=(Token)match(input,Clone,FOLLOW_Clone_in_newOrClone3074); if (state.failed) return retval;
+                    Clone240=(Token)match(input,Clone,FOLLOW_Clone_in_newOrClone3070); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Clone240_tree = (CommonTree)adaptor.create(Clone240);
                     root_0 = (CommonTree)adaptor.becomeRoot(Clone240_tree, root_0);
                     }
-                    pushFollow(FOLLOW_name_in_newOrClone3077);
+                    pushFollow(FOLLOW_name_in_newOrClone3073);
                     name241=name();
 
                     state._fsp--;
@@ -6443,11 +6443,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:393:7: atomOrReference
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:393:7: atomOrReference
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_atomOrReference_in_newOrClone3085);
+                    pushFollow(FOLLOW_atomOrReference_in_newOrClone3081);
                     atomOrReference242=atomOrReference();
 
                     state._fsp--;
@@ -6485,7 +6485,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "atomOrReference"
-    // Php.g:396:1: atomOrReference : ( atom | reference );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:396:1: atomOrReference : ( atom | reference );
     public final PhpParser.atomOrReference_return atomOrReference() throws RecognitionException {
         PhpParser.atomOrReference_return retval = new PhpParser.atomOrReference_return();
         retval.start = input.LT(1);
@@ -6500,16 +6500,16 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return retval; }
-            // Php.g:397:5: ( atom | reference )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:397:5: ( atom | reference )
             int alt64=2;
             alt64 = dfa64.predict(input);
             switch (alt64) {
                 case 1 :
-                    // Php.g:397:7: atom
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:397:7: atom
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_atom_in_atomOrReference3102);
+                    pushFollow(FOLLOW_atom_in_atomOrReference3098);
                     atom243=atom();
 
                     state._fsp--;
@@ -6519,11 +6519,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:398:7: reference
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:398:7: reference
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_reference_in_atomOrReference3110);
+                    pushFollow(FOLLOW_reference_in_atomOrReference3106);
                     reference244=reference();
 
                     state._fsp--;
@@ -6561,7 +6561,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "arrayDeclaration"
-    // Php.g:401:1: arrayDeclaration : Array OpenBrace ( arrayEntry ( Comma arrayEntry )* )? CloseBrace -> ^( Array ( arrayEntry )* ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:401:1: arrayDeclaration : Array OpenRoundBracket ( arrayEntry ( Comma arrayEntry )* )? CloseRoundBracket -> ^( Array ( arrayEntry )* ) ;
     public final PhpParser.arrayDeclaration_return arrayDeclaration() throws RecognitionException {
         PhpParser.arrayDeclaration_return retval = new PhpParser.arrayDeclaration_return();
         retval.start = input.LT(1);
@@ -6569,48 +6569,48 @@ public class PhpParser extends Parser {
         CommonTree root_0 = null;
 
         Token Array245=null;
-        Token OpenBrace246=null;
+        Token OpenRoundBracket246=null;
         Token Comma248=null;
-        Token CloseBrace250=null;
+        Token CloseRoundBracket250=null;
         PhpParser.arrayEntry_return arrayEntry247 = null;
 
         PhpParser.arrayEntry_return arrayEntry249 = null;
 
 
         CommonTree Array245_tree=null;
-        CommonTree OpenBrace246_tree=null;
+        CommonTree OpenRoundBracket246_tree=null;
         CommonTree Comma248_tree=null;
-        CommonTree CloseBrace250_tree=null;
+        CommonTree CloseRoundBracket250_tree=null;
         RewriteRuleTokenStream stream_Array=new RewriteRuleTokenStream(adaptor,"token Array");
         RewriteRuleTokenStream stream_Comma=new RewriteRuleTokenStream(adaptor,"token Comma");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleSubtreeStream stream_arrayEntry=new RewriteRuleSubtreeStream(adaptor,"rule arrayEntry");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return retval; }
-            // Php.g:402:5: ( Array OpenBrace ( arrayEntry ( Comma arrayEntry )* )? CloseBrace -> ^( Array ( arrayEntry )* ) )
-            // Php.g:402:7: Array OpenBrace ( arrayEntry ( Comma arrayEntry )* )? CloseBrace
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:5: ( Array OpenRoundBracket ( arrayEntry ( Comma arrayEntry )* )? CloseRoundBracket -> ^( Array ( arrayEntry )* ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:7: Array OpenRoundBracket ( arrayEntry ( Comma arrayEntry )* )? CloseRoundBracket
             {
-            Array245=(Token)match(input,Array,FOLLOW_Array_in_arrayDeclaration3127); if (state.failed) return retval; 
+            Array245=(Token)match(input,Array,FOLLOW_Array_in_arrayDeclaration3123); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_Array.add(Array245);
 
-            OpenBrace246=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_arrayDeclaration3129); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_OpenBrace.add(OpenBrace246);
+            OpenRoundBracket246=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_arrayDeclaration3125); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_OpenRoundBracket.add(OpenRoundBracket246);
 
-            // Php.g:402:23: ( arrayEntry ( Comma arrayEntry )* )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:30: ( arrayEntry ( Comma arrayEntry )* )?
             int alt66=2;
             alt66 = dfa66.predict(input);
             switch (alt66) {
                 case 1 :
-                    // Php.g:402:24: arrayEntry ( Comma arrayEntry )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:31: arrayEntry ( Comma arrayEntry )*
                     {
-                    pushFollow(FOLLOW_arrayEntry_in_arrayDeclaration3132);
+                    pushFollow(FOLLOW_arrayEntry_in_arrayDeclaration3128);
                     arrayEntry247=arrayEntry();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_arrayEntry.add(arrayEntry247.getTree());
-                    // Php.g:402:35: ( Comma arrayEntry )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:42: ( Comma arrayEntry )*
                     loop65:
                     do {
                         int alt65=2;
@@ -6623,12 +6623,12 @@ public class PhpParser extends Parser {
 
                         switch (alt65) {
                     	case 1 :
-                    	    // Php.g:402:36: Comma arrayEntry
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:43: Comma arrayEntry
                     	    {
-                    	    Comma248=(Token)match(input,Comma,FOLLOW_Comma_in_arrayDeclaration3135); if (state.failed) return retval; 
+                    	    Comma248=(Token)match(input,Comma,FOLLOW_Comma_in_arrayDeclaration3131); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_Comma.add(Comma248);
 
-                    	    pushFollow(FOLLOW_arrayEntry_in_arrayDeclaration3137);
+                    	    pushFollow(FOLLOW_arrayEntry_in_arrayDeclaration3133);
                     	    arrayEntry249=arrayEntry();
 
                     	    state._fsp--;
@@ -6649,13 +6649,13 @@ public class PhpParser extends Parser {
 
             }
 
-            CloseBrace250=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_arrayDeclaration3143); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_CloseBrace.add(CloseBrace250);
+            CloseRoundBracket250=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_arrayDeclaration3139); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_CloseRoundBracket.add(CloseRoundBracket250);
 
 
 
             // AST REWRITE
-            // elements: arrayEntry, Array
+            // elements: Array, arrayEntry
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6666,14 +6666,14 @@ public class PhpParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 402:68: -> ^( Array ( arrayEntry )* )
+            // 402:82: -> ^( Array ( arrayEntry )* )
             {
-                // Php.g:402:71: ^( Array ( arrayEntry )* )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:85: ^( Array ( arrayEntry )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_Array.nextNode(), root_1);
 
-                // Php.g:402:79: ( arrayEntry )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:402:93: ( arrayEntry )*
                 while ( stream_arrayEntry.hasNext() ) {
                     adaptor.addChild(root_1, stream_arrayEntry.nextTree());
 
@@ -6715,7 +6715,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "arrayEntry"
-    // Php.g:405:1: arrayEntry : ( keyValuePair | expression ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:405:1: arrayEntry : ( keyValuePair | expression ) ;
     public final PhpParser.arrayEntry_return arrayEntry() throws RecognitionException {
         PhpParser.arrayEntry_return retval = new PhpParser.arrayEntry_return();
         retval.start = input.LT(1);
@@ -6730,19 +6730,19 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return retval; }
-            // Php.g:406:5: ( ( keyValuePair | expression ) )
-            // Php.g:406:7: ( keyValuePair | expression )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:5: ( ( keyValuePair | expression ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:7: ( keyValuePair | expression )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // Php.g:406:7: ( keyValuePair | expression )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:7: ( keyValuePair | expression )
             int alt67=2;
             alt67 = dfa67.predict(input);
             switch (alt67) {
                 case 1 :
-                    // Php.g:406:8: keyValuePair
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:8: keyValuePair
                     {
-                    pushFollow(FOLLOW_keyValuePair_in_arrayEntry3170);
+                    pushFollow(FOLLOW_keyValuePair_in_arrayEntry3166);
                     keyValuePair251=keyValuePair();
 
                     state._fsp--;
@@ -6752,9 +6752,9 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:406:23: expression
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:23: expression
                     {
-                    pushFollow(FOLLOW_expression_in_arrayEntry3174);
+                    pushFollow(FOLLOW_expression_in_arrayEntry3170);
                     expression252=expression();
 
                     state._fsp--;
@@ -6796,7 +6796,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "keyValuePair"
-    // Php.g:409:1: keyValuePair : ( expression ArrayAssign expression ) -> ^( ArrayAssign ( expression )+ ) ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:409:1: keyValuePair : ( expression ArrayAssign expression ) -> ^( ArrayAssign ( expression )+ ) ;
     public final PhpParser.keyValuePair_return keyValuePair() throws RecognitionException {
         PhpParser.keyValuePair_return retval = new PhpParser.keyValuePair_return();
         retval.start = input.LT(1);
@@ -6814,22 +6814,22 @@ public class PhpParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return retval; }
-            // Php.g:410:5: ( ( expression ArrayAssign expression ) -> ^( ArrayAssign ( expression )+ ) )
-            // Php.g:410:7: ( expression ArrayAssign expression )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:410:5: ( ( expression ArrayAssign expression ) -> ^( ArrayAssign ( expression )+ ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:410:7: ( expression ArrayAssign expression )
             {
-            // Php.g:410:7: ( expression ArrayAssign expression )
-            // Php.g:410:8: expression ArrayAssign expression
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:410:7: ( expression ArrayAssign expression )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:410:8: expression ArrayAssign expression
             {
-            pushFollow(FOLLOW_expression_in_keyValuePair3193);
+            pushFollow(FOLLOW_expression_in_keyValuePair3189);
             expression253=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression253.getTree());
-            ArrayAssign254=(Token)match(input,ArrayAssign,FOLLOW_ArrayAssign_in_keyValuePair3195); if (state.failed) return retval; 
+            ArrayAssign254=(Token)match(input,ArrayAssign,FOLLOW_ArrayAssign_in_keyValuePair3191); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_ArrayAssign.add(ArrayAssign254);
 
-            pushFollow(FOLLOW_expression_in_keyValuePair3197);
+            pushFollow(FOLLOW_expression_in_keyValuePair3193);
             expression255=expression();
 
             state._fsp--;
@@ -6841,7 +6841,7 @@ public class PhpParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, ArrayAssign
+            // elements: ArrayAssign, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6854,7 +6854,7 @@ public class PhpParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 410:43: -> ^( ArrayAssign ( expression )+ )
             {
-                // Php.g:410:46: ^( ArrayAssign ( expression )+ )
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:410:46: ^( ArrayAssign ( expression )+ )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_ArrayAssign.nextNode(), root_1);
@@ -6903,7 +6903,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "atom"
-    // Php.g:413:1: atom : ( SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boolean | arrayDeclaration );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:1: atom : ( SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boolean | arrayDeclaration );
     public final PhpParser.atom_return atom() throws RecognitionException {
         PhpParser.atom_return retval = new PhpParser.atom_return();
         retval.start = input.LT(1);
@@ -6928,7 +6928,7 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return retval; }
-            // Php.g:413:5: ( SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boolean | arrayDeclaration )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:5: ( SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boolean | arrayDeclaration )
             int alt68=7;
             switch ( input.LA(1) ) {
             case SingleQuotedString:
@@ -6976,11 +6976,11 @@ public class PhpParser extends Parser {
 
             switch (alt68) {
                 case 1 :
-                    // Php.g:413:7: SingleQuotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:7: SingleQuotedString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    SingleQuotedString256=(Token)match(input,SingleQuotedString,FOLLOW_SingleQuotedString_in_atom3219); if (state.failed) return retval;
+                    SingleQuotedString256=(Token)match(input,SingleQuotedString,FOLLOW_SingleQuotedString_in_atom3215); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     SingleQuotedString256_tree = (CommonTree)adaptor.create(SingleQuotedString256);
                     adaptor.addChild(root_0, SingleQuotedString256_tree);
@@ -6989,11 +6989,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:413:28: DoubleQuotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:28: DoubleQuotedString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    DoubleQuotedString257=(Token)match(input,DoubleQuotedString,FOLLOW_DoubleQuotedString_in_atom3223); if (state.failed) return retval;
+                    DoubleQuotedString257=(Token)match(input,DoubleQuotedString,FOLLOW_DoubleQuotedString_in_atom3219); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     DoubleQuotedString257_tree = (CommonTree)adaptor.create(DoubleQuotedString257);
                     adaptor.addChild(root_0, DoubleQuotedString257_tree);
@@ -7002,11 +7002,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:413:49: HereDoc
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:49: HereDoc
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    HereDoc258=(Token)match(input,HereDoc,FOLLOW_HereDoc_in_atom3227); if (state.failed) return retval;
+                    HereDoc258=(Token)match(input,HereDoc,FOLLOW_HereDoc_in_atom3223); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     HereDoc258_tree = (CommonTree)adaptor.create(HereDoc258);
                     adaptor.addChild(root_0, HereDoc258_tree);
@@ -7015,11 +7015,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // Php.g:413:59: Integer
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:59: Integer
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Integer259=(Token)match(input,Integer,FOLLOW_Integer_in_atom3231); if (state.failed) return retval;
+                    Integer259=(Token)match(input,Integer,FOLLOW_Integer_in_atom3227); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Integer259_tree = (CommonTree)adaptor.create(Integer259);
                     adaptor.addChild(root_0, Integer259_tree);
@@ -7028,11 +7028,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // Php.g:413:69: Real
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:69: Real
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Real260=(Token)match(input,Real,FOLLOW_Real_in_atom3235); if (state.failed) return retval;
+                    Real260=(Token)match(input,Real,FOLLOW_Real_in_atom3231); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Real260_tree = (CommonTree)adaptor.create(Real260);
                     adaptor.addChild(root_0, Real260_tree);
@@ -7041,11 +7041,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // Php.g:413:76: Boolean
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:76: Boolean
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Boolean261=(Token)match(input,Boolean,FOLLOW_Boolean_in_atom3239); if (state.failed) return retval;
+                    Boolean261=(Token)match(input,Boolean,FOLLOW_Boolean_in_atom3235); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Boolean261_tree = (CommonTree)adaptor.create(Boolean261);
                     adaptor.addChild(root_0, Boolean261_tree);
@@ -7054,11 +7054,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // Php.g:413:86: arrayDeclaration
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:413:86: arrayDeclaration
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_arrayDeclaration_in_atom3243);
+                    pushFollow(FOLLOW_arrayDeclaration_in_atom3239);
                     arrayDeclaration262=arrayDeclaration();
 
                     state._fsp--;
@@ -7096,7 +7096,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "reference"
-    // Php.g:417:1: reference : ( Ampersand nameOrFunctionCall | nameOrFunctionCall );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:417:1: reference : ( Ampersand nameOrFunctionCall | nameOrFunctionCall );
     public final PhpParser.reference_return reference() throws RecognitionException {
         PhpParser.reference_return retval = new PhpParser.reference_return();
         retval.start = input.LT(1);
@@ -7113,7 +7113,7 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return retval; }
-            // Php.g:418:5: ( Ampersand nameOrFunctionCall | nameOrFunctionCall )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:418:5: ( Ampersand nameOrFunctionCall | nameOrFunctionCall )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -7132,16 +7132,16 @@ public class PhpParser extends Parser {
             }
             switch (alt69) {
                 case 1 :
-                    // Php.g:418:7: Ampersand nameOrFunctionCall
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:418:7: Ampersand nameOrFunctionCall
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Ampersand263=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_reference3261); if (state.failed) return retval;
+                    Ampersand263=(Token)match(input,Ampersand,FOLLOW_Ampersand_in_reference3257); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Ampersand263_tree = (CommonTree)adaptor.create(Ampersand263);
                     root_0 = (CommonTree)adaptor.becomeRoot(Ampersand263_tree, root_0);
                     }
-                    pushFollow(FOLLOW_nameOrFunctionCall_in_reference3264);
+                    pushFollow(FOLLOW_nameOrFunctionCall_in_reference3260);
                     nameOrFunctionCall264=nameOrFunctionCall();
 
                     state._fsp--;
@@ -7151,11 +7151,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:419:7: nameOrFunctionCall
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:419:7: nameOrFunctionCall
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_nameOrFunctionCall_in_reference3272);
+                    pushFollow(FOLLOW_nameOrFunctionCall_in_reference3268);
                     nameOrFunctionCall265=nameOrFunctionCall();
 
                     state._fsp--;
@@ -7193,16 +7193,16 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "nameOrFunctionCall"
-    // Php.g:422:1: nameOrFunctionCall : ( name OpenBrace ( expression ( Comma expression )* )? CloseBrace -> ^( Apply name ( expression )* ) | name );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:422:1: nameOrFunctionCall : ( name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket -> ^( Apply name ( expression )* ) | name );
     public final PhpParser.nameOrFunctionCall_return nameOrFunctionCall() throws RecognitionException {
         PhpParser.nameOrFunctionCall_return retval = new PhpParser.nameOrFunctionCall_return();
         retval.start = input.LT(1);
         int nameOrFunctionCall_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token OpenBrace267=null;
+        Token OpenRoundBracket267=null;
         Token Comma269=null;
-        Token CloseBrace271=null;
+        Token CloseRoundBracket271=null;
         PhpParser.name_return name266 = null;
 
         PhpParser.expression_return expression268 = null;
@@ -7212,46 +7212,46 @@ public class PhpParser extends Parser {
         PhpParser.name_return name272 = null;
 
 
-        CommonTree OpenBrace267_tree=null;
+        CommonTree OpenRoundBracket267_tree=null;
         CommonTree Comma269_tree=null;
-        CommonTree CloseBrace271_tree=null;
+        CommonTree CloseRoundBracket271_tree=null;
         RewriteRuleTokenStream stream_Comma=new RewriteRuleTokenStream(adaptor,"token Comma");
-        RewriteRuleTokenStream stream_CloseBrace=new RewriteRuleTokenStream(adaptor,"token CloseBrace");
-        RewriteRuleTokenStream stream_OpenBrace=new RewriteRuleTokenStream(adaptor,"token OpenBrace");
+        RewriteRuleTokenStream stream_OpenRoundBracket=new RewriteRuleTokenStream(adaptor,"token OpenRoundBracket");
+        RewriteRuleTokenStream stream_CloseRoundBracket=new RewriteRuleTokenStream(adaptor,"token CloseRoundBracket");
         RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return retval; }
-            // Php.g:423:5: ( name OpenBrace ( expression ( Comma expression )* )? CloseBrace -> ^( Apply name ( expression )* ) | name )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:5: ( name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket -> ^( Apply name ( expression )* ) | name )
             int alt72=2;
             alt72 = dfa72.predict(input);
             switch (alt72) {
                 case 1 :
-                    // Php.g:423:7: name OpenBrace ( expression ( Comma expression )* )? CloseBrace
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:7: name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket
                     {
-                    pushFollow(FOLLOW_name_in_nameOrFunctionCall3289);
+                    pushFollow(FOLLOW_name_in_nameOrFunctionCall3285);
                     name266=name();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_name.add(name266.getTree());
-                    OpenBrace267=(Token)match(input,OpenBrace,FOLLOW_OpenBrace_in_nameOrFunctionCall3291); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_OpenBrace.add(OpenBrace267);
+                    OpenRoundBracket267=(Token)match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_nameOrFunctionCall3287); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_OpenRoundBracket.add(OpenRoundBracket267);
 
-                    // Php.g:423:22: ( expression ( Comma expression )* )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:29: ( expression ( Comma expression )* )?
                     int alt71=2;
                     alt71 = dfa71.predict(input);
                     switch (alt71) {
                         case 1 :
-                            // Php.g:423:23: expression ( Comma expression )*
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:30: expression ( Comma expression )*
                             {
-                            pushFollow(FOLLOW_expression_in_nameOrFunctionCall3294);
+                            pushFollow(FOLLOW_expression_in_nameOrFunctionCall3290);
                             expression268=expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
                             if ( state.backtracking==0 ) stream_expression.add(expression268.getTree());
-                            // Php.g:423:34: ( Comma expression )*
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:41: ( Comma expression )*
                             loop70:
                             do {
                                 int alt70=2;
@@ -7264,12 +7264,12 @@ public class PhpParser extends Parser {
 
                                 switch (alt70) {
                             	case 1 :
-                            	    // Php.g:423:35: Comma expression
+                            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:42: Comma expression
                             	    {
-                            	    Comma269=(Token)match(input,Comma,FOLLOW_Comma_in_nameOrFunctionCall3297); if (state.failed) return retval; 
+                            	    Comma269=(Token)match(input,Comma,FOLLOW_Comma_in_nameOrFunctionCall3293); if (state.failed) return retval; 
                             	    if ( state.backtracking==0 ) stream_Comma.add(Comma269);
 
-                            	    pushFollow(FOLLOW_expression_in_nameOrFunctionCall3299);
+                            	    pushFollow(FOLLOW_expression_in_nameOrFunctionCall3295);
                             	    expression270=expression();
 
                             	    state._fsp--;
@@ -7290,13 +7290,13 @@ public class PhpParser extends Parser {
 
                     }
 
-                    CloseBrace271=(Token)match(input,CloseBrace,FOLLOW_CloseBrace_in_nameOrFunctionCall3305); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CloseBrace.add(CloseBrace271);
+                    CloseRoundBracket271=(Token)match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_nameOrFunctionCall3301); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CloseRoundBracket.add(CloseRoundBracket271);
 
 
 
                     // AST REWRITE
-                    // elements: name, expression
+                    // elements: expression, name
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -7307,15 +7307,15 @@ public class PhpParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 423:67: -> ^( Apply name ( expression )* )
+                    // 423:81: -> ^( Apply name ( expression )* )
                     {
-                        // Php.g:423:70: ^( Apply name ( expression )* )
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:84: ^( Apply name ( expression )* )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Apply, "Apply"), root_1);
 
                         adaptor.addChild(root_1, stream_name.nextTree());
-                        // Php.g:423:83: ( expression )*
+                        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:97: ( expression )*
                         while ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -7331,11 +7331,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:424:7: name
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:424:7: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_nameOrFunctionCall3324);
+                    pushFollow(FOLLOW_name_in_nameOrFunctionCall3320);
                     name272=name();
 
                     state._fsp--;
@@ -7373,7 +7373,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "name"
-    // Php.g:427:1: name : ( staticMemberAccess | memberAccess | variable );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:427:1: name : ( staticMemberAccess | memberAccess | variable );
     public final PhpParser.name_return name() throws RecognitionException {
         PhpParser.name_return retval = new PhpParser.name_return();
         retval.start = input.LT(1);
@@ -7390,16 +7390,16 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return retval; }
-            // Php.g:427:5: ( staticMemberAccess | memberAccess | variable )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:427:5: ( staticMemberAccess | memberAccess | variable )
             int alt73=3;
             alt73 = dfa73.predict(input);
             switch (alt73) {
                 case 1 :
-                    // Php.g:427:7: staticMemberAccess
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:427:7: staticMemberAccess
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_staticMemberAccess_in_name3336);
+                    pushFollow(FOLLOW_staticMemberAccess_in_name3332);
                     staticMemberAccess273=staticMemberAccess();
 
                     state._fsp--;
@@ -7409,11 +7409,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:428:7: memberAccess
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:428:7: memberAccess
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_memberAccess_in_name3344);
+                    pushFollow(FOLLOW_memberAccess_in_name3340);
                     memberAccess274=memberAccess();
 
                     state._fsp--;
@@ -7423,11 +7423,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // Php.g:429:7: variable
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:429:7: variable
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_variable_in_name3352);
+                    pushFollow(FOLLOW_variable_in_name3348);
                     variable275=variable();
 
                     state._fsp--;
@@ -7465,7 +7465,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "staticMemberAccess"
-    // Php.g:432:1: staticMemberAccess : UnquotedString '::' variable ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:432:1: staticMemberAccess : UnquotedString '::' variable ;
     public final PhpParser.staticMemberAccess_return staticMemberAccess() throws RecognitionException {
         PhpParser.staticMemberAccess_return retval = new PhpParser.staticMemberAccess_return();
         retval.start = input.LT(1);
@@ -7482,22 +7482,22 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return retval; }
-            // Php.g:433:5: ( UnquotedString '::' variable )
-            // Php.g:433:7: UnquotedString '::' variable
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:433:5: ( UnquotedString '::' variable )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:433:7: UnquotedString '::' variable
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            UnquotedString276=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_staticMemberAccess3373); if (state.failed) return retval;
+            UnquotedString276=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_staticMemberAccess3369); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             UnquotedString276_tree = (CommonTree)adaptor.create(UnquotedString276);
             adaptor.addChild(root_0, UnquotedString276_tree);
             }
-            string_literal277=(Token)match(input,ClassMember,FOLLOW_ClassMember_in_staticMemberAccess3375); if (state.failed) return retval;
+            string_literal277=(Token)match(input,ClassMember,FOLLOW_ClassMember_in_staticMemberAccess3371); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             string_literal277_tree = (CommonTree)adaptor.create(string_literal277);
             root_0 = (CommonTree)adaptor.becomeRoot(string_literal277_tree, root_0);
             }
-            pushFollow(FOLLOW_variable_in_staticMemberAccess3378);
+            pushFollow(FOLLOW_variable_in_staticMemberAccess3374);
             variable278=variable();
 
             state._fsp--;
@@ -7533,15 +7533,15 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "memberAccess"
-    // Php.g:436:1: memberAccess : variable ( OpenSquareBrace expression CloseSquareBrace | '->' UnquotedString )* ;
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:436:1: memberAccess : variable ( OpenSquareBracket expression CloseSquareBracket | '->' UnquotedString )* ;
     public final PhpParser.memberAccess_return memberAccess() throws RecognitionException {
         PhpParser.memberAccess_return retval = new PhpParser.memberAccess_return();
         retval.start = input.LT(1);
         int memberAccess_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token OpenSquareBrace280=null;
-        Token CloseSquareBrace282=null;
+        Token OpenSquareBracket280=null;
+        Token CloseSquareBracket282=null;
         Token string_literal283=null;
         Token UnquotedString284=null;
         PhpParser.variable_return variable279 = null;
@@ -7549,57 +7549,57 @@ public class PhpParser extends Parser {
         PhpParser.expression_return expression281 = null;
 
 
-        CommonTree OpenSquareBrace280_tree=null;
-        CommonTree CloseSquareBrace282_tree=null;
+        CommonTree OpenSquareBracket280_tree=null;
+        CommonTree CloseSquareBracket282_tree=null;
         CommonTree string_literal283_tree=null;
         CommonTree UnquotedString284_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return retval; }
-            // Php.g:437:5: ( variable ( OpenSquareBrace expression CloseSquareBrace | '->' UnquotedString )* )
-            // Php.g:437:7: variable ( OpenSquareBrace expression CloseSquareBrace | '->' UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:437:5: ( variable ( OpenSquareBracket expression CloseSquareBracket | '->' UnquotedString )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:437:7: variable ( OpenSquareBracket expression CloseSquareBracket | '->' UnquotedString )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_variable_in_memberAccess3395);
+            pushFollow(FOLLOW_variable_in_memberAccess3391);
             variable279=variable();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, variable279.getTree());
-            // Php.g:438:9: ( OpenSquareBrace expression CloseSquareBrace | '->' UnquotedString )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:438:9: ( OpenSquareBracket expression CloseSquareBracket | '->' UnquotedString )*
             loop74:
             do {
                 int alt74=3;
                 alt74 = dfa74.predict(input);
                 switch (alt74) {
             	case 1 :
-            	    // Php.g:438:11: OpenSquareBrace expression CloseSquareBrace
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:438:11: OpenSquareBracket expression CloseSquareBracket
             	    {
-            	    OpenSquareBrace280=(Token)match(input,OpenSquareBrace,FOLLOW_OpenSquareBrace_in_memberAccess3408); if (state.failed) return retval;
+            	    OpenSquareBracket280=(Token)match(input,OpenSquareBracket,FOLLOW_OpenSquareBracket_in_memberAccess3404); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    OpenSquareBrace280_tree = (CommonTree)adaptor.create(OpenSquareBrace280);
-            	    root_0 = (CommonTree)adaptor.becomeRoot(OpenSquareBrace280_tree, root_0);
+            	    OpenSquareBracket280_tree = (CommonTree)adaptor.create(OpenSquareBracket280);
+            	    root_0 = (CommonTree)adaptor.becomeRoot(OpenSquareBracket280_tree, root_0);
             	    }
-            	    pushFollow(FOLLOW_expression_in_memberAccess3411);
+            	    pushFollow(FOLLOW_expression_in_memberAccess3407);
             	    expression281=expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression281.getTree());
-            	    CloseSquareBrace282=(Token)match(input,CloseSquareBrace,FOLLOW_CloseSquareBrace_in_memberAccess3413); if (state.failed) return retval;
+            	    CloseSquareBracket282=(Token)match(input,CloseSquareBracket,FOLLOW_CloseSquareBracket_in_memberAccess3409); if (state.failed) return retval;
 
             	    }
             	    break;
             	case 2 :
-            	    // Php.g:439:11: '->' UnquotedString
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:439:11: '->' UnquotedString
             	    {
-            	    string_literal283=(Token)match(input,InstanceMember,FOLLOW_InstanceMember_in_memberAccess3426); if (state.failed) return retval;
+            	    string_literal283=(Token)match(input,InstanceMember,FOLLOW_InstanceMember_in_memberAccess3422); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    string_literal283_tree = (CommonTree)adaptor.create(string_literal283);
             	    root_0 = (CommonTree)adaptor.becomeRoot(string_literal283_tree, root_0);
             	    }
-            	    UnquotedString284=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_memberAccess3429); if (state.failed) return retval;
+            	    UnquotedString284=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_memberAccess3425); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    UnquotedString284_tree = (CommonTree)adaptor.create(UnquotedString284);
             	    adaptor.addChild(root_0, UnquotedString284_tree);
@@ -7643,7 +7643,7 @@ public class PhpParser extends Parser {
     };
 
     // $ANTLR start "variable"
-    // Php.g:442:1: variable : ( Dollar variable | UnquotedString );
+    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:442:1: variable : ( Dollar variable | UnquotedString );
     public final PhpParser.variable_return variable() throws RecognitionException {
         PhpParser.variable_return retval = new PhpParser.variable_return();
         retval.start = input.LT(1);
@@ -7660,7 +7660,7 @@ public class PhpParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return retval; }
-            // Php.g:443:5: ( Dollar variable | UnquotedString )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:443:5: ( Dollar variable | UnquotedString )
             int alt75=2;
             int LA75_0 = input.LA(1);
 
@@ -7679,16 +7679,16 @@ public class PhpParser extends Parser {
             }
             switch (alt75) {
                 case 1 :
-                    // Php.g:443:7: Dollar variable
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:443:7: Dollar variable
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    Dollar285=(Token)match(input,Dollar,FOLLOW_Dollar_in_variable3452); if (state.failed) return retval;
+                    Dollar285=(Token)match(input,Dollar,FOLLOW_Dollar_in_variable3448); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     Dollar285_tree = (CommonTree)adaptor.create(Dollar285);
                     root_0 = (CommonTree)adaptor.becomeRoot(Dollar285_tree, root_0);
                     }
-                    pushFollow(FOLLOW_variable_in_variable3455);
+                    pushFollow(FOLLOW_variable_in_variable3451);
                     variable286=variable();
 
                     state._fsp--;
@@ -7698,11 +7698,11 @@ public class PhpParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Php.g:444:7: UnquotedString
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:444:7: UnquotedString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    UnquotedString287=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_variable3463); if (state.failed) return retval;
+                    UnquotedString287=(Token)match(input,UnquotedString,FOLLOW_UnquotedString_in_variable3459); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     UnquotedString287_tree = (CommonTree)adaptor.create(UnquotedString287);
                     adaptor.addChild(root_0, UnquotedString287_tree);
@@ -7735,17 +7735,17 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred3_Php
     public final void synpred3_Php_fragment() throws RecognitionException {   
-        // Php.g:158:7: ( ( simpleStatement )? BodyString )
-        // Php.g:158:7: ( simpleStatement )? BodyString
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:7: ( ( simpleStatement )? BodyString )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:7: ( simpleStatement )? BodyString
         {
-        // Php.g:158:7: ( simpleStatement )?
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:158:7: ( simpleStatement )?
         int alt76=2;
         alt76 = dfa76.predict(input);
         switch (alt76) {
             case 1 :
-                // Php.g:0:0: simpleStatement
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: simpleStatement
                 {
-                pushFollow(FOLLOW_simpleStatement_in_synpred3_Php889);
+                pushFollow(FOLLOW_simpleStatement_in_synpred3_Php885);
                 simpleStatement();
 
                 state._fsp--;
@@ -7756,7 +7756,7 @@ public class PhpParser extends Parser {
 
         }
 
-        match(input,BodyString,FOLLOW_BodyString_in_synpred3_Php892); if (state.failed) return ;
+        match(input,BodyString,FOLLOW_BodyString_in_synpred3_Php888); if (state.failed) return ;
 
         }
     }
@@ -7764,16 +7764,16 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred4_Php
     public final void synpred4_Php_fragment() throws RecognitionException {   
-        // Php.g:159:7: ( '{' statement '}' )
-        // Php.g:159:7: '{' statement '}'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:159:7: ( '{' statement '}' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:159:7: '{' statement '}'
         {
-        match(input,OpenCurlyBrace,FOLLOW_OpenCurlyBrace_in_synpred4_Php900); if (state.failed) return ;
-        pushFollow(FOLLOW_statement_in_synpred4_Php902);
+        match(input,OpenCurlyBracket,FOLLOW_OpenCurlyBracket_in_synpred4_Php896); if (state.failed) return ;
+        pushFollow(FOLLOW_statement_in_synpred4_Php898);
         statement();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,CloseCurlyBrace,FOLLOW_CloseCurlyBrace_in_synpred4_Php904); if (state.failed) return ;
+        match(input,CloseCurlyBracket,FOLLOW_CloseCurlyBracket_in_synpred4_Php900); if (state.failed) return ;
 
         }
     }
@@ -7781,10 +7781,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred5_Php
     public final void synpred5_Php_fragment() throws RecognitionException {   
-        // Php.g:160:7: ( bracketedBlock )
-        // Php.g:160:7: bracketedBlock
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:160:7: ( bracketedBlock )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:160:7: bracketedBlock
         {
-        pushFollow(FOLLOW_bracketedBlock_in_synpred5_Php916);
+        pushFollow(FOLLOW_bracketedBlock_in_synpred5_Php912);
         bracketedBlock();
 
         state._fsp--;
@@ -7796,10 +7796,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred23_Php
     public final void synpred23_Php_fragment() throws RecognitionException {   
-        // Php.g:208:7: ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) )
-        // Php.g:208:7: ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:7: ( ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' ) )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:7: ( fieldModifier )* Function UnquotedString parametersDefinition ( bracketedBlock | ';' )
         {
-        // Php.g:208:7: ( fieldModifier )*
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:208:7: ( fieldModifier )*
         loop78:
         do {
             int alt78=2;
@@ -7812,9 +7812,9 @@ public class PhpParser extends Parser {
 
             switch (alt78) {
         	case 1 :
-        	    // Php.g:0:0: fieldModifier
+        	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:0:0: fieldModifier
         	    {
-        	    pushFollow(FOLLOW_fieldModifier_in_synpred23_Php1396);
+        	    pushFollow(FOLLOW_fieldModifier_in_synpred23_Php1392);
         	    fieldModifier();
 
         	    state._fsp--;
@@ -7828,18 +7828,18 @@ public class PhpParser extends Parser {
             }
         } while (true);
 
-        match(input,Function,FOLLOW_Function_in_synpred23_Php1399); if (state.failed) return ;
-        match(input,UnquotedString,FOLLOW_UnquotedString_in_synpred23_Php1401); if (state.failed) return ;
-        pushFollow(FOLLOW_parametersDefinition_in_synpred23_Php1403);
+        match(input,Function,FOLLOW_Function_in_synpred23_Php1395); if (state.failed) return ;
+        match(input,UnquotedString,FOLLOW_UnquotedString_in_synpred23_Php1397); if (state.failed) return ;
+        pushFollow(FOLLOW_parametersDefinition_in_synpred23_Php1399);
         parametersDefinition();
 
         state._fsp--;
         if (state.failed) return ;
-        // Php.g:209:9: ( bracketedBlock | ';' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:9: ( bracketedBlock | ';' )
         int alt79=2;
         int LA79_0 = input.LA(1);
 
-        if ( (LA79_0==OpenCurlyBrace) ) {
+        if ( (LA79_0==OpenCurlyBracket) ) {
             alt79=1;
         }
         else if ( (LA79_0==SemiColon) ) {
@@ -7854,9 +7854,9 @@ public class PhpParser extends Parser {
         }
         switch (alt79) {
             case 1 :
-                // Php.g:209:10: bracketedBlock
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:10: bracketedBlock
                 {
-                pushFollow(FOLLOW_bracketedBlock_in_synpred23_Php1415);
+                pushFollow(FOLLOW_bracketedBlock_in_synpred23_Php1411);
                 bracketedBlock();
 
                 state._fsp--;
@@ -7865,9 +7865,9 @@ public class PhpParser extends Parser {
                 }
                 break;
             case 2 :
-                // Php.g:209:27: ';'
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:209:27: ';'
                 {
-                match(input,SemiColon,FOLLOW_SemiColon_in_synpred23_Php1419); if (state.failed) return ;
+                match(input,SemiColon,FOLLOW_SemiColon_in_synpred23_Php1415); if (state.failed) return ;
 
                 }
                 break;
@@ -7881,10 +7881,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred33_Php
     public final void synpred33_Php_fragment() throws RecognitionException {   
-        // Php.g:232:58: ( conditional )
-        // Php.g:232:58: conditional
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:232:58: ( conditional )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:232:58: conditional
         {
-        pushFollow(FOLLOW_conditional_in_synpred33_Php1708);
+        pushFollow(FOLLOW_conditional_in_synpred33_Php1704);
         conditional();
 
         state._fsp--;
@@ -7896,10 +7896,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred52_Php
     public final void synpred52_Php_fragment() throws RecognitionException {   
-        // Php.g:256:62: ( conditional )
-        // Php.g:256:62: conditional
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:62: ( conditional )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:256:62: conditional
         {
-        pushFollow(FOLLOW_conditional_in_synpred52_Php2043);
+        pushFollow(FOLLOW_conditional_in_synpred52_Php2039);
         conditional();
 
         state._fsp--;
@@ -7911,11 +7911,11 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred65_Php
     public final void synpred65_Php_fragment() throws RecognitionException {   
-        // Php.g:311:23: ( Or weakLogicalXor )
-        // Php.g:311:23: Or weakLogicalXor
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:23: ( Or weakLogicalXor )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:311:23: Or weakLogicalXor
         {
-        match(input,Or,FOLLOW_Or_in_synpred65_Php2458); if (state.failed) return ;
-        pushFollow(FOLLOW_weakLogicalXor_in_synpred65_Php2461);
+        match(input,Or,FOLLOW_Or_in_synpred65_Php2454); if (state.failed) return ;
+        pushFollow(FOLLOW_weakLogicalXor_in_synpred65_Php2457);
         weakLogicalXor();
 
         state._fsp--;
@@ -7927,11 +7927,11 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred66_Php
     public final void synpred66_Php_fragment() throws RecognitionException {   
-        // Php.g:315:23: ( Xor weakLogicalAnd )
-        // Php.g:315:23: Xor weakLogicalAnd
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:23: ( Xor weakLogicalAnd )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:315:23: Xor weakLogicalAnd
         {
-        match(input,Xor,FOLLOW_Xor_in_synpred66_Php2483); if (state.failed) return ;
-        pushFollow(FOLLOW_weakLogicalAnd_in_synpred66_Php2486);
+        match(input,Xor,FOLLOW_Xor_in_synpred66_Php2479); if (state.failed) return ;
+        pushFollow(FOLLOW_weakLogicalAnd_in_synpred66_Php2482);
         weakLogicalAnd();
 
         state._fsp--;
@@ -7943,11 +7943,11 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred67_Php
     public final void synpred67_Php_fragment() throws RecognitionException {   
-        // Php.g:319:19: ( And assignment )
-        // Php.g:319:19: And assignment
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:19: ( And assignment )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:319:19: And assignment
         {
-        match(input,And,FOLLOW_And_in_synpred67_Php2512); if (state.failed) return ;
-        pushFollow(FOLLOW_assignment_in_synpred67_Php2515);
+        match(input,And,FOLLOW_And_in_synpred67_Php2508); if (state.failed) return ;
+        pushFollow(FOLLOW_assignment_in_synpred67_Php2511);
         assignment();
 
         state._fsp--;
@@ -7959,16 +7959,16 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred69_Php
     public final void synpred69_Php_fragment() throws RecognitionException {   
-        // Php.g:323:7: ( name ( ( Equals | AsignmentOperator ) assignment ) )
-        // Php.g:323:7: name ( ( Equals | AsignmentOperator ) assignment )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:7: ( name ( ( Equals | AsignmentOperator ) assignment ) )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:7: name ( ( Equals | AsignmentOperator ) assignment )
         {
-        pushFollow(FOLLOW_name_in_synpred69_Php2534);
+        pushFollow(FOLLOW_name_in_synpred69_Php2530);
         name();
 
         state._fsp--;
         if (state.failed) return ;
-        // Php.g:323:12: ( ( Equals | AsignmentOperator ) assignment )
-        // Php.g:323:13: ( Equals | AsignmentOperator ) assignment
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:12: ( ( Equals | AsignmentOperator ) assignment )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:323:13: ( Equals | AsignmentOperator ) assignment
         {
         if ( input.LA(1)==Equals||input.LA(1)==AsignmentOperator ) {
             input.consume();
@@ -7980,7 +7980,7 @@ public class PhpParser extends Parser {
             throw mse;
         }
 
-        pushFollow(FOLLOW_assignment_in_synpred69_Php2546);
+        pushFollow(FOLLOW_assignment_in_synpred69_Php2542);
         assignment();
 
         state._fsp--;
@@ -7995,22 +7995,22 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred70_Php
     public final void synpred70_Php_fragment() throws RecognitionException {   
-        // Php.g:328:7: ( logicalOr QuestionMark expression Colon expression )
-        // Php.g:328:7: logicalOr QuestionMark expression Colon expression
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:7: ( logicalOr QuestionMark expression Colon expression )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:328:7: logicalOr QuestionMark expression Colon expression
         {
-        pushFollow(FOLLOW_logicalOr_in_synpred70_Php2572);
+        pushFollow(FOLLOW_logicalOr_in_synpred70_Php2568);
         logicalOr();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,QuestionMark,FOLLOW_QuestionMark_in_synpred70_Php2574); if (state.failed) return ;
-        pushFollow(FOLLOW_expression_in_synpred70_Php2576);
+        match(input,QuestionMark,FOLLOW_QuestionMark_in_synpred70_Php2570); if (state.failed) return ;
+        pushFollow(FOLLOW_expression_in_synpred70_Php2572);
         expression();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,Colon,FOLLOW_Colon_in_synpred70_Php2578); if (state.failed) return ;
-        pushFollow(FOLLOW_expression_in_synpred70_Php2580);
+        match(input,Colon,FOLLOW_Colon_in_synpred70_Php2574); if (state.failed) return ;
+        pushFollow(FOLLOW_expression_in_synpred70_Php2576);
         expression();
 
         state._fsp--;
@@ -8022,15 +8022,15 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred92_Php
     public final void synpred92_Php_fragment() throws RecognitionException {   
-        // Php.g:386:7: ( name IncrementOperator )
-        // Php.g:386:7: name IncrementOperator
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:386:7: ( name IncrementOperator )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:386:7: name IncrementOperator
         {
-        pushFollow(FOLLOW_name_in_synpred92_Php3026);
+        pushFollow(FOLLOW_name_in_synpred92_Php3022);
         name();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,IncrementOperator,FOLLOW_IncrementOperator_in_synpred92_Php3028); if (state.failed) return ;
+        match(input,IncrementOperator,FOLLOW_IncrementOperator_in_synpred92_Php3024); if (state.failed) return ;
 
         }
     }
@@ -8038,10 +8038,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred98_Php
     public final void synpred98_Php_fragment() throws RecognitionException {   
-        // Php.g:406:8: ( keyValuePair )
-        // Php.g:406:8: keyValuePair
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:8: ( keyValuePair )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:406:8: keyValuePair
         {
-        pushFollow(FOLLOW_keyValuePair_in_synpred98_Php3170);
+        pushFollow(FOLLOW_keyValuePair_in_synpred98_Php3166);
         keyValuePair();
 
         state._fsp--;
@@ -8053,28 +8053,28 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred108_Php
     public final void synpred108_Php_fragment() throws RecognitionException {   
-        // Php.g:423:7: ( name OpenBrace ( expression ( Comma expression )* )? CloseBrace )
-        // Php.g:423:7: name OpenBrace ( expression ( Comma expression )* )? CloseBrace
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:7: ( name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:7: name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket
         {
-        pushFollow(FOLLOW_name_in_synpred108_Php3289);
+        pushFollow(FOLLOW_name_in_synpred108_Php3285);
         name();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,OpenBrace,FOLLOW_OpenBrace_in_synpred108_Php3291); if (state.failed) return ;
-        // Php.g:423:22: ( expression ( Comma expression )* )?
+        match(input,OpenRoundBracket,FOLLOW_OpenRoundBracket_in_synpred108_Php3287); if (state.failed) return ;
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:29: ( expression ( Comma expression )* )?
         int alt93=2;
         alt93 = dfa93.predict(input);
         switch (alt93) {
             case 1 :
-                // Php.g:423:23: expression ( Comma expression )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:30: expression ( Comma expression )*
                 {
-                pushFollow(FOLLOW_expression_in_synpred108_Php3294);
+                pushFollow(FOLLOW_expression_in_synpred108_Php3290);
                 expression();
 
                 state._fsp--;
                 if (state.failed) return ;
-                // Php.g:423:34: ( Comma expression )*
+                // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:41: ( Comma expression )*
                 loop92:
                 do {
                     int alt92=2;
@@ -8087,10 +8087,10 @@ public class PhpParser extends Parser {
 
                     switch (alt92) {
                 	case 1 :
-                	    // Php.g:423:35: Comma expression
+                	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:423:42: Comma expression
                 	    {
-                	    match(input,Comma,FOLLOW_Comma_in_synpred108_Php3297); if (state.failed) return ;
-                	    pushFollow(FOLLOW_expression_in_synpred108_Php3299);
+                	    match(input,Comma,FOLLOW_Comma_in_synpred108_Php3293); if (state.failed) return ;
+                	    pushFollow(FOLLOW_expression_in_synpred108_Php3295);
                 	    expression();
 
                 	    state._fsp--;
@@ -8110,7 +8110,7 @@ public class PhpParser extends Parser {
 
         }
 
-        match(input,CloseBrace,FOLLOW_CloseBrace_in_synpred108_Php3305); if (state.failed) return ;
+        match(input,CloseRoundBracket,FOLLOW_CloseRoundBracket_in_synpred108_Php3301); if (state.failed) return ;
 
         }
     }
@@ -8118,10 +8118,10 @@ public class PhpParser extends Parser {
 
     // $ANTLR start synpred110_Php
     public final void synpred110_Php_fragment() throws RecognitionException {   
-        // Php.g:428:7: ( memberAccess )
-        // Php.g:428:7: memberAccess
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:428:7: ( memberAccess )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:428:7: memberAccess
         {
-        pushFollow(FOLLOW_memberAccess_in_synpred110_Php3344);
+        pushFollow(FOLLOW_memberAccess_in_synpred110_Php3340);
         memberAccess();
 
         state._fsp--;
@@ -17407,7 +17407,7 @@ public class PhpParser extends Parser {
             this.transition = DFA61_transition;
         }
         public String getDescription() {
-            return "377:1: negateOrCast : ( ( Tilde | Minus | SuppressWarnings ) increment | OpenBrace PrimitiveType CloseBrace increment -> ^( Cast PrimitiveType increment ) | OpenBrace weakLogicalAnd CloseBrace | increment );";
+            return "377:1: negateOrCast : ( ( Tilde | Minus | SuppressWarnings ) increment | OpenRoundBracket PrimitiveType CloseRoundBracket increment -> ^( Cast PrimitiveType increment ) | OpenRoundBracket weakLogicalAnd CloseRoundBracket | increment );";
         }
     }
     static final String DFA62_eotS =
@@ -17776,7 +17776,7 @@ public class PhpParser extends Parser {
             this.transition = DFA66_transition;
         }
         public String getDescription() {
-            return "402:23: ( arrayEntry ( Comma arrayEntry )* )?";
+            return "402:30: ( arrayEntry ( Comma arrayEntry )* )?";
         }
     }
     static final String DFA67_eotS =
@@ -20583,7 +20583,7 @@ public class PhpParser extends Parser {
             this.transition = DFA72_transition;
         }
         public String getDescription() {
-            return "422:1: nameOrFunctionCall : ( name OpenBrace ( expression ( Comma expression )* )? CloseBrace -> ^( Apply name ( expression )* ) | name );";
+            return "422:1: nameOrFunctionCall : ( name OpenRoundBracket ( expression ( Comma expression )* )? CloseRoundBracket -> ^( Apply name ( expression )* ) | name );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -20737,7 +20737,7 @@ public class PhpParser extends Parser {
             this.transition = DFA71_transition;
         }
         public String getDescription() {
-            return "423:22: ( expression ( Comma expression )* )?";
+            return "423:29: ( expression ( Comma expression )* )?";
         }
     }
     static final String DFA73_eotS =
@@ -20956,7 +20956,7 @@ public class PhpParser extends Parser {
             this.transition = DFA74_transition;
         }
         public String getDescription() {
-            return "()* loopback of 438:9: ( OpenSquareBrace expression CloseSquareBrace | '->' UnquotedString )*";
+            return "()* loopback of 438:9: ( OpenSquareBracket expression CloseSquareBracket | '->' UnquotedString )*";
         }
     }
     static final String DFA76_eotS =
@@ -21099,345 +21099,345 @@ public class PhpParser extends Parser {
             this.transition = DFA93_transition;
         }
         public String getDescription() {
-            return "423:22: ( expression ( Comma expression )* )?";
+            return "423:29: ( expression ( Comma expression )* )?";
         }
     }
  
 
-    public static final BitSet FOLLOW_statement_in_prog876 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_simpleStatement_in_statement889 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_BodyString_in_statement892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_statement900 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_statement902 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_statement904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_bracketedBlock_in_statement916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classDefinition_in_statement929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceDefinition_in_statement937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_complexStatement_in_statement945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_simpleStatement_in_statement953 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_statement955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_bracketedBlock977 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_bracketedBlock981 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_bracketedBlock984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Interface_in_interfaceDefinition1010 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_interfaceDefinition1014 = new BitSet(new long[]{0x0200000000000400L});
-    public static final BitSet FOLLOW_interfaceExtends_in_interfaceDefinition1016 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_interfaceDefinition1027 = new BitSet(new long[]{0x2804200000000800L,0x0000000000040000L});
-    public static final BitSet FOLLOW_interfaceMember_in_interfaceDefinition1037 = new BitSet(new long[]{0x2804200000000800L,0x0000000000040000L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_interfaceDefinition1048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Extends_in_interfaceExtends1088 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_interfaceExtends1091 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Comma_in_interfaceExtends1094 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_interfaceExtends1097 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Const_in_interfaceMember1115 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_interfaceMember1117 = new BitSet(new long[]{0x0000000080000010L});
-    public static final BitSet FOLLOW_Equals_in_interfaceMember1120 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_interfaceMember1122 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_interfaceMember1126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_fieldModifier_in_interfaceMember1154 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_Function_in_interfaceMember1157 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_interfaceMember1159 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_parametersDefinition_in_interfaceMember1161 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_interfaceMember1163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classModifier_in_classDefinition1207 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_Class_in_classDefinition1219 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classDefinition1223 = new BitSet(new long[]{0x0600000000000400L});
-    public static final BitSet FOLLOW_Extends_in_classDefinition1235 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classDefinition1239 = new BitSet(new long[]{0x0400000000000400L});
-    public static final BitSet FOLLOW_classImplements_in_classDefinition1252 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_classDefinition1263 = new BitSet(new long[]{0x3804200000080800L,0x0000000000040000L});
-    public static final BitSet FOLLOW_classMember_in_classDefinition1273 = new BitSet(new long[]{0x3804200000080800L,0x0000000000040000L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_classDefinition1284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Implements_in_classImplements1366 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classImplements1370 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Comma_in_classImplements1373 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classImplements1376 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_fieldModifier_in_classMember1396 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_Function_in_classMember1399 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classMember1401 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_parametersDefinition_in_classMember1403 = new BitSet(new long[]{0x0000000000000410L});
-    public static final BitSet FOLLOW_bracketedBlock_in_classMember1415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SemiColon_in_classMember1419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Var_in_classMember1456 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_Dollar_in_classMember1458 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classMember1460 = new BitSet(new long[]{0x0000000080000010L});
-    public static final BitSet FOLLOW_Equals_in_classMember1463 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_classMember1465 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_classMember1469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Const_in_classMember1502 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classMember1504 = new BitSet(new long[]{0x0000000080000010L});
-    public static final BitSet FOLLOW_Equals_in_classMember1507 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_classMember1509 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_classMember1513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_fieldModifier_in_classMember1541 = new BitSet(new long[]{0x0804000000080000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_Dollar_in_classMember1545 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_classMember1547 = new BitSet(new long[]{0x0000000080000010L});
-    public static final BitSet FOLLOW_Equals_in_classMember1551 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_classMember1553 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_classMember1557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Dollar_in_fieldDefinition1605 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_fieldDefinition1607 = new BitSet(new long[]{0x0000000080000010L});
-    public static final BitSet FOLLOW_Equals_in_fieldDefinition1610 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_fieldDefinition1612 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_fieldDefinition1616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Abstract_in_classModifier1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statement_in_prog872 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_simpleStatement_in_statement885 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_BodyString_in_statement888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_statement896 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_statement898 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_statement900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_bracketedBlock_in_statement912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classDefinition_in_statement925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceDefinition_in_statement933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_complexStatement_in_statement941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_simpleStatement_in_statement949 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_statement951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_bracketedBlock973 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_bracketedBlock977 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_bracketedBlock980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Interface_in_interfaceDefinition1006 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_interfaceDefinition1010 = new BitSet(new long[]{0x0200000000000400L});
+    public static final BitSet FOLLOW_interfaceExtends_in_interfaceDefinition1012 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_interfaceDefinition1023 = new BitSet(new long[]{0x2804200000000800L,0x0000000000040000L});
+    public static final BitSet FOLLOW_interfaceMember_in_interfaceDefinition1033 = new BitSet(new long[]{0x2804200000000800L,0x0000000000040000L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_interfaceDefinition1044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Extends_in_interfaceExtends1084 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_interfaceExtends1087 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Comma_in_interfaceExtends1090 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_interfaceExtends1093 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Const_in_interfaceMember1111 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_interfaceMember1113 = new BitSet(new long[]{0x0000000080000010L});
+    public static final BitSet FOLLOW_Equals_in_interfaceMember1116 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_interfaceMember1118 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_interfaceMember1122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_fieldModifier_in_interfaceMember1150 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_Function_in_interfaceMember1153 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_interfaceMember1155 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_parametersDefinition_in_interfaceMember1157 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_interfaceMember1159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classModifier_in_classDefinition1203 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_Class_in_classDefinition1215 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classDefinition1219 = new BitSet(new long[]{0x0600000000000400L});
+    public static final BitSet FOLLOW_Extends_in_classDefinition1231 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classDefinition1235 = new BitSet(new long[]{0x0400000000000400L});
+    public static final BitSet FOLLOW_classImplements_in_classDefinition1248 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_classDefinition1259 = new BitSet(new long[]{0x3804200000080800L,0x0000000000040000L});
+    public static final BitSet FOLLOW_classMember_in_classDefinition1269 = new BitSet(new long[]{0x3804200000080800L,0x0000000000040000L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_classDefinition1280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Implements_in_classImplements1362 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classImplements1366 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Comma_in_classImplements1369 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classImplements1372 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_fieldModifier_in_classMember1392 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_Function_in_classMember1395 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classMember1397 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_parametersDefinition_in_classMember1399 = new BitSet(new long[]{0x0000000000000410L});
+    public static final BitSet FOLLOW_bracketedBlock_in_classMember1411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SemiColon_in_classMember1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Var_in_classMember1452 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_Dollar_in_classMember1454 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classMember1456 = new BitSet(new long[]{0x0000000080000010L});
+    public static final BitSet FOLLOW_Equals_in_classMember1459 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_classMember1461 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_classMember1465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Const_in_classMember1498 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classMember1500 = new BitSet(new long[]{0x0000000080000010L});
+    public static final BitSet FOLLOW_Equals_in_classMember1503 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_classMember1505 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_classMember1509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_fieldModifier_in_classMember1537 = new BitSet(new long[]{0x0804000000080000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_Dollar_in_classMember1541 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_classMember1543 = new BitSet(new long[]{0x0000000080000010L});
+    public static final BitSet FOLLOW_Equals_in_classMember1547 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_classMember1549 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_classMember1553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Dollar_in_fieldDefinition1601 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_fieldDefinition1603 = new BitSet(new long[]{0x0000000080000010L});
+    public static final BitSet FOLLOW_Equals_in_fieldDefinition1606 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_fieldDefinition1608 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_fieldDefinition1612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Abstract_in_classModifier1647 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_fieldModifier0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_If_in_complexStatement1694 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1696 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_complexStatement1700 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1702 = new BitSet(new long[]{0x0987E7FF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_complexStatement1706 = new BitSet(new long[]{0x0000003000000002L});
-    public static final BitSet FOLLOW_conditional_in_complexStatement1708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_For_in_complexStatement1739 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1741 = new BitSet(new long[]{0x0007C007454A0050L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_forInit_in_complexStatement1743 = new BitSet(new long[]{0x0007C007454A0050L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_forCondition_in_complexStatement1745 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_forUpdate_in_complexStatement1747 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1749 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_complexStatement1751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Foreach_in_complexStatement1773 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1775 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_variable_in_complexStatement1777 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_112_in_complexStatement1779 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_arrayEntry_in_complexStatement1781 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1783 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_complexStatement1785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_While_in_complexStatement1805 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1807 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_complexStatement1811 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1814 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_complexStatement1816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Do_in_complexStatement1835 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_complexStatement1837 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_While_in_complexStatement1839 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1841 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_complexStatement1845 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1847 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_complexStatement1849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Switch_in_complexStatement1868 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_complexStatement1870 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_complexStatement1872 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_complexStatement1874 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_complexStatement1876 = new BitSet(new long[]{0x0000180000000000L});
-    public static final BitSet FOLLOW_cases_in_complexStatement1877 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_complexStatement1878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_functionDefinition_in_complexStatement1896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Echo_in_simpleStatement1913 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_commaList_in_simpleStatement1916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Global_in_simpleStatement1924 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_name_in_simpleStatement1927 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Comma_in_simpleStatement1930 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_name_in_simpleStatement1933 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Static_in_simpleStatement1943 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_variable_in_simpleStatement1946 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_Equals_in_simpleStatement1948 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_simpleStatement1951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Break_in_simpleStatement1959 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
-    public static final BitSet FOLLOW_Integer_in_simpleStatement1962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Continue_in_simpleStatement1971 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
-    public static final BitSet FOLLOW_Integer_in_simpleStatement1974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Return_in_simpleStatement1988 = new BitSet(new long[]{0x0007C007454A0042L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_simpleStatement1991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RequireOperator_in_simpleStatement2000 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_simpleStatement2003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_simpleStatement2011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ElseIf_in_conditional2029 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_conditional2031 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_conditional2035 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_conditional2037 = new BitSet(new long[]{0x0987E7FF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_conditional2041 = new BitSet(new long[]{0x0000003000000002L});
-    public static final BitSet FOLLOW_conditional_in_conditional2043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Else_in_conditional2067 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_conditional2069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_commaList_in_forInit2090 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_forInit2093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_commaList_in_forCondition2119 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SemiColon_in_forCondition2122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_commaList_in_forUpdate2152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_casestatement_in_cases2180 = new BitSet(new long[]{0x0000180000000000L});
-    public static final BitSet FOLLOW_defaultcase_in_cases2184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Case_in_casestatement2201 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_casestatement2204 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_Colon_in_casestatement2206 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_casestatement2209 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_Default_in_defaultcase2229 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_Colon_in_defaultcase2232 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_defaultcase2235 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_Function_in_functionDefinition2254 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_functionDefinition2256 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_parametersDefinition_in_functionDefinition2258 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_bracketedBlock_in_functionDefinition2260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenBrace_in_parametersDefinition2298 = new BitSet(new long[]{0x0000000000480080L});
-    public static final BitSet FOLLOW_paramDef_in_parametersDefinition2301 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_Comma_in_parametersDefinition2304 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_paramDef_in_parametersDefinition2306 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_CloseBrace_in_parametersDefinition2312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_paramName_in_paramDef2339 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_Equals_in_paramDef2342 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
-    public static final BitSet FOLLOW_atom_in_paramDef2345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Dollar_in_paramName2364 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_paramName2367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Ampersand_in_paramName2375 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_Dollar_in_paramName2377 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_paramName2379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_commaList2408 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_Comma_in_commaList2411 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_commaList2414 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_weakLogicalOr_in_expression2438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_weakLogicalXor_in_weakLogicalOr2455 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_Or_in_weakLogicalOr2458 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_weakLogicalXor_in_weakLogicalOr2461 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_weakLogicalAnd_in_weakLogicalXor2480 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_Xor_in_weakLogicalXor2483 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_weakLogicalAnd_in_weakLogicalXor2486 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_assignment_in_weakLogicalAnd2509 = new BitSet(new long[]{0x0008000000000002L});
-    public static final BitSet FOLLOW_And_in_weakLogicalAnd2512 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_assignment_in_weakLogicalAnd2515 = new BitSet(new long[]{0x0008000000000002L});
-    public static final BitSet FOLLOW_name_in_assignment2534 = new BitSet(new long[]{0x0000000080000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_set_in_assignment2537 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_assignment_in_assignment2546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ternary_in_assignment2555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logicalOr_in_ternary2572 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_QuestionMark_in_ternary2574 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_ternary2576 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_Colon_in_ternary2578 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_ternary2580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logicalOr_in_ternary2599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logicalAnd_in_logicalOr2620 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_LogicalOr_in_logicalOr2623 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_logicalAnd_in_logicalOr2626 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_bitwiseOr_in_logicalAnd2645 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_LogicalAnd_in_logicalAnd2648 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_bitwiseOr_in_logicalAnd2651 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_bitWiseAnd_in_bitwiseOr2674 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_Pipe_in_bitwiseOr2677 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_bitWiseAnd_in_bitwiseOr2680 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_equalityCheck_in_bitWiseAnd2699 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_Ampersand_in_bitWiseAnd2702 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_equalityCheck_in_bitWiseAnd2705 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_comparisionCheck_in_equalityCheck2724 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-    public static final BitSet FOLLOW_EqualityOperator_in_equalityCheck2727 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_comparisionCheck_in_equalityCheck2730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_bitWiseShift_in_comparisionCheck2753 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
-    public static final BitSet FOLLOW_ComparisionOperator_in_comparisionCheck2756 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_bitWiseShift_in_comparisionCheck2759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_addition_in_bitWiseShift2778 = new BitSet(new long[]{0x0000000000000002L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ShiftOperator_in_bitWiseShift2781 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_addition_in_bitWiseShift2784 = new BitSet(new long[]{0x0000000000000002L,0x0000000001000000L});
-    public static final BitSet FOLLOW_multiplication_in_addition2807 = new BitSet(new long[]{0x0000000006200002L});
-    public static final BitSet FOLLOW_set_in_addition2810 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_multiplication_in_addition2823 = new BitSet(new long[]{0x0000000006200002L});
-    public static final BitSet FOLLOW_logicalNot_in_multiplication2842 = new BitSet(new long[]{0x0000000038000002L});
-    public static final BitSet FOLLOW_set_in_multiplication2845 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_logicalNot_in_multiplication2858 = new BitSet(new long[]{0x0000000038000002L});
-    public static final BitSet FOLLOW_Bang_in_logicalNot2877 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_logicalNot_in_logicalNot2880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceOf_in_logicalNot2888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_negateOrCast_in_instanceOf2905 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_Instanceof_in_instanceOf2908 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_negateOrCast_in_instanceOf2911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_negateOrCast2930 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_increment_in_negateOrCast2943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenBrace_in_negateOrCast2951 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_PrimitiveType_in_negateOrCast2953 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_negateOrCast2955 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_increment_in_negateOrCast2957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenBrace_in_negateOrCast2975 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_weakLogicalAnd_in_negateOrCast2978 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CloseBrace_in_negateOrCast2980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_increment_in_negateOrCast2989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IncrementOperator_in_increment3006 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_name_in_increment3008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_increment3026 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
-    public static final BitSet FOLLOW_IncrementOperator_in_increment3028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_newOrClone_in_increment3046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_New_in_newOrClone3063 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_nameOrFunctionCall_in_newOrClone3066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Clone_in_newOrClone3074 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_name_in_newOrClone3077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atomOrReference_in_newOrClone3085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_atomOrReference3102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_reference_in_atomOrReference3110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Array_in_arrayDeclaration3127 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_arrayDeclaration3129 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_arrayEntry_in_arrayDeclaration3132 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_Comma_in_arrayDeclaration3135 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_arrayEntry_in_arrayDeclaration3137 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_CloseBrace_in_arrayDeclaration3143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_keyValuePair_in_arrayEntry3170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_arrayEntry3174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_keyValuePair3193 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_ArrayAssign_in_keyValuePair3195 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_keyValuePair3197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SingleQuotedString_in_atom3219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DoubleQuotedString_in_atom3223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_HereDoc_in_atom3227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Integer_in_atom3231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Real_in_atom3235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Boolean_in_atom3239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arrayDeclaration_in_atom3243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Ampersand_in_reference3261 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
-    public static final BitSet FOLLOW_nameOrFunctionCall_in_reference3264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nameOrFunctionCall_in_reference3272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_nameOrFunctionCall3289 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_nameOrFunctionCall3291 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_nameOrFunctionCall3294 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_Comma_in_nameOrFunctionCall3297 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_nameOrFunctionCall3299 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_CloseBrace_in_nameOrFunctionCall3305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_nameOrFunctionCall3324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_staticMemberAccess_in_name3336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_memberAccess_in_name3344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variable_in_name3352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UnquotedString_in_staticMemberAccess3373 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ClassMember_in_staticMemberAccess3375 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_variable_in_staticMemberAccess3378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variable_in_memberAccess3395 = new BitSet(new long[]{0x0000000000010102L});
-    public static final BitSet FOLLOW_OpenSquareBrace_in_memberAccess3408 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_memberAccess3411 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_CloseSquareBrace_in_memberAccess3413 = new BitSet(new long[]{0x0000000000010102L});
-    public static final BitSet FOLLOW_InstanceMember_in_memberAccess3426 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_memberAccess3429 = new BitSet(new long[]{0x0000000000010102L});
-    public static final BitSet FOLLOW_Dollar_in_variable3452 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_variable_in_variable3455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UnquotedString_in_variable3463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_simpleStatement_in_synpred3_Php889 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_BodyString_in_synpred3_Php892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OpenCurlyBrace_in_synpred4_Php900 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
-    public static final BitSet FOLLOW_statement_in_synpred4_Php902 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CloseCurlyBrace_in_synpred4_Php904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_bracketedBlock_in_synpred5_Php916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_fieldModifier_in_synpred23_Php1396 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_Function_in_synpred23_Php1399 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_UnquotedString_in_synpred23_Php1401 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_parametersDefinition_in_synpred23_Php1403 = new BitSet(new long[]{0x0000000000000410L});
-    public static final BitSet FOLLOW_bracketedBlock_in_synpred23_Php1415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SemiColon_in_synpred23_Php1419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditional_in_synpred33_Php1708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditional_in_synpred52_Php2043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Or_in_synpred65_Php2458 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_weakLogicalXor_in_synpred65_Php2461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Xor_in_synpred66_Php2483 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_weakLogicalAnd_in_synpred66_Php2486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_And_in_synpred67_Php2512 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_assignment_in_synpred67_Php2515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_synpred69_Php2534 = new BitSet(new long[]{0x0000000080000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_set_in_synpred69_Php2537 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_assignment_in_synpred69_Php2546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logicalOr_in_synpred70_Php2572 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_QuestionMark_in_synpred70_Php2574 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_synpred70_Php2576 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_Colon_in_synpred70_Php2578 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_synpred70_Php2580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_synpred92_Php3026 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
-    public static final BitSet FOLLOW_IncrementOperator_in_synpred92_Php3028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_keyValuePair_in_synpred98_Php3170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_synpred108_Php3289 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_OpenBrace_in_synpred108_Php3291 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_synpred108_Php3294 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_Comma_in_synpred108_Php3297 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
-    public static final BitSet FOLLOW_expression_in_synpred108_Php3299 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_CloseBrace_in_synpred108_Php3305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_memberAccess_in_synpred110_Php3344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_If_in_complexStatement1690 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1692 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_complexStatement1696 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1698 = new BitSet(new long[]{0x0987E7FF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_complexStatement1702 = new BitSet(new long[]{0x0000003000000002L});
+    public static final BitSet FOLLOW_conditional_in_complexStatement1704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_For_in_complexStatement1735 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1737 = new BitSet(new long[]{0x0007C007454A0050L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_forInit_in_complexStatement1739 = new BitSet(new long[]{0x0007C007454A0050L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_forCondition_in_complexStatement1741 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_forUpdate_in_complexStatement1743 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1745 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_complexStatement1747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Foreach_in_complexStatement1769 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1771 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_variable_in_complexStatement1773 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_112_in_complexStatement1775 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_arrayEntry_in_complexStatement1777 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1779 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_complexStatement1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_While_in_complexStatement1801 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1803 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_complexStatement1807 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1810 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_complexStatement1812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Do_in_complexStatement1831 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_complexStatement1833 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_While_in_complexStatement1835 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1837 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_complexStatement1841 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1843 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_complexStatement1845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Switch_in_complexStatement1864 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_complexStatement1866 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_complexStatement1868 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_complexStatement1870 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_complexStatement1872 = new BitSet(new long[]{0x0000180000000000L});
+    public static final BitSet FOLLOW_cases_in_complexStatement1873 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_complexStatement1874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_functionDefinition_in_complexStatement1892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Echo_in_simpleStatement1909 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_commaList_in_simpleStatement1912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Global_in_simpleStatement1920 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_name_in_simpleStatement1923 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Comma_in_simpleStatement1926 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_name_in_simpleStatement1929 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Static_in_simpleStatement1939 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_variable_in_simpleStatement1942 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_Equals_in_simpleStatement1944 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_simpleStatement1947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Break_in_simpleStatement1955 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_Integer_in_simpleStatement1958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Continue_in_simpleStatement1967 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_Integer_in_simpleStatement1970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Return_in_simpleStatement1984 = new BitSet(new long[]{0x0007C007454A0042L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_simpleStatement1987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RequireOperator_in_simpleStatement1996 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_simpleStatement1999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_simpleStatement2007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ElseIf_in_conditional2025 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_conditional2027 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_conditional2031 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_conditional2033 = new BitSet(new long[]{0x0987E7FF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_conditional2037 = new BitSet(new long[]{0x0000003000000002L});
+    public static final BitSet FOLLOW_conditional_in_conditional2039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Else_in_conditional2063 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_conditional2065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_commaList_in_forInit2086 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_forInit2089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_commaList_in_forCondition2115 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SemiColon_in_forCondition2118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_commaList_in_forUpdate2148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_casestatement_in_cases2176 = new BitSet(new long[]{0x0000180000000000L});
+    public static final BitSet FOLLOW_defaultcase_in_cases2180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Case_in_casestatement2197 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_casestatement2200 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_Colon_in_casestatement2202 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_casestatement2205 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_Default_in_defaultcase2225 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_Colon_in_defaultcase2228 = new BitSet(new long[]{0x0987E7CF454A0440L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_defaultcase2231 = new BitSet(new long[]{0x0987E7CF454A0442L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_Function_in_functionDefinition2250 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_functionDefinition2252 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_parametersDefinition_in_functionDefinition2254 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_bracketedBlock_in_functionDefinition2256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_parametersDefinition2294 = new BitSet(new long[]{0x0000000000480080L});
+    public static final BitSet FOLLOW_paramDef_in_parametersDefinition2297 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_Comma_in_parametersDefinition2300 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_paramDef_in_parametersDefinition2302 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_parametersDefinition2308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_paramName_in_paramDef2335 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_Equals_in_paramDef2338 = new BitSet(new long[]{0x0000000000000000L,0x00000001F8080000L});
+    public static final BitSet FOLLOW_atom_in_paramDef2341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Dollar_in_paramName2360 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_paramName2363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Ampersand_in_paramName2371 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_Dollar_in_paramName2373 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_paramName2375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_commaList2404 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_Comma_in_commaList2407 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_commaList2410 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_weakLogicalOr_in_expression2434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_weakLogicalXor_in_weakLogicalOr2451 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_Or_in_weakLogicalOr2454 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_weakLogicalXor_in_weakLogicalOr2457 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_weakLogicalAnd_in_weakLogicalXor2476 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_Xor_in_weakLogicalXor2479 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_weakLogicalAnd_in_weakLogicalXor2482 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_assignment_in_weakLogicalAnd2505 = new BitSet(new long[]{0x0008000000000002L});
+    public static final BitSet FOLLOW_And_in_weakLogicalAnd2508 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_assignment_in_weakLogicalAnd2511 = new BitSet(new long[]{0x0008000000000002L});
+    public static final BitSet FOLLOW_name_in_assignment2530 = new BitSet(new long[]{0x0000000080000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_set_in_assignment2533 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_assignment_in_assignment2542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ternary_in_assignment2551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logicalOr_in_ternary2568 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_QuestionMark_in_ternary2570 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_ternary2572 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_Colon_in_ternary2574 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_ternary2576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logicalOr_in_ternary2595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logicalAnd_in_logicalOr2616 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_LogicalOr_in_logicalOr2619 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_logicalAnd_in_logicalOr2622 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_bitwiseOr_in_logicalAnd2641 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_LogicalAnd_in_logicalAnd2644 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_bitwiseOr_in_logicalAnd2647 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_bitWiseAnd_in_bitwiseOr2670 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_Pipe_in_bitwiseOr2673 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_bitWiseAnd_in_bitwiseOr2676 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_equalityCheck_in_bitWiseAnd2695 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_Ampersand_in_bitWiseAnd2698 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_equalityCheck_in_bitWiseAnd2701 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_comparisionCheck_in_equalityCheck2720 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+    public static final BitSet FOLLOW_EqualityOperator_in_equalityCheck2723 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_comparisionCheck_in_equalityCheck2726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_bitWiseShift_in_comparisionCheck2749 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
+    public static final BitSet FOLLOW_ComparisionOperator_in_comparisionCheck2752 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_bitWiseShift_in_comparisionCheck2755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_addition_in_bitWiseShift2774 = new BitSet(new long[]{0x0000000000000002L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ShiftOperator_in_bitWiseShift2777 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_addition_in_bitWiseShift2780 = new BitSet(new long[]{0x0000000000000002L,0x0000000001000000L});
+    public static final BitSet FOLLOW_multiplication_in_addition2803 = new BitSet(new long[]{0x0000000006200002L});
+    public static final BitSet FOLLOW_set_in_addition2806 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_multiplication_in_addition2819 = new BitSet(new long[]{0x0000000006200002L});
+    public static final BitSet FOLLOW_logicalNot_in_multiplication2838 = new BitSet(new long[]{0x0000000038000002L});
+    public static final BitSet FOLLOW_set_in_multiplication2841 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_logicalNot_in_multiplication2854 = new BitSet(new long[]{0x0000000038000002L});
+    public static final BitSet FOLLOW_Bang_in_logicalNot2873 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_logicalNot_in_logicalNot2876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceOf_in_logicalNot2884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_negateOrCast_in_instanceOf2901 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_Instanceof_in_instanceOf2904 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_negateOrCast_in_instanceOf2907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_negateOrCast2926 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_increment_in_negateOrCast2939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_negateOrCast2947 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_PrimitiveType_in_negateOrCast2949 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_negateOrCast2951 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_increment_in_negateOrCast2953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_negateOrCast2971 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_weakLogicalAnd_in_negateOrCast2974 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_negateOrCast2976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_increment_in_negateOrCast2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IncrementOperator_in_increment3002 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_name_in_increment3004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_increment3022 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+    public static final BitSet FOLLOW_IncrementOperator_in_increment3024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_newOrClone_in_increment3042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_New_in_newOrClone3059 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_nameOrFunctionCall_in_newOrClone3062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Clone_in_newOrClone3070 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_name_in_newOrClone3073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atomOrReference_in_newOrClone3081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_atomOrReference3098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_reference_in_atomOrReference3106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Array_in_arrayDeclaration3123 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_arrayDeclaration3125 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_arrayEntry_in_arrayDeclaration3128 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_Comma_in_arrayDeclaration3131 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_arrayEntry_in_arrayDeclaration3133 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_arrayDeclaration3139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_keyValuePair_in_arrayEntry3166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_arrayEntry3170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_keyValuePair3189 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_ArrayAssign_in_keyValuePair3191 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_keyValuePair3193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SingleQuotedString_in_atom3215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DoubleQuotedString_in_atom3219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_HereDoc_in_atom3223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Integer_in_atom3227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Real_in_atom3231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Boolean_in_atom3235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arrayDeclaration_in_atom3239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Ampersand_in_reference3257 = new BitSet(new long[]{0x00000003454A0040L,0x00000001FC0A0000L});
+    public static final BitSet FOLLOW_nameOrFunctionCall_in_reference3260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nameOrFunctionCall_in_reference3268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_nameOrFunctionCall3285 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_nameOrFunctionCall3287 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_nameOrFunctionCall3290 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_Comma_in_nameOrFunctionCall3293 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_nameOrFunctionCall3295 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_nameOrFunctionCall3301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_nameOrFunctionCall3320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_staticMemberAccess_in_name3332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_memberAccess_in_name3340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variable_in_name3348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UnquotedString_in_staticMemberAccess3369 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ClassMember_in_staticMemberAccess3371 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_variable_in_staticMemberAccess3374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variable_in_memberAccess3391 = new BitSet(new long[]{0x0000000000010102L});
+    public static final BitSet FOLLOW_OpenSquareBracket_in_memberAccess3404 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_memberAccess3407 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_CloseSquareBracket_in_memberAccess3409 = new BitSet(new long[]{0x0000000000010102L});
+    public static final BitSet FOLLOW_InstanceMember_in_memberAccess3422 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_memberAccess3425 = new BitSet(new long[]{0x0000000000010102L});
+    public static final BitSet FOLLOW_Dollar_in_variable3448 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_variable_in_variable3451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UnquotedString_in_variable3459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_simpleStatement_in_synpred3_Php885 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_BodyString_in_synpred3_Php888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OpenCurlyBracket_in_synpred4_Php896 = new BitSet(new long[]{0x0987E7CF454A0C40L,0x00000001FC1B0000L});
+    public static final BitSet FOLLOW_statement_in_synpred4_Php898 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_CloseCurlyBracket_in_synpred4_Php900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_bracketedBlock_in_synpred5_Php912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_fieldModifier_in_synpred23_Php1392 = new BitSet(new long[]{0x0804200000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_Function_in_synpred23_Php1395 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_UnquotedString_in_synpred23_Php1397 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_parametersDefinition_in_synpred23_Php1399 = new BitSet(new long[]{0x0000000000000410L});
+    public static final BitSet FOLLOW_bracketedBlock_in_synpred23_Php1411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SemiColon_in_synpred23_Php1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditional_in_synpred33_Php1704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditional_in_synpred52_Php2039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Or_in_synpred65_Php2454 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_weakLogicalXor_in_synpred65_Php2457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Xor_in_synpred66_Php2479 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_weakLogicalAnd_in_synpred66_Php2482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_And_in_synpred67_Php2508 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_assignment_in_synpred67_Php2511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_synpred69_Php2530 = new BitSet(new long[]{0x0000000080000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_set_in_synpred69_Php2533 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_assignment_in_synpred69_Php2542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logicalOr_in_synpred70_Php2568 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_QuestionMark_in_synpred70_Php2570 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_synpred70_Php2572 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_Colon_in_synpred70_Php2574 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_synpred70_Php2576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_synpred92_Php3022 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+    public static final BitSet FOLLOW_IncrementOperator_in_synpred92_Php3024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_keyValuePair_in_synpred98_Php3166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_synpred108_Php3285 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_OpenRoundBracket_in_synpred108_Php3287 = new BitSet(new long[]{0x0007C007454A00C0L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_synpred108_Php3290 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_Comma_in_synpred108_Php3293 = new BitSet(new long[]{0x0007C007454A0040L,0x00000001FC1A0000L});
+    public static final BitSet FOLLOW_expression_in_synpred108_Php3295 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_CloseRoundBracket_in_synpred108_Php3301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_memberAccess_in_synpred110_Php3340 = new BitSet(new long[]{0x0000000000000002L});
 
 }
