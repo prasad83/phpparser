@@ -97,6 +97,10 @@ tokens{
 @header{
 package net.kuruvila.php.parser; 
 }
+
+@members{
+    private boolean expressionFollowsBodyString = false;
+}
 @lexer::header{
 package net.kuruvila.php.parser;
 }
@@ -157,7 +161,8 @@ package net.kuruvila.php.parser;
 prog : statement*;
 
 statement
-    : simpleStatement? BodyString
+    : {expressionFollowsBodyString}?=> {expressionFollowsBodyString=false;} printExpr ';'!
+    | ({expressionFollowsBodyString}?=>  {expressionFollowsBodyString=false;} printExpr? | simpleStatement?) BodyString {expressionFollowsBodyString = $BodyString.text.endsWith("<?=");}
     | '{' statement '}' -> statement
     | bracketedBlock
     //| UnquotedString Colon statement -> ^(Label UnquotedString statement)
@@ -166,7 +171,11 @@ statement
     | complexStatement
     | simpleStatement ';'!
     ;
-    
+
+printExpr
+    : expression -> ^(Echo expression)
+    ;
+
 bracketedBlock
     : '{' stmts=statement* '}' -> ^(Block $stmts)
     ;
@@ -458,12 +467,12 @@ BodyString
 fragment
 BodyStringRest
     : {isAllowShortOpenTag()}?=> BodyStringRestShortTag
-    | (('<' ~ '?')=> '<' | ~'<' )* '<?php'?
+    | (('<' ~ '?')=> '<' | ~'<' )* ('<?' ('php'|'='))?
     ;
 
 fragment
 BodyStringRestShortTag
-    : (('<' ~ '?')=> '<' | ~'<' )* ('<?' ('php'?))?
+    : (('<' ~ '?')=> '<' | ~'<' )* ('<?' ('php'|'=')?)?
     ;
 
 

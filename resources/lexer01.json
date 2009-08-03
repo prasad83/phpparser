@@ -34,5 +34,7 @@
     "WhiteSpace",
     "BodyString",
     "WhiteSpace",
-    "BodyString"
+    "BodyString",
+		"WhiteSpace",
+		"BodyString"
 ]

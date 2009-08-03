@@ -1,1 +1,2 @@
 Yamagucci<?/*H ello*/?>
+<?= $a ?>

@@ -1,0 +1,22 @@
+[
+	null,
+	{"value" : "<?php", "name" : "BodyString"},
+	{"value" : "?><?=", "name" : "BodyString"},
+	[
+		{"value" : "Echo", "name" : "'echo'"},
+		["$", "a"]
+	],
+	{"value" : "?>\n<?=", "name" : "BodyString"},
+	[
+		{"value" : "Echo", "name" : "'echo'"},
+		[
+			{"value" : "=", "name" : "'='"},
+			["$", "a"], ["$", "b"]
+		]
+	],
+	[
+		{"value" : "echo", "name" : "'echo'"},
+		{"value" : "'holler'", "name" : "SingleQuotedString"}
+	],
+	{"value" : "?>", "name" : "BodyString"}
+]

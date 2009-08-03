@@ -138,6 +138,13 @@ public class PhpParserTest {
 				test("list");
 		}
     
+
+		@Test
+		public void testPrintExpr() throws Exception{
+				System.out.println("Test test");
+				test("printexpr");
+		}
+
 		//@Test
     public void testVtiger() throws Exception{
         PhpParser parser = res.parser("vtiger");

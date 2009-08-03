@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 /Users/sidharth/Documents/code/phpparser/grammar/Php.g 2009-08-02 17:47:00
+// $ANTLR 3.1.3 Mar 17, 2009 19:23:44 /Users/sidharth/Documents/code/phpparser/grammar/Php.g 2009-08-03 23:56:58
 
 package net.kuruvila.php.parser;
 
@@ -1429,8 +1429,8 @@ public class PhpLexer extends Lexer {
         try {
             int _type = BodyString;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:455:5: ( '?>' BodyStringRest )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:455:7: '?>' BodyStringRest
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:464:5: ( '?>' BodyStringRest )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:464:7: '?>' BodyStringRest
             {
             match("?>"); if (state.failed) return ;
 
@@ -1449,60 +1449,60 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "BodyStringRest"
     public final void mBodyStringRest() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:460:5: ({...}? => BodyStringRestShortTag | ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?php' )? )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:469:5: ({...}? => BodyStringRestShortTag | ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( 'php' | '=' ) )? )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0=='<') ) {
-                int LA3_1 = input.LA(2);
+            if ( (LA4_0=='<') ) {
+                int LA4_1 = input.LA(2);
 
                 if ( ((isAllowShortOpenTag())) ) {
-                    alt3=1;
+                    alt4=1;
                 }
                 else if ( (true) ) {
-                    alt3=2;
+                    alt4=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 3, 1, input);
+                        new NoViableAltException("", 4, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( ((LA3_0>='\u0000' && LA3_0<=';')||(LA3_0>='=' && LA3_0<='\uFFFF')) ) {
-                int LA3_2 = input.LA(2);
+            else if ( ((LA4_0>='\u0000' && LA4_0<=';')||(LA4_0>='=' && LA4_0<='\uFFFF')) ) {
+                int LA4_2 = input.LA(2);
 
                 if ( ((isAllowShortOpenTag())) ) {
-                    alt3=1;
+                    alt4=1;
                 }
                 else if ( (true) ) {
-                    alt3=2;
+                    alt4=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 3, 2, input);
+                        new NoViableAltException("", 4, 2, input);
 
                     throw nvae;
                 }
             }
             else if ( ((isAllowShortOpenTag())) ) {
-                alt3=1;
+                alt4=1;
             }
             else if ( (true) ) {
-                alt3=2;
+                alt4=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:460:7: {...}? => BodyStringRestShortTag
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:469:7: {...}? => BodyStringRestShortTag
                     {
                     if ( !((isAllowShortOpenTag())) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
@@ -1513,23 +1513,23 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?php' )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( 'php' | '=' ) )?
                     {
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*
                     loop1:
                     do {
                         int alt1=3;
                         alt1 = dfa1.predict(input);
                         switch (alt1) {
                     	case 1 :
-                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:8: ( '<' ~ '?' )=> '<'
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:8: ( '<' ~ '?' )=> '<'
                     	    {
                     	    match('<'); if (state.failed) return ;
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:28: ~ '<'
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:28: ~ '<'
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<=';')||(input.LA(1)>='=' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1550,18 +1550,54 @@ public class PhpLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:36: ( '<?php' )?
-                    int alt2=2;
-                    int LA2_0 = input.LA(1);
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:36: ( '<?' ( 'php' | '=' ) )?
+                    int alt3=2;
+                    int LA3_0 = input.LA(1);
 
-                    if ( (LA2_0=='<') ) {
-                        alt2=1;
+                    if ( (LA3_0=='<') ) {
+                        alt3=1;
                     }
-                    switch (alt2) {
+                    switch (alt3) {
                         case 1 :
-                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:36: '<?php'
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:37: '<?' ( 'php' | '=' )
                             {
-                            match("<?php"); if (state.failed) return ;
+                            match("<?"); if (state.failed) return ;
+
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:42: ( 'php' | '=' )
+                            int alt2=2;
+                            int LA2_0 = input.LA(1);
+
+                            if ( (LA2_0=='p') ) {
+                                alt2=1;
+                            }
+                            else if ( (LA2_0=='=') ) {
+                                alt2=2;
+                            }
+                            else {
+                                if (state.backtracking>0) {state.failed=true; return ;}
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 2, 0, input);
+
+                                throw nvae;
+                            }
+                            switch (alt2) {
+                                case 1 :
+                                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:43: 'php'
+                                    {
+                                    match("php"); if (state.failed) return ;
+
+
+                                    }
+                                    break;
+                                case 2 :
+                                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:49: '='
+                                    {
+                                    match('='); if (state.failed) return ;
+
+                                    }
+                                    break;
+
+                            }
 
 
                             }
@@ -1583,54 +1619,54 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "BodyStringRestShortTag"
     public final void mBodyStringRestShortTag() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:5: ( ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( ( 'php' )? ) )? )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( ( 'php' )? ) )?
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:5: ( ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( 'php' | '=' )? )? )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )* ( '<?' ( 'php' | '=' )? )?
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*
-            loop4:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*
+            loop5:
             do {
-                int alt4=3;
-                int LA4_0 = input.LA(1);
+                int alt5=3;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0=='<') ) {
-                    int LA4_1 = input.LA(2);
+                if ( (LA5_0=='<') ) {
+                    int LA5_1 = input.LA(2);
 
-                    if ( (LA4_1=='?') ) {
-                        int LA4_4 = input.LA(3);
+                    if ( (LA5_1=='?') ) {
+                        int LA5_4 = input.LA(3);
 
                         if ( (synpred2_Php()) ) {
-                            alt4=1;
+                            alt5=1;
                         }
 
 
                     }
-                    else if ( (LA4_1=='<') && (synpred2_Php())) {
-                        alt4=1;
+                    else if ( (LA5_1=='<') && (synpred2_Php())) {
+                        alt5=1;
                     }
-                    else if ( ((LA4_1>='\u0000' && LA4_1<=';')||(LA4_1>='=' && LA4_1<='>')||(LA4_1>='@' && LA4_1<='\uFFFF')) && (synpred2_Php())) {
-                        alt4=1;
+                    else if ( ((LA5_1>='\u0000' && LA5_1<=';')||(LA5_1>='=' && LA5_1<='>')||(LA5_1>='@' && LA5_1<='\uFFFF')) && (synpred2_Php())) {
+                        alt5=1;
                     }
 
                     else {
-                        alt4=1;
+                        alt5=1;
                     }
 
                 }
-                else if ( ((LA4_0>='\u0000' && LA4_0<=';')||(LA4_0>='=' && LA4_0<='\uFFFF')) ) {
-                    alt4=2;
+                else if ( ((LA5_0>='\u0000' && LA5_0<=';')||(LA5_0>='=' && LA5_0<='\uFFFF')) ) {
+                    alt5=2;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:8: ( '<' ~ '?' )=> '<'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:8: ( '<' ~ '?' )=> '<'
             	    {
             	    match('<'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:28: ~ '<'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:28: ~ '<'
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<=';')||(input.LA(1)>='=' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1647,45 +1683,49 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:36: ( '<?' ( ( 'php' )? ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:36: ( '<?' ( 'php' | '=' )? )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0=='<') ) {
-                alt6=1;
+            if ( (LA7_0=='<') ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:37: '<?' ( ( 'php' )? )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:37: '<?' ( 'php' | '=' )?
                     {
                     match("<?"); if (state.failed) return ;
 
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:42: ( ( 'php' )? )
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:43: ( 'php' )?
-                    {
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:43: ( 'php' )?
-                    int alt5=2;
-                    int LA5_0 = input.LA(1);
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:42: ( 'php' | '=' )?
+                    int alt6=3;
+                    int LA6_0 = input.LA(1);
 
-                    if ( (LA5_0=='p') ) {
-                        alt5=1;
+                    if ( (LA6_0=='p') ) {
+                        alt6=1;
                     }
-                    switch (alt5) {
+                    else if ( (LA6_0=='=') ) {
+                        alt6=2;
+                    }
+                    switch (alt6) {
                         case 1 :
-                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:43: 'php'
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:43: 'php'
                             {
                             match("php"); if (state.failed) return ;
 
 
                             }
                             break;
+                        case 2 :
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:49: '='
+                            {
+                            match('='); if (state.failed) return ;
 
-                    }
-
+                            }
+                            break;
 
                     }
 
@@ -1709,56 +1749,56 @@ public class PhpLexer extends Lexer {
         try {
             int _type = MultilineComment;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:5: ( '/*' ( ( '*' ~ '/' )=> '*' | ~ '*' )* '*/' )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:7: '/*' ( ( '*' ~ '/' )=> '*' | ~ '*' )* '*/'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:5: ( '/*' ( ( '*' ~ '/' )=> '*' | ~ '*' )* '*/' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:7: '/*' ( ( '*' ~ '/' )=> '*' | ~ '*' )* '*/'
             {
             match("/*"); if (state.failed) return ;
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:12: ( ( '*' ~ '/' )=> '*' | ~ '*' )*
-            loop7:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:12: ( ( '*' ~ '/' )=> '*' | ~ '*' )*
+            loop8:
             do {
-                int alt7=3;
-                int LA7_0 = input.LA(1);
+                int alt8=3;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA8_0=='*') ) {
+                    int LA8_1 = input.LA(2);
 
-                    if ( (LA7_1=='/') ) {
-                        int LA7_3 = input.LA(3);
+                    if ( (LA8_1=='/') ) {
+                        int LA8_3 = input.LA(3);
 
-                        if ( (LA7_3=='*') && (synpred3_Php())) {
-                            alt7=1;
+                        if ( (LA8_3=='*') && (synpred3_Php())) {
+                            alt8=1;
                         }
-                        else if ( ((LA7_3>='\u0000' && LA7_3<=')')||(LA7_3>='+' && LA7_3<='\uFFFF')) && (synpred3_Php())) {
-                            alt7=1;
+                        else if ( ((LA8_3>='\u0000' && LA8_3<=')')||(LA8_3>='+' && LA8_3<='\uFFFF')) && (synpred3_Php())) {
+                            alt8=1;
                         }
 
 
                     }
-                    else if ( (LA7_1=='*') && (synpred3_Php())) {
-                        alt7=1;
+                    else if ( (LA8_1=='*') && (synpred3_Php())) {
+                        alt8=1;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<=')')||(LA7_1>='+' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) && (synpred3_Php())) {
-                        alt7=1;
+                    else if ( ((LA8_1>='\u0000' && LA8_1<=')')||(LA8_1>='+' && LA8_1<='.')||(LA8_1>='0' && LA8_1<='\uFFFF')) && (synpred3_Php())) {
+                        alt8=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=2;
+                else if ( ((LA8_0>='\u0000' && LA8_0<=')')||(LA8_0>='+' && LA8_0<='\uFFFF')) ) {
+                    alt8=2;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:13: ( '*' ~ '/' )=> '*'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:13: ( '*' ~ '/' )=> '*'
             	    {
             	    match('*'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:32: ~ '*'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:32: ~ '*'
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<=')')||(input.LA(1)>='+' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1775,7 +1815,7 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -1800,85 +1840,18 @@ public class PhpLexer extends Lexer {
         try {
             int _type = SinglelineComment;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:5: ( '//' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )* )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:7: '//' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:5: ( '//' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:7: '//' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
             {
             match("//"); if (state.failed) return ;
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:13: ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
-            loop8:
-            do {
-                int alt8=3;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0=='?') && (synpred4_Php())) {
-                    alt8=1;
-                }
-                else if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='>')||(LA8_0>='@' && LA8_0<='\uFFFF')) ) {
-                    alt8=2;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:14: ( '?' ~ '>' )=> '?'
-            	    {
-            	    match('?'); if (state.failed) return ;
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:32: ~ ( '\\n' | '?' )
-            	    {
-            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF') ) {
-            	        input.consume();
-            	    state.failed=false;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return ;}
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-              _channel=HIDDEN;
-            }
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "SinglelineComment"
-
-    // $ANTLR start "UnixComment"
-    public final void mUnixComment() throws RecognitionException {
-        try {
-            int _type = UnixComment;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:5: ( '#' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )* )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:7: '#' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
-            {
-            match('#'); if (state.failed) return ;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:11: ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:13: ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
             loop9:
             do {
                 int alt9=3;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0=='?') && (synpred5_Php())) {
+                if ( (LA9_0=='?') && (synpred4_Php())) {
                     alt9=1;
                 }
                 else if ( ((LA9_0>='\u0000' && LA9_0<='\t')||(LA9_0>='\u000B' && LA9_0<='>')||(LA9_0>='@' && LA9_0<='\uFFFF')) ) {
@@ -1888,14 +1861,14 @@ public class PhpLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:12: ( '?' ~ '>' )=> '?'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:14: ( '?' ~ '>' )=> '?'
             	    {
             	    match('?'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:30: ~ ( '\\n' | '?' )
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:32: ~ ( '\\n' | '?' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1928,6 +1901,73 @@ public class PhpLexer extends Lexer {
         finally {
         }
     }
+    // $ANTLR end "SinglelineComment"
+
+    // $ANTLR start "UnixComment"
+    public final void mUnixComment() throws RecognitionException {
+        try {
+            int _type = UnixComment;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:5: ( '#' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:7: '#' ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
+            {
+            match('#'); if (state.failed) return ;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:11: ( ( '?' ~ '>' )=> '?' | ~ ( '\\n' | '?' ) )*
+            loop10:
+            do {
+                int alt10=3;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0=='?') && (synpred5_Php())) {
+                    alt10=1;
+                }
+                else if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='>')||(LA10_0>='@' && LA10_0<='\uFFFF')) ) {
+                    alt10=2;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:12: ( '?' ~ '>' )=> '?'
+            	    {
+            	    match('?'); if (state.failed) return ;
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:30: ~ ( '\\n' | '?' )
+            	    {
+            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF') ) {
+            	        input.consume();
+            	    state.failed=false;
+            	    }
+            	    else {
+            	        if (state.backtracking>0) {state.failed=true; return ;}
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+              _channel=HIDDEN;
+            }
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
     // $ANTLR end "UnixComment"
 
     // $ANTLR start "Array"
@@ -1935,8 +1975,8 @@ public class PhpLexer extends Lexer {
         try {
             int _type = Array;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:5: ( ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' ) )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:7: ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:494:5: ( ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:494:7: ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' )
             {
             if ( input.LA(1)=='A'||input.LA(1)=='a' ) {
                 input.consume();
@@ -2004,12 +2044,12 @@ public class PhpLexer extends Lexer {
         try {
             int _type = RequireOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:5: ( 'require' | 'require_once' | 'include' | 'include_once' )
-            int alt10=4;
-            alt10 = dfa10.predict(input);
-            switch (alt10) {
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:498:5: ( 'require' | 'require_once' | 'include' | 'include_once' )
+            int alt11=4;
+            alt11 = dfa11.predict(input);
+            switch (alt11) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:7: 'require'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:498:7: 'require'
                     {
                     match("require"); if (state.failed) return ;
 
@@ -2017,7 +2057,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:19: 'require_once'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:498:19: 'require_once'
                     {
                     match("require_once"); if (state.failed) return ;
 
@@ -2025,7 +2065,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:36: 'include'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:498:36: 'include'
                     {
                     match("include"); if (state.failed) return ;
 
@@ -2033,7 +2073,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:48: 'include_once'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:498:48: 'include_once'
                     {
                     match("include_once"); if (state.failed) return ;
 
@@ -2055,50 +2095,50 @@ public class PhpLexer extends Lexer {
         try {
             int _type = PrimitiveType;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:5: ( 'int' | 'float' | 'string' | 'array' | 'object' | 'bool' )
-            int alt11=6;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:5: ( 'int' | 'float' | 'string' | 'array' | 'object' | 'bool' )
+            int alt12=6;
             switch ( input.LA(1) ) {
             case 'i':
                 {
-                alt11=1;
+                alt12=1;
                 }
                 break;
             case 'f':
                 {
-                alt11=2;
+                alt12=2;
                 }
                 break;
             case 's':
                 {
-                alt11=3;
+                alt12=3;
                 }
                 break;
             case 'a':
                 {
-                alt11=4;
+                alt12=4;
                 }
                 break;
             case 'o':
                 {
-                alt11=5;
+                alt12=5;
                 }
                 break;
             case 'b':
                 {
-                alt11=6;
+                alt12=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:7: 'int'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:7: 'int'
                     {
                     match("int"); if (state.failed) return ;
 
@@ -2106,7 +2146,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:13: 'float'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:13: 'float'
                     {
                     match("float"); if (state.failed) return ;
 
@@ -2114,7 +2154,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:21: 'string'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:21: 'string'
                     {
                     match("string"); if (state.failed) return ;
 
@@ -2122,7 +2162,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:30: 'array'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:30: 'array'
                     {
                     match("array"); if (state.failed) return ;
 
@@ -2130,7 +2170,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:38: 'object'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:38: 'object'
                     {
                     match("object"); if (state.failed) return ;
 
@@ -2138,7 +2178,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:493:47: 'bool'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:47: 'bool'
                     {
                     match("bool"); if (state.failed) return ;
 
@@ -2160,29 +2200,29 @@ public class PhpLexer extends Lexer {
         try {
             int _type = AccessModifier;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:497:5: ( 'public' | 'private' | 'protected' )
-            int alt12=3;
-            int LA12_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:5: ( 'public' | 'private' | 'protected' )
+            int alt13=3;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0=='p') ) {
-                int LA12_1 = input.LA(2);
+            if ( (LA13_0=='p') ) {
+                int LA13_1 = input.LA(2);
 
-                if ( (LA12_1=='u') ) {
-                    alt12=1;
+                if ( (LA13_1=='u') ) {
+                    alt13=1;
                 }
-                else if ( (LA12_1=='r') ) {
-                    int LA12_3 = input.LA(3);
+                else if ( (LA13_1=='r') ) {
+                    int LA13_3 = input.LA(3);
 
-                    if ( (LA12_3=='i') ) {
-                        alt12=2;
+                    if ( (LA13_3=='i') ) {
+                        alt13=2;
                     }
-                    else if ( (LA12_3=='o') ) {
-                        alt12=3;
+                    else if ( (LA13_3=='o') ) {
+                        alt13=3;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 12, 3, input);
+                            new NoViableAltException("", 13, 3, input);
 
                         throw nvae;
                     }
@@ -2190,7 +2230,7 @@ public class PhpLexer extends Lexer {
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 12, 1, input);
+                        new NoViableAltException("", 13, 1, input);
 
                     throw nvae;
                 }
@@ -2198,13 +2238,13 @@ public class PhpLexer extends Lexer {
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:497:7: 'public'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:7: 'public'
                     {
                     match("public"); if (state.failed) return ;
 
@@ -2212,7 +2252,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:497:18: 'private'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:18: 'private'
                     {
                     match("private"); if (state.failed) return ;
 
@@ -2220,7 +2260,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:497:30: 'protected'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:30: 'protected'
                     {
                     match("protected"); if (state.failed) return ;
 
@@ -2240,45 +2280,45 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "Decimal"
     public final void mDecimal() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:2: ( ( '1' .. '9' ( '0' .. '9' )* ) | '0' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:2: ( ( '1' .. '9' ( '0' .. '9' )* ) | '0' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( ((LA14_0>='1' && LA14_0<='9')) ) {
-                alt14=1;
+            if ( ((LA15_0>='1' && LA15_0<='9')) ) {
+                alt15=1;
             }
-            else if ( (LA14_0=='0') ) {
-                alt14=2;
+            else if ( (LA15_0=='0') ) {
+                alt15=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:3: ( '1' .. '9' ( '0' .. '9' )* )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:3: ( '1' .. '9' ( '0' .. '9' )* )
                     {
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:3: ( '1' .. '9' ( '0' .. '9' )* )
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:4: '1' .. '9' ( '0' .. '9' )*
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:3: ( '1' .. '9' ( '0' .. '9' )* )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:4: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); if (state.failed) return ;
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:13: ( '0' .. '9' )*
-                    loop13:
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:13: ( '0' .. '9' )*
+                    loop14:
                     do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
+                        int alt14=2;
+                        int LA14_0 = input.LA(1);
 
-                        if ( ((LA13_0>='0' && LA13_0<='9')) ) {
-                            alt13=1;
+                        if ( ((LA14_0>='0' && LA14_0<='9')) ) {
+                            alt14=1;
                         }
 
 
-                        switch (alt13) {
+                        switch (alt14) {
                     	case 1 :
-                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:14: '0' .. '9'
+                    	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); if (state.failed) return ;
 
@@ -2286,7 +2326,7 @@ public class PhpLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop13;
+                    	    break loop14;
                         }
                     } while (true);
 
@@ -2297,7 +2337,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:502:26: '0'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:26: '0'
                     {
                     match('0'); if (state.failed) return ;
 
@@ -2314,8 +2354,8 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "Hexadecimal"
     public final void mHexadecimal() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:2: ( '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:4: '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:515:2: ( '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:515:4: '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match('0'); if (state.failed) return ;
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -2328,19 +2368,19 @@ public class PhpLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:506:16: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
-            int cnt15=0;
-            loop15:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:515:16: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            int cnt16=0;
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( ((LA15_0>='0' && LA15_0<='9')||(LA15_0>='A' && LA15_0<='F')||(LA15_0>='a' && LA15_0<='f')) ) {
-                    alt15=1;
+                if ( ((LA16_0>='0' && LA16_0<='9')||(LA16_0>='A' && LA16_0<='F')||(LA16_0>='a' && LA16_0<='f')) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
             	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:
             	    {
@@ -2354,53 +2394,6 @@ public class PhpLexer extends Lexer {
             	        recover(mse);
             	        throw mse;}
 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt15 >= 1 ) break loop15;
-            	    if (state.backtracking>0) {state.failed=true; return ;}
-                        EarlyExitException eee =
-                            new EarlyExitException(15, input);
-                        throw eee;
-                }
-                cnt15++;
-            } while (true);
-
-
-            }
-
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "Hexadecimal"
-
-    // $ANTLR start "Octal"
-    public final void mOctal() throws RecognitionException {
-        try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:2: ( '0' ( '0' .. '7' )+ )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:4: '0' ( '0' .. '7' )+
-            {
-            match('0'); if (state.failed) return ;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:7: ( '0' .. '7' )+
-            int cnt16=0;
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( ((LA16_0>='0' && LA16_0<='7')) ) {
-                    alt16=1;
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:511:8: '0' .. '7'
-            	    {
-            	    matchRange('0','7'); if (state.failed) return ;
 
             	    }
             	    break;
@@ -2422,6 +2415,53 @@ public class PhpLexer extends Lexer {
         finally {
         }
     }
+    // $ANTLR end "Hexadecimal"
+
+    // $ANTLR start "Octal"
+    public final void mOctal() throws RecognitionException {
+        try {
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:520:2: ( '0' ( '0' .. '7' )+ )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:520:4: '0' ( '0' .. '7' )+
+            {
+            match('0'); if (state.failed) return ;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:520:7: ( '0' .. '7' )+
+            int cnt17=0;
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( ((LA17_0>='0' && LA17_0<='7')) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:520:8: '0' .. '7'
+            	    {
+            	    matchRange('0','7'); if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt17 >= 1 ) break loop17;
+            	    if (state.backtracking>0) {state.failed=true; return ;}
+                        EarlyExitException eee =
+                            new EarlyExitException(17, input);
+                        throw eee;
+                }
+                cnt17++;
+            } while (true);
+
+
+            }
+
+        }
+        finally {
+        }
+    }
     // $ANTLR end "Octal"
 
     // $ANTLR start "Integer"
@@ -2429,16 +2469,16 @@ public class PhpLexer extends Lexer {
         try {
             int _type = Integer;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:514:2: ( Octal | Decimal | Hexadecimal )
-            int alt17=3;
-            int LA17_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:523:2: ( Octal | Decimal | Hexadecimal )
+            int alt18=3;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0=='0') ) {
+            if ( (LA18_0=='0') ) {
                 switch ( input.LA(2) ) {
                 case 'X':
                 case 'x':
                     {
-                    alt17=3;
+                    alt18=3;
                     }
                     break;
                 case '0':
@@ -2450,40 +2490,40 @@ public class PhpLexer extends Lexer {
                 case '6':
                 case '7':
                     {
-                    alt17=1;
+                    alt18=1;
                     }
                     break;
                 default:
-                    alt17=2;}
+                    alt18=2;}
 
             }
-            else if ( ((LA17_0>='1' && LA17_0<='9')) ) {
-                alt17=2;
+            else if ( ((LA18_0>='1' && LA18_0<='9')) ) {
+                alt18=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:514:3: Octal
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:523:3: Octal
                     {
                     mOctal(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:514:9: Decimal
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:523:9: Decimal
                     {
                     mDecimal(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:514:17: Hexadecimal
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:523:17: Hexadecimal
                     {
                     mHexadecimal(); if (state.failed) return ;
 
@@ -2502,24 +2542,24 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "Digits"
     public final void mDigits() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:519:2: ( ( '0' .. '9' )+ )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:519:4: ( '0' .. '9' )+
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:528:2: ( ( '0' .. '9' )+ )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:528:4: ( '0' .. '9' )+
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:519:4: ( '0' .. '9' )+
-            int cnt18=0;
-            loop18:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:528:4: ( '0' .. '9' )+
+            int cnt19=0;
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( ((LA18_0>='0' && LA18_0<='9')) ) {
-                    alt18=1;
+                if ( ((LA19_0>='0' && LA19_0<='9')) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:519:4: '0' .. '9'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:528:4: '0' .. '9'
             	    {
             	    matchRange('0','9'); if (state.failed) return ;
 
@@ -2527,13 +2567,13 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt18 >= 1 ) break loop18;
+            	    if ( cnt19 >= 1 ) break loop19;
             	    if (state.backtracking>0) {state.failed=true; return ;}
                         EarlyExitException eee =
-                            new EarlyExitException(18, input);
+                            new EarlyExitException(19, input);
                         throw eee;
                 }
-                cnt18++;
+                cnt19++;
             } while (true);
 
 
@@ -2548,32 +2588,32 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "DNum"
     public final void mDNum() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:2: ( ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) ) )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:2: ( ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA20_0=='.') && (synpred6_Php())) {
-                alt20=1;
+            if ( (LA21_0=='.') && (synpred6_Php())) {
+                alt21=1;
             }
-            else if ( ((LA20_0>='0' && LA20_0<='9')) ) {
-                alt20=2;
+            else if ( ((LA21_0>='0' && LA21_0<='9')) ) {
+                alt21=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:4: ( '.' Digits )=> ( '.' Digits )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:4: ( '.' Digits )=> ( '.' Digits )
                     {
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:18: ( '.' Digits )
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:19: '.' Digits
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:18: ( '.' Digits )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:19: '.' Digits
                     {
                     match('.'); if (state.failed) return ;
                     mDigits(); if (state.failed) return ;
@@ -2584,23 +2624,23 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:31: ( Digits '.' ( Digits )? )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:31: ( Digits '.' ( Digits )? )
                     {
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:31: ( Digits '.' ( Digits )? )
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:32: Digits '.' ( Digits )?
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:31: ( Digits '.' ( Digits )? )
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:32: Digits '.' ( Digits )?
                     {
                     mDigits(); if (state.failed) return ;
                     match('.'); if (state.failed) return ;
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:43: ( Digits )?
-                    int alt19=2;
-                    int LA19_0 = input.LA(1);
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:43: ( Digits )?
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
 
-                    if ( ((LA19_0>='0' && LA19_0<='9')) ) {
-                        alt19=1;
+                    if ( ((LA20_0>='0' && LA20_0<='9')) ) {
+                        alt20=1;
                     }
-                    switch (alt19) {
+                    switch (alt20) {
                         case 1 :
-                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:43: Digits
+                            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:43: Digits
                             {
                             mDigits(); if (state.failed) return ;
 
@@ -2630,25 +2670,25 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "Exponent_DNum"
     public final void mExponent_DNum() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:2: ( ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits ) )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:2: ( ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits ) )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:4: ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:4: ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:4: ( Digits | DNum )
-            int alt21=2;
-            alt21 = dfa21.predict(input);
-            switch (alt21) {
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:4: ( Digits | DNum )
+            int alt22=2;
+            alt22 = dfa22.predict(input);
+            switch (alt22) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:5: Digits
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:5: Digits
                     {
                     mDigits(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:12: DNum
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:12: DNum
                     {
                     mDNum(); if (state.failed) return ;
 
@@ -2667,16 +2707,16 @@ public class PhpLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:26: ( '+' '-' )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:26: ( '+' '-' )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0=='+') ) {
-                alt22=1;
+            if ( (LA23_0=='+') ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:529:27: '+' '-'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:538:27: '+' '-'
                     {
                     match('+'); if (state.failed) return ;
                     match('-'); if (state.failed) return ;
@@ -2704,19 +2744,19 @@ public class PhpLexer extends Lexer {
         try {
             int _type = Real;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:5: ( DNum | Exponent_DNum )
-            int alt23=2;
-            alt23 = dfa23.predict(input);
-            switch (alt23) {
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:5: ( DNum | Exponent_DNum )
+            int alt24=2;
+            alt24 = dfa24.predict(input);
+            switch (alt24) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:7: DNum
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:7: DNum
                     {
                     mDNum(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:12: Exponent_DNum
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:12: Exponent_DNum
                     {
                     mExponent_DNum(); if (state.failed) return ;
 
@@ -2737,26 +2777,26 @@ public class PhpLexer extends Lexer {
         try {
             int _type = Boolean;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:537:5: ( 'true' | 'false' )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:546:5: ( 'true' | 'false' )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0=='t') ) {
-                alt24=1;
+            if ( (LA25_0=='t') ) {
+                alt25=1;
             }
-            else if ( (LA24_0=='f') ) {
-                alt24=2;
+            else if ( (LA25_0=='f') ) {
+                alt25=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:537:7: 'true'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:546:7: 'true'
                     {
                     match("true"); if (state.failed) return ;
 
@@ -2764,7 +2804,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:537:16: 'false'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:546:16: 'false'
                     {
                     match("false"); if (state.failed) return ;
 
@@ -2786,18 +2826,18 @@ public class PhpLexer extends Lexer {
         try {
             int _type = SingleQuotedString;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:5: ( '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )* '\\'' )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:7: '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )* '\\''
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:5: ( '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )* '\\'' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:7: '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )* '\\''
             {
             match('\''); if (state.failed) return ;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:12: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )*
-            loop25:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:12: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )*
+            loop26:
             do {
-                int alt25=5;
-                alt25 = dfa25.predict(input);
-                switch (alt25) {
+                int alt26=5;
+                alt26 = dfa26.predict(input);
+                switch (alt26) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:13: ( '\\\\' '\\'' )=> '\\\\' '\\''
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:13: ( '\\\\' '\\'' )=> '\\\\' '\\''
             	    {
             	    match('\\'); if (state.failed) return ;
             	    match('\''); if (state.failed) return ;
@@ -2805,7 +2845,7 @@ public class PhpLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:15: ( '\\\\' '\\\\' )=> '\\\\' '\\\\'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:551:15: ( '\\\\' '\\\\' )=> '\\\\' '\\\\'
             	    {
             	    match('\\'); if (state.failed) return ;
             	    match('\\'); if (state.failed) return ;
@@ -2813,14 +2853,14 @@ public class PhpLexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:543:15: '\\\\'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:552:15: '\\\\'
             	    {
             	    match('\\'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 4 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:543:22: ~ ( '\\'' | '\\\\' )
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:552:22: ~ ( '\\'' | '\\\\' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2837,7 +2877,7 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop26;
                 }
             } while (true);
 
@@ -2856,37 +2896,37 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "EscapeCharector"
     public final void mEscapeCharector() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:5: ( 'n' | 'r' | 't' | '\\\\' | '$' | '\"' | Digits | 'x' )
-            int alt26=8;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:5: ( 'n' | 'r' | 't' | '\\\\' | '$' | '\"' | Digits | 'x' )
+            int alt27=8;
             switch ( input.LA(1) ) {
             case 'n':
                 {
-                alt26=1;
+                alt27=1;
                 }
                 break;
             case 'r':
                 {
-                alt26=2;
+                alt27=2;
                 }
                 break;
             case 't':
                 {
-                alt26=3;
+                alt27=3;
                 }
                 break;
             case '\\':
                 {
-                alt26=4;
+                alt27=4;
                 }
                 break;
             case '$':
                 {
-                alt26=5;
+                alt27=5;
                 }
                 break;
             case '\"':
                 {
-                alt26=6;
+                alt27=6;
                 }
                 break;
             case '0':
@@ -2900,74 +2940,74 @@ public class PhpLexer extends Lexer {
             case '8':
             case '9':
                 {
-                alt26=7;
+                alt27=7;
                 }
                 break;
             case 'x':
                 {
-                alt26=8;
+                alt27=8;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:7: 'n'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:7: 'n'
                     {
                     match('n'); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:13: 'r'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:13: 'r'
                     {
                     match('r'); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:19: 't'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:19: 't'
                     {
                     match('t'); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:25: '\\\\'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:25: '\\\\'
                     {
                     match('\\'); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:32: '$'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:32: '$'
                     {
                     match('$'); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:38: '\"'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:38: '\"'
                     {
                     match('\"'); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:44: Digits
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:44: Digits
                     {
                     mDigits(); if (state.failed) return ;
 
                     }
                     break;
                 case 8 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:549:53: 'x'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:558:53: 'x'
                     {
                     match('x'); if (state.failed) return ;
 
@@ -2986,18 +3026,18 @@ public class PhpLexer extends Lexer {
         try {
             int _type = DoubleQuotedString;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:5: ( '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:7: '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:5: ( '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:7: '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); if (state.failed) return ;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:12: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )*
-            loop27:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:12: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )*
+            loop28:
             do {
-                int alt27=4;
-                alt27 = dfa27.predict(input);
-                switch (alt27) {
+                int alt28=4;
+                alt28 = dfa28.predict(input);
+                switch (alt28) {
             	case 1 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:14: ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:14: ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector
             	    {
             	    match('\\'); if (state.failed) return ;
             	    mEscapeCharector(); if (state.failed) return ;
@@ -3005,14 +3045,14 @@ public class PhpLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:554:7: '\\\\'
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:563:7: '\\\\'
             	    {
             	    match('\\'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 3 :
-            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:555:7: ~ ( '\\\\' | '\"' )
+            	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:564:7: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3029,7 +3069,7 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop28;
                 }
             } while (true);
 
@@ -3050,8 +3090,8 @@ public class PhpLexer extends Lexer {
         try {
             int _type = HereDoc;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:560:5: ( '<<<' HereDocContents )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:560:7: '<<<' HereDocContents
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:569:5: ( '<<<' HereDocContents )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:569:7: '<<<' HereDocContents
             {
             match("<<<"); if (state.failed) return ;
 
@@ -3072,8 +3112,8 @@ public class PhpLexer extends Lexer {
         try {
             int _type = UnquotedString;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:565:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:565:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:574:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:574:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3085,18 +3125,18 @@ public class PhpLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:565:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-            loop28:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:574:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( ((LA28_0>='0' && LA28_0<='9')||(LA28_0>='A' && LA28_0<='Z')||LA28_0=='_'||(LA28_0>='a' && LA28_0<='z')) ) {
-                    alt28=1;
+                if ( ((LA29_0>='0' && LA29_0<='9')||(LA29_0>='A' && LA29_0<='Z')||LA29_0=='_'||(LA29_0>='a' && LA29_0<='z')) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
             	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:
             	    {
@@ -3115,7 +3155,7 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -3133,8 +3173,8 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "HereDocContents"
     public final void mHereDocContents() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:571:5: ()
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:571:7: 
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:580:5: ()
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:580:7: 
             {
             if ( state.backtracking==0 ) {
 
@@ -3180,75 +3220,75 @@ public class PhpLexer extends Lexer {
         try {
             int _type = AsignmentOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:5: ( '+=' | '-=' | '*=' | '/=' | '.=' | '%=' | '&=' | '|=' | '^=' | '<<=' | '>>=' )
-            int alt29=11;
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:5: ( '+=' | '-=' | '*=' | '/=' | '.=' | '%=' | '&=' | '|=' | '^=' | '<<=' | '>>=' )
+            int alt30=11;
             switch ( input.LA(1) ) {
             case '+':
                 {
-                alt29=1;
+                alt30=1;
                 }
                 break;
             case '-':
                 {
-                alt29=2;
+                alt30=2;
                 }
                 break;
             case '*':
                 {
-                alt29=3;
+                alt30=3;
                 }
                 break;
             case '/':
                 {
-                alt29=4;
+                alt30=4;
                 }
                 break;
             case '.':
                 {
-                alt29=5;
+                alt30=5;
                 }
                 break;
             case '%':
                 {
-                alt29=6;
+                alt30=6;
                 }
                 break;
             case '&':
                 {
-                alt29=7;
+                alt30=7;
                 }
                 break;
             case '|':
                 {
-                alt29=8;
+                alt30=8;
                 }
                 break;
             case '^':
                 {
-                alt29=9;
+                alt30=9;
                 }
                 break;
             case '<':
                 {
-                alt29=10;
+                alt30=10;
                 }
                 break;
             case '>':
                 {
-                alt29=11;
+                alt30=11;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:7: '+='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:7: '+='
                     {
                     match("+="); if (state.failed) return ;
 
@@ -3256,7 +3296,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:12: '-='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:12: '-='
                     {
                     match("-="); if (state.failed) return ;
 
@@ -3264,7 +3304,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:17: '*='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:17: '*='
                     {
                     match("*="); if (state.failed) return ;
 
@@ -3272,7 +3312,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:22: '/='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:22: '/='
                     {
                     match("/="); if (state.failed) return ;
 
@@ -3280,7 +3320,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:27: '.='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:27: '.='
                     {
                     match(".="); if (state.failed) return ;
 
@@ -3288,7 +3328,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:32: '%='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:32: '%='
                     {
                     match("%="); if (state.failed) return ;
 
@@ -3296,7 +3336,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:37: '&='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:37: '&='
                     {
                     match("&="); if (state.failed) return ;
 
@@ -3304,7 +3344,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:42: '|='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:42: '|='
                     {
                     match("|="); if (state.failed) return ;
 
@@ -3312,7 +3352,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:47: '^='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:47: '^='
                     {
                     match("^="); if (state.failed) return ;
 
@@ -3320,7 +3360,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:52: '<<='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:52: '<<='
                     {
                     match("<<="); if (state.failed) return ;
 
@@ -3328,7 +3368,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:602:58: '>>='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:611:58: '>>='
                     {
                     match(">>="); if (state.failed) return ;
 
@@ -3350,46 +3390,46 @@ public class PhpLexer extends Lexer {
         try {
             int _type = EqualityOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:606:5: ( '==' | '!=' | '===' | '!==' )
-            int alt30=4;
-            int LA30_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:615:5: ( '==' | '!=' | '===' | '!==' )
+            int alt31=4;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0=='=') ) {
-                int LA30_1 = input.LA(2);
+            if ( (LA31_0=='=') ) {
+                int LA31_1 = input.LA(2);
 
-                if ( (LA30_1=='=') ) {
-                    int LA30_3 = input.LA(3);
+                if ( (LA31_1=='=') ) {
+                    int LA31_3 = input.LA(3);
 
-                    if ( (LA30_3=='=') ) {
-                        alt30=3;
+                    if ( (LA31_3=='=') ) {
+                        alt31=3;
                     }
                     else {
-                        alt30=1;}
+                        alt31=1;}
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 30, 1, input);
+                        new NoViableAltException("", 31, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA30_0=='!') ) {
-                int LA30_2 = input.LA(2);
+            else if ( (LA31_0=='!') ) {
+                int LA31_2 = input.LA(2);
 
-                if ( (LA30_2=='=') ) {
-                    int LA30_4 = input.LA(3);
+                if ( (LA31_2=='=') ) {
+                    int LA31_4 = input.LA(3);
 
-                    if ( (LA30_4=='=') ) {
-                        alt30=4;
+                    if ( (LA31_4=='=') ) {
+                        alt31=4;
                     }
                     else {
-                        alt30=2;}
+                        alt31=2;}
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 30, 2, input);
+                        new NoViableAltException("", 31, 2, input);
 
                     throw nvae;
                 }
@@ -3397,13 +3437,13 @@ public class PhpLexer extends Lexer {
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:606:7: '=='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:615:7: '=='
                     {
                     match("=="); if (state.failed) return ;
 
@@ -3411,7 +3451,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:606:14: '!='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:615:14: '!='
                     {
                     match("!="); if (state.failed) return ;
 
@@ -3419,7 +3459,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:606:21: '==='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:615:21: '==='
                     {
                     match("==="); if (state.failed) return ;
 
@@ -3427,7 +3467,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:606:29: '!=='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:615:29: '!=='
                     {
                     match("!=="); if (state.failed) return ;
 
@@ -3449,52 +3489,52 @@ public class PhpLexer extends Lexer {
         try {
             int _type = ComparisionOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:5: ( '<' | '<=' | '>' | '>=' | '<>' )
-            int alt31=5;
-            int LA31_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:5: ( '<' | '<=' | '>' | '>=' | '<>' )
+            int alt32=5;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA31_0=='<') ) {
+            if ( (LA32_0=='<') ) {
                 switch ( input.LA(2) ) {
                 case '=':
                     {
-                    alt31=2;
+                    alt32=2;
                     }
                     break;
                 case '>':
                     {
-                    alt31=5;
+                    alt32=5;
                     }
                     break;
                 default:
-                    alt31=1;}
+                    alt32=1;}
 
             }
-            else if ( (LA31_0=='>') ) {
-                int LA31_2 = input.LA(2);
+            else if ( (LA32_0=='>') ) {
+                int LA32_2 = input.LA(2);
 
-                if ( (LA31_2=='=') ) {
-                    alt31=4;
+                if ( (LA32_2=='=') ) {
+                    alt32=4;
                 }
                 else {
-                    alt31=3;}
+                    alt32=3;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:7: '<'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:7: '<'
                     {
                     match('<'); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:13: '<='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:13: '<='
                     {
                     match("<="); if (state.failed) return ;
 
@@ -3502,14 +3542,14 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:20: '>'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:20: '>'
                     {
                     match('>'); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:26: '>='
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:26: '>='
                     {
                     match(">="); if (state.failed) return ;
 
@@ -3517,7 +3557,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:610:33: '<>'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:619:33: '<>'
                     {
                     match("<>"); if (state.failed) return ;
 
@@ -3539,26 +3579,26 @@ public class PhpLexer extends Lexer {
         try {
             int _type = ShiftOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:614:5: ( '<<' | '>>' )
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:623:5: ( '<<' | '>>' )
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA32_0=='<') ) {
-                alt32=1;
+            if ( (LA33_0=='<') ) {
+                alt33=1;
             }
-            else if ( (LA32_0=='>') ) {
-                alt32=2;
+            else if ( (LA33_0=='>') ) {
+                alt33=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 throw nvae;
             }
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:614:7: '<<'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:623:7: '<<'
                     {
                     match("<<"); if (state.failed) return ;
 
@@ -3566,7 +3606,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:614:14: '>>'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:623:14: '>>'
                     {
                     match(">>"); if (state.failed) return ;
 
@@ -3588,26 +3628,26 @@ public class PhpLexer extends Lexer {
         try {
             int _type = IncrementOperator;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:618:5: ( '--' | '++' )
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:627:5: ( '--' | '++' )
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA33_0=='-') ) {
-                alt33=1;
+            if ( (LA34_0=='-') ) {
+                alt34=1;
             }
-            else if ( (LA33_0=='+') ) {
-                alt33=2;
+            else if ( (LA34_0=='+') ) {
+                alt34=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 34, 0, input);
 
                 throw nvae;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:618:7: '--'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:627:7: '--'
                     {
                     match("--"); if (state.failed) return ;
 
@@ -3615,7 +3655,7 @@ public class PhpLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:618:12: '++'
+                    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:627:12: '++'
                     {
                     match("++"); if (state.failed) return ;
 
@@ -3635,8 +3675,8 @@ public class PhpLexer extends Lexer {
     // $ANTLR start "Eol"
     public final void mEol() throws RecognitionException {
         try {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:623:5: ( '\\n' )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:623:7: '\\n'
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:632:5: ( '\\n' )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:632:7: '\\n'
             {
             match('\n'); if (state.failed) return ;
 
@@ -3656,21 +3696,21 @@ public class PhpLexer extends Lexer {
 
                 _channel=HIDDEN;
 
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:630:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )* )
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:630:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:639:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )* )
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:639:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
             {
-            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:630:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
-            loop34:
+            // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:639:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
+            loop35:
             do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( ((LA34_0>='\t' && LA34_0<='\n')||LA34_0=='\r'||LA34_0==' ') ) {
-                    alt34=1;
+                if ( ((LA35_0>='\t' && LA35_0<='\n')||LA35_0=='\r'||LA35_0==' ') ) {
+                    alt35=1;
                 }
 
 
-                switch (alt34) {
+                switch (alt35) {
             	case 1 :
             	    // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:
             	    {
@@ -3689,7 +3729,7 @@ public class PhpLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop35;
                 }
             } while (true);
 
@@ -3706,9 +3746,9 @@ public class PhpLexer extends Lexer {
 
     public void mTokens() throws RecognitionException {
         // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:1:8: ( SemiColon | Comma | OpenRoundBracket | CloseRoundBracket | OpenSquareBracket | CloseSquareBracket | OpenCurlyBracket | CloseCurlyBracket | ArrayAssign | LogicalOr | LogicalAnd | ClassMember | InstanceMember | SuppressWarnings | QuestionMark | Dollar | Colon | Dot | Ampersand | Pipe | Bang | Plus | Minus | Asterisk | Percent | Forwardslash | Tilde | Equals | New | Clone | Echo | If | Else | ElseIf | For | Foreach | While | Do | Switch | Case | Default | Function | Break | Continue | Return | Global | Static | And | Or | Xor | Instanceof | List | Class | Interface | Extends | Implements | Abstract | Var | Const | T__113 | BodyString | MultilineComment | SinglelineComment | UnixComment | Array | RequireOperator | PrimitiveType | AccessModifier | Integer | Real | Boolean | SingleQuotedString | DoubleQuotedString | HereDoc | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace )
-        int alt35=81;
-        alt35 = dfa35.predict(input);
-        switch (alt35) {
+        int alt36=81;
+        alt36 = dfa36.predict(input);
+        switch (alt36) {
             case 1 :
                 // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:1:10: SemiColon
                 {
@@ -4283,8 +4323,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred1_Php
     public final void synpred1_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:8: ( '<' ~ '?' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:461:9: '<' ~ '?'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:8: ( '<' ~ '?' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:470:9: '<' ~ '?'
         {
         match('<'); if (state.failed) return ;
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF') ) {
@@ -4304,8 +4344,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred2_Php
     public final void synpred2_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:8: ( '<' ~ '?' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:466:9: '<' ~ '?'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:8: ( '<' ~ '?' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:475:9: '<' ~ '?'
         {
         match('<'); if (state.failed) return ;
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF') ) {
@@ -4325,8 +4365,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred3_Php
     public final void synpred3_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:13: ( '*' ~ '/' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:472:14: '*' ~ '/'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:13: ( '*' ~ '/' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:481:14: '*' ~ '/'
         {
         match('*'); if (state.failed) return ;
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<='\uFFFF') ) {
@@ -4346,8 +4386,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred4_Php
     public final void synpred4_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:14: ( '?' ~ '>' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:476:15: '?' ~ '>'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:14: ( '?' ~ '>' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:485:15: '?' ~ '>'
         {
         match('?'); if (state.failed) return ;
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='=')||(input.LA(1)>='?' && input.LA(1)<='\uFFFF') ) {
@@ -4367,8 +4407,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred5_Php
     public final void synpred5_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:12: ( '?' ~ '>' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:480:13: '?' ~ '>'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:12: ( '?' ~ '>' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:489:13: '?' ~ '>'
         {
         match('?'); if (state.failed) return ;
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='=')||(input.LA(1)>='?' && input.LA(1)<='\uFFFF') ) {
@@ -4388,8 +4428,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred6_Php
     public final void synpred6_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:4: ( '.' Digits )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:524:5: '.' Digits
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:4: ( '.' Digits )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:533:5: '.' Digits
         {
         match('.'); if (state.failed) return ;
         mDigits(); if (state.failed) return ;
@@ -4400,8 +4440,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred7_Php
     public final void synpred7_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:13: ( '\\\\' '\\'' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:541:14: '\\\\' '\\''
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:13: ( '\\\\' '\\'' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:550:14: '\\\\' '\\''
         {
         match('\\'); if (state.failed) return ;
         match('\''); if (state.failed) return ;
@@ -4412,8 +4452,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred8_Php
     public final void synpred8_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:15: ( '\\\\' '\\\\' )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:542:16: '\\\\' '\\\\'
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:551:15: ( '\\\\' '\\\\' )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:551:16: '\\\\' '\\\\'
         {
         match('\\'); if (state.failed) return ;
         match('\\'); if (state.failed) return ;
@@ -4424,8 +4464,8 @@ public class PhpLexer extends Lexer {
 
     // $ANTLR start synpred9_Php
     public final void synpred9_Php_fragment() throws RecognitionException {   
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:14: ( '\\\\' EscapeCharector )
-        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:553:15: '\\\\' EscapeCharector
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:14: ( '\\\\' EscapeCharector )
+        // /Users/sidharth/Documents/code/phpparser/grammar/Php.g:562:15: '\\\\' EscapeCharector
         {
         match('\\'); if (state.failed) return ;
         mEscapeCharector(); if (state.failed) return ;
@@ -4563,35 +4603,36 @@ public class PhpLexer extends Lexer {
 
 
     protected DFA1 dfa1 = new DFA1(this);
-    protected DFA10 dfa10 = new DFA10(this);
-    protected DFA21 dfa21 = new DFA21(this);
-    protected DFA23 dfa23 = new DFA23(this);
-    protected DFA25 dfa25 = new DFA25(this);
-    protected DFA27 dfa27 = new DFA27(this);
-    protected DFA35 dfa35 = new DFA35(this);
+    protected DFA11 dfa11 = new DFA11(this);
+    protected DFA22 dfa22 = new DFA22(this);
+    protected DFA24 dfa24 = new DFA24(this);
+    protected DFA26 dfa26 = new DFA26(this);
+    protected DFA28 dfa28 = new DFA28(this);
+    protected DFA36 dfa36 = new DFA36(this);
     static final String DFA1_eotS =
-        "\1\2\1\6\2\uffff\1\6\3\uffff\2\6\1\uffff";
+        "\1\2\1\6\2\uffff\1\6\3\uffff\1\6\1\uffff\1\6\1\uffff";
     static final String DFA1_eofS =
-        "\13\uffff";
+        "\14\uffff";
     static final String DFA1_minS =
-        "\2\0\2\uffff\1\0\3\uffff\3\0";
+        "\2\0\2\uffff\1\0\3\uffff\4\0";
     static final String DFA1_maxS =
-        "\2\uffff\2\uffff\1\uffff\3\uffff\2\uffff\1\0";
+        "\2\uffff\2\uffff\1\uffff\3\uffff\1\uffff\1\0\1\uffff\1\0";
     static final String DFA1_acceptS =
-        "\2\uffff\1\3\1\2\1\uffff\3\1\3\uffff";
+        "\2\uffff\1\3\1\2\1\uffff\3\1\4\uffff";
     static final String DFA1_specialS =
-        "\1\5\1\3\2\uffff\1\0\3\uffff\1\1\1\4\1\2}>";
+        "\1\6\1\3\2\uffff\1\5\3\uffff\1\0\1\1\1\4\1\2}>";
     static final String[] DFA1_transitionS = {
             "\74\3\1\1\uffc3\3",
             "\74\7\1\5\2\7\1\4\uffc0\7",
             "",
             "",
-            "\74\7\1\5\63\7\1\10\uff8f\7",
+            "\74\7\1\5\1\11\62\7\1\10\uff8f\7",
             "",
             "",
             "",
-            "\74\7\1\5\53\7\1\11\uff97\7",
-            "\74\7\1\5\63\7\1\12\uff8f\7",
+            "\74\7\1\5\53\7\1\12\uff97\7",
+            "\1\uffff",
+            "\74\7\1\5\63\7\1\13\uff8f\7",
             "\1\uffff"
     };
 
@@ -4625,39 +4666,20 @@ public class PhpLexer extends Lexer {
             this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "()* loopback of 461:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*";
+            return "()* loopback of 470:7: ( ( '<' ~ '?' )=> '<' | ~ '<' )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA1_4 = input.LA(1);
-
-                         
-                        int index1_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA1_4=='p') ) {s = 8;}
-
-                        else if ( (LA1_4=='<') && (synpred1_Php())) {s = 5;}
-
-                        else if ( ((LA1_4>='\u0000' && LA1_4<=';')||(LA1_4>='=' && LA1_4<='o')||(LA1_4>='q' && LA1_4<='\uFFFF')) && (synpred1_Php())) {s = 7;}
-
-                        else s = 6;
-
-                         
-                        input.seek(index1_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA1_8 = input.LA(1);
 
                          
                         int index1_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA1_8=='h') ) {s = 9;}
+                        if ( (LA1_8=='h') ) {s = 10;}
 
                         else if ( (LA1_8=='<') && (synpred1_Php())) {s = 5;}
 
@@ -4669,11 +4691,11 @@ public class PhpLexer extends Lexer {
                         input.seek(index1_8);
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA1_10 = input.LA(1);
+                    case 1 : 
+                        int LA1_9 = input.LA(1);
 
                          
-                        int index1_10 = input.index();
+                        int index1_9 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred1_Php()) ) {s = 7;}
@@ -4681,7 +4703,22 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 2;}
 
                          
-                        input.seek(index1_10);
+                        input.seek(index1_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA1_11 = input.LA(1);
+
+                         
+                        int index1_11 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred1_Php()) ) {s = 7;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index1_11);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
@@ -4704,25 +4741,46 @@ public class PhpLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA1_9 = input.LA(1);
+                        int LA1_10 = input.LA(1);
 
                          
-                        int index1_9 = input.index();
+                        int index1_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA1_9=='p') ) {s = 10;}
+                        if ( (LA1_10=='p') ) {s = 11;}
 
-                        else if ( (LA1_9=='<') && (synpred1_Php())) {s = 5;}
+                        else if ( (LA1_10=='<') && (synpred1_Php())) {s = 5;}
 
-                        else if ( ((LA1_9>='\u0000' && LA1_9<=';')||(LA1_9>='=' && LA1_9<='o')||(LA1_9>='q' && LA1_9<='\uFFFF')) && (synpred1_Php())) {s = 7;}
+                        else if ( ((LA1_10>='\u0000' && LA1_10<=';')||(LA1_10>='=' && LA1_10<='o')||(LA1_10>='q' && LA1_10<='\uFFFF')) && (synpred1_Php())) {s = 7;}
 
                         else s = 6;
 
                          
-                        input.seek(index1_9);
+                        input.seek(index1_10);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
+                        int LA1_4 = input.LA(1);
+
+                         
+                        int index1_4 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA1_4=='<') && (synpred1_Php())) {s = 5;}
+
+                        else if ( (LA1_4=='p') ) {s = 8;}
+
+                        else if ( (LA1_4=='=') ) {s = 9;}
+
+                        else if ( ((LA1_4>='\u0000' && LA1_4<=';')||(LA1_4>='>' && LA1_4<='o')||(LA1_4>='q' && LA1_4<='\uFFFF')) && (synpred1_Php())) {s = 7;}
+
+                        else s = 6;
+
+                         
+                        input.seek(index1_4);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
                         int LA1_0 = input.LA(1);
 
                         s = -1;
@@ -4742,21 +4800,21 @@ public class PhpLexer extends Lexer {
             throw nvae;
         }
     }
-    static final String DFA10_eotS =
+    static final String DFA11_eotS =
         "\15\uffff\1\20\1\22\4\uffff";
-    static final String DFA10_eofS =
+    static final String DFA11_eofS =
         "\23\uffff";
-    static final String DFA10_minS =
+    static final String DFA11_minS =
         "\1\151\1\145\1\156\1\161\1\143\1\165\1\154\1\151\1\165\1\162\1\144"+
         "\2\145\2\137\4\uffff";
-    static final String DFA10_maxS =
+    static final String DFA11_maxS =
         "\1\162\1\145\1\156\1\161\1\143\1\165\1\154\1\151\1\165\1\162\1\144"+
         "\2\145\2\137\4\uffff";
-    static final String DFA10_acceptS =
+    static final String DFA11_acceptS =
         "\17\uffff\1\2\1\1\1\4\1\3";
-    static final String DFA10_specialS =
+    static final String DFA11_specialS =
         "\23\uffff}>";
-    static final String[] DFA10_transitionS = {
+    static final String[] DFA11_transitionS = {
             "\1\2\10\uffff\1\1",
             "\1\3",
             "\1\4",
@@ -4778,104 +4836,104 @@ public class PhpLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
-    static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
-    static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
-    static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
-    static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
-    static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
-    static final short[][] DFA10_transition;
+    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+    static final short[][] DFA11_transition;
 
     static {
-        int numStates = DFA10_transitionS.length;
-        DFA10_transition = new short[numStates][];
+        int numStates = DFA11_transitionS.length;
+        DFA11_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
+            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
         }
     }
 
-    class DFA10 extends DFA {
+    class DFA11 extends DFA {
 
-        public DFA10(BaseRecognizer recognizer) {
+        public DFA11(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 10;
-            this.eot = DFA10_eot;
-            this.eof = DFA10_eof;
-            this.min = DFA10_min;
-            this.max = DFA10_max;
-            this.accept = DFA10_accept;
-            this.special = DFA10_special;
-            this.transition = DFA10_transition;
+            this.decisionNumber = 11;
+            this.eot = DFA11_eot;
+            this.eof = DFA11_eof;
+            this.min = DFA11_min;
+            this.max = DFA11_max;
+            this.accept = DFA11_accept;
+            this.special = DFA11_special;
+            this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "488:1: RequireOperator : ( 'require' | 'require_once' | 'include' | 'include_once' );";
+            return "497:1: RequireOperator : ( 'require' | 'require_once' | 'include' | 'include_once' );";
         }
     }
-    static final String DFA21_eotS =
+    static final String DFA22_eotS =
         "\4\uffff";
-    static final String DFA21_eofS =
+    static final String DFA22_eofS =
         "\4\uffff";
-    static final String DFA21_minS =
+    static final String DFA22_minS =
         "\2\56\2\uffff";
-    static final String DFA21_maxS =
+    static final String DFA22_maxS =
         "\1\71\1\145\2\uffff";
-    static final String DFA21_acceptS =
+    static final String DFA22_acceptS =
         "\2\uffff\1\2\1\1";
-    static final String DFA21_specialS =
+    static final String DFA22_specialS =
         "\4\uffff}>";
-    static final String[] DFA21_transitionS = {
+    static final String[] DFA22_transitionS = {
             "\1\2\1\uffff\12\1",
             "\1\2\1\uffff\12\1\13\uffff\1\3\37\uffff\1\3",
             "",
             ""
     };
 
-    static final short[] DFA21_eot = DFA.unpackEncodedString(DFA21_eotS);
-    static final short[] DFA21_eof = DFA.unpackEncodedString(DFA21_eofS);
-    static final char[] DFA21_min = DFA.unpackEncodedStringToUnsignedChars(DFA21_minS);
-    static final char[] DFA21_max = DFA.unpackEncodedStringToUnsignedChars(DFA21_maxS);
-    static final short[] DFA21_accept = DFA.unpackEncodedString(DFA21_acceptS);
-    static final short[] DFA21_special = DFA.unpackEncodedString(DFA21_specialS);
-    static final short[][] DFA21_transition;
+    static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
+    static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
+    static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
+    static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
+    static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
+    static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
+    static final short[][] DFA22_transition;
 
     static {
-        int numStates = DFA21_transitionS.length;
-        DFA21_transition = new short[numStates][];
+        int numStates = DFA22_transitionS.length;
+        DFA22_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA21_transition[i] = DFA.unpackEncodedString(DFA21_transitionS[i]);
+            DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
         }
     }
 
-    class DFA21 extends DFA {
+    class DFA22 extends DFA {
 
-        public DFA21(BaseRecognizer recognizer) {
+        public DFA22(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 21;
-            this.eot = DFA21_eot;
-            this.eof = DFA21_eof;
-            this.min = DFA21_min;
-            this.max = DFA21_max;
-            this.accept = DFA21_accept;
-            this.special = DFA21_special;
-            this.transition = DFA21_transition;
+            this.decisionNumber = 22;
+            this.eot = DFA22_eot;
+            this.eof = DFA22_eof;
+            this.min = DFA22_min;
+            this.max = DFA22_max;
+            this.accept = DFA22_accept;
+            this.special = DFA22_special;
+            this.transition = DFA22_transition;
         }
         public String getDescription() {
-            return "529:4: ( Digits | DNum )";
+            return "538:4: ( Digits | DNum )";
         }
     }
-    static final String DFA23_eotS =
+    static final String DFA24_eotS =
         "\3\uffff\2\6\2\uffff\1\6";
-    static final String DFA23_eofS =
+    static final String DFA24_eofS =
         "\10\uffff";
-    static final String DFA23_minS =
+    static final String DFA24_minS =
         "\1\56\1\60\1\56\2\60\2\uffff\1\60";
-    static final String DFA23_maxS =
+    static final String DFA24_maxS =
         "\2\71\3\145\2\uffff\1\145";
-    static final String DFA23_acceptS =
+    static final String DFA24_acceptS =
         "\5\uffff\1\2\1\1\1\uffff";
-    static final String DFA23_specialS =
+    static final String DFA24_specialS =
         "\10\uffff}>";
-    static final String[] DFA23_transitionS = {
+    static final String[] DFA24_transitionS = {
             "\1\1\1\uffff\12\2",
             "\12\3",
             "\1\4\1\uffff\12\2\13\uffff\1\5\37\uffff\1\5",
@@ -4886,52 +4944,52 @@ public class PhpLexer extends Lexer {
             "\12\7\13\uffff\1\5\37\uffff\1\5"
     };
 
-    static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
-    static final short[] DFA23_eof = DFA.unpackEncodedString(DFA23_eofS);
-    static final char[] DFA23_min = DFA.unpackEncodedStringToUnsignedChars(DFA23_minS);
-    static final char[] DFA23_max = DFA.unpackEncodedStringToUnsignedChars(DFA23_maxS);
-    static final short[] DFA23_accept = DFA.unpackEncodedString(DFA23_acceptS);
-    static final short[] DFA23_special = DFA.unpackEncodedString(DFA23_specialS);
-    static final short[][] DFA23_transition;
+    static final short[] DFA24_eot = DFA.unpackEncodedString(DFA24_eotS);
+    static final short[] DFA24_eof = DFA.unpackEncodedString(DFA24_eofS);
+    static final char[] DFA24_min = DFA.unpackEncodedStringToUnsignedChars(DFA24_minS);
+    static final char[] DFA24_max = DFA.unpackEncodedStringToUnsignedChars(DFA24_maxS);
+    static final short[] DFA24_accept = DFA.unpackEncodedString(DFA24_acceptS);
+    static final short[] DFA24_special = DFA.unpackEncodedString(DFA24_specialS);
+    static final short[][] DFA24_transition;
 
     static {
-        int numStates = DFA23_transitionS.length;
-        DFA23_transition = new short[numStates][];
+        int numStates = DFA24_transitionS.length;
+        DFA24_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA23_transition[i] = DFA.unpackEncodedString(DFA23_transitionS[i]);
+            DFA24_transition[i] = DFA.unpackEncodedString(DFA24_transitionS[i]);
         }
     }
 
-    class DFA23 extends DFA {
+    class DFA24 extends DFA {
 
-        public DFA23(BaseRecognizer recognizer) {
+        public DFA24(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 23;
-            this.eot = DFA23_eot;
-            this.eof = DFA23_eof;
-            this.min = DFA23_min;
-            this.max = DFA23_max;
-            this.accept = DFA23_accept;
-            this.special = DFA23_special;
-            this.transition = DFA23_transition;
+            this.decisionNumber = 24;
+            this.eot = DFA24_eot;
+            this.eof = DFA24_eof;
+            this.min = DFA24_min;
+            this.max = DFA24_max;
+            this.accept = DFA24_accept;
+            this.special = DFA24_special;
+            this.transition = DFA24_transition;
         }
         public String getDescription() {
-            return "532:1: Real : ( DNum | Exponent_DNum );";
+            return "541:1: Real : ( DNum | Exponent_DNum );";
         }
     }
-    static final String DFA25_eotS =
+    static final String DFA26_eotS =
         "\4\uffff\1\6\6\uffff";
-    static final String DFA25_eofS =
+    static final String DFA26_eofS =
         "\13\uffff";
-    static final String DFA25_minS =
+    static final String DFA26_minS =
         "\1\0\1\uffff\1\0\1\uffff\2\0\5\uffff";
-    static final String DFA25_maxS =
+    static final String DFA26_maxS =
         "\1\uffff\1\uffff\1\uffff\1\uffff\1\uffff\1\0\5\uffff";
-    static final String DFA25_acceptS =
+    static final String DFA26_acceptS =
         "\1\uffff\1\5\1\uffff\1\4\2\uffff\1\3\3\1\1\2";
-    static final String DFA25_specialS =
-        "\1\1\1\uffff\1\2\1\uffff\1\0\1\3\5\uffff}>";
-    static final String[] DFA25_transitionS = {
+    static final String DFA26_specialS =
+        "\1\2\1\uffff\1\0\1\uffff\1\1\1\3\5\uffff}>";
+    static final String[] DFA26_transitionS = {
             "\47\3\1\1\64\3\1\2\uffa3\3",
             "",
             "\47\6\1\4\64\6\1\5\uffa3\6",
@@ -4945,90 +5003,90 @@ public class PhpLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA25_eot = DFA.unpackEncodedString(DFA25_eotS);
-    static final short[] DFA25_eof = DFA.unpackEncodedString(DFA25_eofS);
-    static final char[] DFA25_min = DFA.unpackEncodedStringToUnsignedChars(DFA25_minS);
-    static final char[] DFA25_max = DFA.unpackEncodedStringToUnsignedChars(DFA25_maxS);
-    static final short[] DFA25_accept = DFA.unpackEncodedString(DFA25_acceptS);
-    static final short[] DFA25_special = DFA.unpackEncodedString(DFA25_specialS);
-    static final short[][] DFA25_transition;
+    static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
+    static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
+    static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
+    static final char[] DFA26_max = DFA.unpackEncodedStringToUnsignedChars(DFA26_maxS);
+    static final short[] DFA26_accept = DFA.unpackEncodedString(DFA26_acceptS);
+    static final short[] DFA26_special = DFA.unpackEncodedString(DFA26_specialS);
+    static final short[][] DFA26_transition;
 
     static {
-        int numStates = DFA25_transitionS.length;
-        DFA25_transition = new short[numStates][];
+        int numStates = DFA26_transitionS.length;
+        DFA26_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA25_transition[i] = DFA.unpackEncodedString(DFA25_transitionS[i]);
+            DFA26_transition[i] = DFA.unpackEncodedString(DFA26_transitionS[i]);
         }
     }
 
-    class DFA25 extends DFA {
+    class DFA26 extends DFA {
 
-        public DFA25(BaseRecognizer recognizer) {
+        public DFA26(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 25;
-            this.eot = DFA25_eot;
-            this.eof = DFA25_eof;
-            this.min = DFA25_min;
-            this.max = DFA25_max;
-            this.accept = DFA25_accept;
-            this.special = DFA25_special;
-            this.transition = DFA25_transition;
+            this.decisionNumber = 26;
+            this.eot = DFA26_eot;
+            this.eof = DFA26_eof;
+            this.min = DFA26_min;
+            this.max = DFA26_max;
+            this.accept = DFA26_accept;
+            this.special = DFA26_special;
+            this.transition = DFA26_transition;
         }
         public String getDescription() {
-            return "()* loopback of 541:12: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )*";
+            return "()* loopback of 550:12: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' | ~ ( '\\'' | '\\\\' ) )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA25_4 = input.LA(1);
+                        int LA26_2 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA26_2=='\'') ) {s = 4;}
+
+                        else if ( (LA26_2=='\\') ) {s = 5;}
+
+                        else if ( ((LA26_2>='\u0000' && LA26_2<='&')||(LA26_2>='(' && LA26_2<='[')||(LA26_2>=']' && LA26_2<='\uFFFF')) ) {s = 6;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA26_4 = input.LA(1);
 
                          
-                        int index25_4 = input.index();
+                        int index26_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA25_4=='\'') && (synpred7_Php())) {s = 7;}
+                        if ( (LA26_4=='\'') && (synpred7_Php())) {s = 7;}
 
-                        else if ( (LA25_4=='\\') && (synpred7_Php())) {s = 8;}
+                        else if ( (LA26_4=='\\') && (synpred7_Php())) {s = 8;}
 
-                        else if ( ((LA25_4>='\u0000' && LA25_4<='&')||(LA25_4>='(' && LA25_4<='[')||(LA25_4>=']' && LA25_4<='\uFFFF')) && (synpred7_Php())) {s = 9;}
+                        else if ( ((LA26_4>='\u0000' && LA26_4<='&')||(LA26_4>='(' && LA26_4<='[')||(LA26_4>=']' && LA26_4<='\uFFFF')) && (synpred7_Php())) {s = 9;}
 
                         else s = 6;
 
                          
-                        input.seek(index25_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA25_0 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA25_0=='\'') ) {s = 1;}
-
-                        else if ( (LA25_0=='\\') ) {s = 2;}
-
-                        else if ( ((LA25_0>='\u0000' && LA25_0<='&')||(LA25_0>='(' && LA25_0<='[')||(LA25_0>=']' && LA25_0<='\uFFFF')) ) {s = 3;}
-
+                        input.seek(index26_4);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA25_2 = input.LA(1);
+                        int LA26_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA25_2=='\'') ) {s = 4;}
+                        if ( (LA26_0=='\'') ) {s = 1;}
 
-                        else if ( (LA25_2=='\\') ) {s = 5;}
+                        else if ( (LA26_0=='\\') ) {s = 2;}
 
-                        else if ( ((LA25_2>='\u0000' && LA25_2<='&')||(LA25_2>='(' && LA25_2<='[')||(LA25_2>=']' && LA25_2<='\uFFFF')) ) {s = 6;}
+                        else if ( ((LA26_0>='\u0000' && LA26_0<='&')||(LA26_0>='(' && LA26_0<='[')||(LA26_0>=']' && LA26_0<='\uFFFF')) ) {s = 3;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA25_5 = input.LA(1);
+                        int LA26_5 = input.LA(1);
 
                          
-                        int index25_5 = input.index();
+                        int index26_5 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred8_Php()) ) {s = 10;}
@@ -5036,30 +5094,30 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 6;}
 
                          
-                        input.seek(index25_5);
+                        input.seek(index26_5);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 25, _s, input);
+                new NoViableAltException(getDescription(), 26, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA27_eotS =
+    static final String DFA28_eotS =
         "\4\uffff\1\14\13\uffff";
-    static final String DFA27_eofS =
+    static final String DFA28_eofS =
         "\20\uffff";
-    static final String DFA27_minS =
+    static final String DFA28_minS =
         "\1\0\1\uffff\1\0\1\uffff\10\0\4\uffff";
-    static final String DFA27_maxS =
+    static final String DFA28_maxS =
         "\1\uffff\1\uffff\1\uffff\1\uffff\1\uffff\7\0\4\uffff";
-    static final String DFA27_acceptS =
+    static final String DFA28_acceptS =
         "\1\uffff\1\4\1\uffff\1\3\10\uffff\1\2\3\1";
-    static final String DFA27_specialS =
-        "\1\6\1\uffff\1\10\1\uffff\1\5\1\0\1\3\1\4\1\7\1\1\1\2\1\11\4\uffff}>";
-    static final String[] DFA27_transitionS = {
+    static final String DFA28_specialS =
+        "\1\5\1\uffff\1\6\1\uffff\1\3\1\7\1\1\1\10\1\0\1\11\1\2\1\4\4\uffff}>";
+    static final String[] DFA28_transitionS = {
             "\42\3\1\1\71\3\1\2\uffa3\3",
             "",
             "\42\14\1\4\1\14\1\11\13\14\12\12\42\14\1\5\21\14\1\6\3\14\1"+
@@ -5079,47 +5137,47 @@ public class PhpLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
-    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
-    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
-    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
-    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
-    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
-    static final short[][] DFA27_transition;
+    static final short[] DFA28_eot = DFA.unpackEncodedString(DFA28_eotS);
+    static final short[] DFA28_eof = DFA.unpackEncodedString(DFA28_eofS);
+    static final char[] DFA28_min = DFA.unpackEncodedStringToUnsignedChars(DFA28_minS);
+    static final char[] DFA28_max = DFA.unpackEncodedStringToUnsignedChars(DFA28_maxS);
+    static final short[] DFA28_accept = DFA.unpackEncodedString(DFA28_acceptS);
+    static final short[] DFA28_special = DFA.unpackEncodedString(DFA28_specialS);
+    static final short[][] DFA28_transition;
 
     static {
-        int numStates = DFA27_transitionS.length;
-        DFA27_transition = new short[numStates][];
+        int numStates = DFA28_transitionS.length;
+        DFA28_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
+            DFA28_transition[i] = DFA.unpackEncodedString(DFA28_transitionS[i]);
         }
     }
 
-    class DFA27 extends DFA {
+    class DFA28 extends DFA {
 
-        public DFA27(BaseRecognizer recognizer) {
+        public DFA28(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 27;
-            this.eot = DFA27_eot;
-            this.eof = DFA27_eof;
-            this.min = DFA27_min;
-            this.max = DFA27_max;
-            this.accept = DFA27_accept;
-            this.special = DFA27_special;
-            this.transition = DFA27_transition;
+            this.decisionNumber = 28;
+            this.eot = DFA28_eot;
+            this.eof = DFA28_eof;
+            this.min = DFA28_min;
+            this.max = DFA28_max;
+            this.accept = DFA28_accept;
+            this.special = DFA28_special;
+            this.transition = DFA28_transition;
         }
         public String getDescription() {
-            return "()* loopback of 553:12: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )*";
+            return "()* loopback of 562:12: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' | ~ ( '\\\\' | '\"' ) )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA27_5 = input.LA(1);
+                        int LA28_8 = input.LA(1);
 
                          
-                        int index27_5 = input.index();
+                        int index28_8 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_Php()) ) {s = 15;}
@@ -5127,14 +5185,14 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index27_5);
+                        input.seek(index28_8);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA27_9 = input.LA(1);
+                        int LA28_6 = input.LA(1);
 
                          
-                        int index27_9 = input.index();
+                        int index28_6 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_Php()) ) {s = 15;}
@@ -5142,14 +5200,14 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index27_9);
+                        input.seek(index28_6);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA27_10 = input.LA(1);
+                        int LA28_10 = input.LA(1);
 
                          
-                        int index27_10 = input.index();
+                        int index28_10 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_Php()) ) {s = 15;}
@@ -5157,75 +5215,84 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index27_10);
+                        input.seek(index28_10);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA27_6 = input.LA(1);
+                        int LA28_4 = input.LA(1);
 
                          
-                        int index27_6 = input.index();
+                        int index28_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_Php()) ) {s = 15;}
+                        if ( (LA28_4=='\"') && (synpred9_Php())) {s = 13;}
 
-                        else if ( (true) ) {s = 12;}
+                        else if ( (LA28_4=='\\') && (synpred9_Php())) {s = 14;}
 
-                         
-                        input.seek(index27_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA27_7 = input.LA(1);
-
-                         
-                        int index27_7 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred9_Php()) ) {s = 15;}
-
-                        else if ( (true) ) {s = 12;}
-
-                         
-                        input.seek(index27_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA27_4 = input.LA(1);
-
-                         
-                        int index27_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA27_4=='\"') && (synpred9_Php())) {s = 13;}
-
-                        else if ( (LA27_4=='\\') && (synpred9_Php())) {s = 14;}
-
-                        else if ( ((LA27_4>='\u0000' && LA27_4<='!')||(LA27_4>='#' && LA27_4<='[')||(LA27_4>=']' && LA27_4<='\uFFFF')) && (synpred9_Php())) {s = 15;}
+                        else if ( ((LA28_4>='\u0000' && LA28_4<='!')||(LA28_4>='#' && LA28_4<='[')||(LA28_4>=']' && LA28_4<='\uFFFF')) && (synpred9_Php())) {s = 15;}
 
                         else s = 12;
 
                          
-                        input.seek(index27_4);
+                        input.seek(index28_4);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA28_11 = input.LA(1);
+
+                         
+                        int index28_11 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred9_Php()) ) {s = 15;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index28_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA28_0 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA28_0=='\"') ) {s = 1;}
+
+                        else if ( (LA28_0=='\\') ) {s = 2;}
+
+                        else if ( ((LA28_0>='\u0000' && LA28_0<='!')||(LA28_0>='#' && LA28_0<='[')||(LA28_0>=']' && LA28_0<='\uFFFF')) ) {s = 3;}
+
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA27_0 = input.LA(1);
+                        int LA28_2 = input.LA(1);
 
                         s = -1;
-                        if ( (LA27_0=='\"') ) {s = 1;}
+                        if ( (LA28_2=='\"') ) {s = 4;}
 
-                        else if ( (LA27_0=='\\') ) {s = 2;}
+                        else if ( (LA28_2=='\\') ) {s = 5;}
 
-                        else if ( ((LA27_0>='\u0000' && LA27_0<='!')||(LA27_0>='#' && LA27_0<='[')||(LA27_0>=']' && LA27_0<='\uFFFF')) ) {s = 3;}
+                        else if ( (LA28_2=='n') ) {s = 6;}
+
+                        else if ( (LA28_2=='r') ) {s = 7;}
+
+                        else if ( (LA28_2=='t') ) {s = 8;}
+
+                        else if ( (LA28_2=='$') ) {s = 9;}
+
+                        else if ( ((LA28_2>='0' && LA28_2<='9')) ) {s = 10;}
+
+                        else if ( (LA28_2=='x') ) {s = 11;}
+
+                        else if ( ((LA28_2>='\u0000' && LA28_2<='!')||LA28_2=='#'||(LA28_2>='%' && LA28_2<='/')||(LA28_2>=':' && LA28_2<='[')||(LA28_2>=']' && LA28_2<='m')||(LA28_2>='o' && LA28_2<='q')||LA28_2=='s'||(LA28_2>='u' && LA28_2<='w')||(LA28_2>='y' && LA28_2<='\uFFFF')) ) {s = 12;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
-                        int LA27_8 = input.LA(1);
+                        int LA28_5 = input.LA(1);
 
                          
-                        int index27_8 = input.index();
+                        int index28_5 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_Php()) ) {s = 15;}
@@ -5233,38 +5300,14 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index27_8);
+                        input.seek(index28_5);
                         if ( s>=0 ) return s;
                         break;
                     case 8 : 
-                        int LA27_2 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA27_2=='\"') ) {s = 4;}
-
-                        else if ( (LA27_2=='\\') ) {s = 5;}
-
-                        else if ( (LA27_2=='n') ) {s = 6;}
-
-                        else if ( (LA27_2=='r') ) {s = 7;}
-
-                        else if ( (LA27_2=='t') ) {s = 8;}
-
-                        else if ( (LA27_2=='$') ) {s = 9;}
-
-                        else if ( ((LA27_2>='0' && LA27_2<='9')) ) {s = 10;}
-
-                        else if ( (LA27_2=='x') ) {s = 11;}
-
-                        else if ( ((LA27_2>='\u0000' && LA27_2<='!')||LA27_2=='#'||(LA27_2>='%' && LA27_2<='/')||(LA27_2>=':' && LA27_2<='[')||(LA27_2>=']' && LA27_2<='m')||(LA27_2>='o' && LA27_2<='q')||LA27_2=='s'||(LA27_2>='u' && LA27_2<='w')||(LA27_2>='y' && LA27_2<='\uFFFF')) ) {s = 12;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 9 : 
-                        int LA27_11 = input.LA(1);
+                        int LA28_7 = input.LA(1);
 
                          
-                        int index27_11 = input.index();
+                        int index28_7 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_Php()) ) {s = 15;}
@@ -5272,18 +5315,33 @@ public class PhpLexer extends Lexer {
                         else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index27_11);
+                        input.seek(index28_7);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA28_9 = input.LA(1);
+
+                         
+                        int index28_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred9_Php()) ) {s = 15;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index28_9);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 27, _s, input);
+                new NoViableAltException(getDescription(), 28, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA35_eotS =
+    static final String DFA36_eotS =
         "\1\64\10\uffff\1\67\1\71\1\73\1\75\1\100\1\uffff\1\102\1\uffff\1"+
         "\104\1\105\1\106\1\107\1\110\1\113\1\uffff\20\61\1\uffff\2\61\2"+
         "\157\1\61\2\uffff\1\164\2\uffff\1\164\30\uffff\7\61\1\176\7\61\1"+
@@ -5302,9 +5360,9 @@ public class PhpLexer extends Lexer {
         "\1\uffff\1\61\1\u0130\1\61\1\uffff\1\61\1\u0133\2\61\1\uffff\1\61"+
         "\1\uffff\1\u0119\1\u0137\1\uffff\1\61\1\u0139\1\61\1\uffff\1\61"+
         "\1\uffff\1\61\2\u0121";
-    static final String DFA35_eofS =
+    static final String DFA36_eofS =
         "\u013d\uffff";
-    static final String DFA35_minS =
+    static final String DFA36_minS =
         "\1\41\10\uffff\2\75\1\46\1\72\1\55\1\uffff\1\76\1\uffff\1\60\1\75"+
         "\1\53\2\75\1\52\1\uffff\1\145\1\141\1\143\1\146\1\141\1\150\1\145"+
         "\1\164\1\157\1\145\1\154\1\122\1\142\1\157\1\151\1\141\1\uffff\1"+
@@ -5330,7 +5388,7 @@ public class PhpLexer extends Lexer {
         "\uffff\1\157\1\60\1\144\1\uffff\1\146\1\60\1\156\1\163\1\uffff\1"+
         "\156\1\uffff\2\60\1\uffff\1\143\1\60\1\143\1\uffff\1\145\1\uffff"+
         "\1\145\2\60";
-    static final String DFA35_maxS =
+    static final String DFA36_maxS =
         "\1\176\10\uffff\1\76\1\174\1\75\1\72\1\76\1\uffff\1\76\1\uffff\6"+
         "\75\1\uffff\1\145\1\157\1\170\1\156\1\165\1\150\1\157\1\167\1\162"+
         "\1\145\1\154\1\163\1\162\1\157\1\151\1\141\1\uffff\1\162\1\165\2"+
@@ -5356,7 +5414,7 @@ public class PhpLexer extends Lexer {
         "\1\uffff\1\172\1\uffff\1\157\1\172\1\144\1\uffff\1\146\1\172\1\156"+
         "\1\163\1\uffff\1\156\1\uffff\2\172\1\uffff\1\143\1\172\1\143\1\uffff"+
         "\1\145\1\uffff\1\145\2\172";
-    static final String DFA35_acceptS =
+    static final String DFA36_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\5\uffff\1\16\1\uffff\1"+
         "\20\6\uffff\1\33\20\uffff\1\100\5\uffff\1\110\1\111\1\uffff\1\113"+
         "\1\114\1\uffff\1\121\1\11\1\115\1\34\1\12\1\24\1\13\1\23\1\14\1"+
@@ -5369,9 +5427,9 @@ public class PhpLexer extends Lexer {
         "\1\42\10\uffff\1\47\1\57\1\55\1\uffff\1\56\1\uffff\1\104\3\uffff"+
         "\1\67\3\uffff\1\102\1\uffff\1\44\1\uffff\1\51\3\uffff\1\54\4\uffff"+
         "\1\52\1\uffff\1\71\2\uffff\1\66\3\uffff\1\63\1\uffff\1\70\3\uffff";
-    static final String DFA35_specialS =
+    static final String DFA36_specialS =
         "\u013d\uffff}>";
-    static final String[] DFA35_transitionS = {
+    static final String[] DFA36_transitionS = {
             "\1\22\1\57\1\50\1\20\1\25\1\13\1\56\1\3\1\4\1\24\1\23\1\2\1"+
             "\15\1\21\1\26\1\53\11\54\1\14\1\1\1\60\1\11\1\63\1\17\1\16\1"+
             "\51\31\61\1\5\1\uffff\1\6\1\62\1\61\1\uffff\1\43\1\40\1\31\1"+
@@ -5697,34 +5755,34 @@ public class PhpLexer extends Lexer {
             "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61"
     };
 
-    static final short[] DFA35_eot = DFA.unpackEncodedString(DFA35_eotS);
-    static final short[] DFA35_eof = DFA.unpackEncodedString(DFA35_eofS);
-    static final char[] DFA35_min = DFA.unpackEncodedStringToUnsignedChars(DFA35_minS);
-    static final char[] DFA35_max = DFA.unpackEncodedStringToUnsignedChars(DFA35_maxS);
-    static final short[] DFA35_accept = DFA.unpackEncodedString(DFA35_acceptS);
-    static final short[] DFA35_special = DFA.unpackEncodedString(DFA35_specialS);
-    static final short[][] DFA35_transition;
+    static final short[] DFA36_eot = DFA.unpackEncodedString(DFA36_eotS);
+    static final short[] DFA36_eof = DFA.unpackEncodedString(DFA36_eofS);
+    static final char[] DFA36_min = DFA.unpackEncodedStringToUnsignedChars(DFA36_minS);
+    static final char[] DFA36_max = DFA.unpackEncodedStringToUnsignedChars(DFA36_maxS);
+    static final short[] DFA36_accept = DFA.unpackEncodedString(DFA36_acceptS);
+    static final short[] DFA36_special = DFA.unpackEncodedString(DFA36_specialS);
+    static final short[][] DFA36_transition;
 
     static {
-        int numStates = DFA35_transitionS.length;
-        DFA35_transition = new short[numStates][];
+        int numStates = DFA36_transitionS.length;
+        DFA36_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA35_transition[i] = DFA.unpackEncodedString(DFA35_transitionS[i]);
+            DFA36_transition[i] = DFA.unpackEncodedString(DFA36_transitionS[i]);
         }
     }
 
-    class DFA35 extends DFA {
+    class DFA36 extends DFA {
 
-        public DFA35(BaseRecognizer recognizer) {
+        public DFA36(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 35;
-            this.eot = DFA35_eot;
-            this.eof = DFA35_eof;
-            this.min = DFA35_min;
-            this.max = DFA35_max;
-            this.accept = DFA35_accept;
-            this.special = DFA35_special;
-            this.transition = DFA35_transition;
+            this.decisionNumber = 36;
+            this.eot = DFA36_eot;
+            this.eof = DFA36_eof;
+            this.min = DFA36_min;
+            this.max = DFA36_max;
+            this.accept = DFA36_accept;
+            this.special = DFA36_special;
+            this.transition = DFA36_transition;
         }
         public String getDescription() {
             return "1:1: Tokens : ( SemiColon | Comma | OpenRoundBracket | CloseRoundBracket | OpenSquareBracket | CloseSquareBracket | OpenCurlyBracket | CloseCurlyBracket | ArrayAssign | LogicalOr | LogicalAnd | ClassMember | InstanceMember | SuppressWarnings | QuestionMark | Dollar | Colon | Dot | Ampersand | Pipe | Bang | Plus | Minus | Asterisk | Percent | Forwardslash | Tilde | Equals | New | Clone | Echo | If | Else | ElseIf | For | Foreach | While | Do | Switch | Case | Default | Function | Break | Continue | Return | Global | Static | And | Or | Xor | Instanceof | List | Class | Interface | Extends | Implements | Abstract | Var | Const | T__113 | BodyString | MultilineComment | SinglelineComment | UnixComment | Array | RequireOperator | PrimitiveType | AccessModifier | Integer | Real | Boolean | SingleQuotedString | DoubleQuotedString | HereDoc | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace );";

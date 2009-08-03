@@ -1,5 +1,9 @@
 [
     {"text":"Yamagucci<?", "type":"BodyString"},
     {"text":"/*H ello*/", "type":"MultilineComment"},
-    {"text":"?>", "type":"BodyString"}
+    {"text":"?>\n<?=", "type":"BodyString"},
+		"WhiteSpace",
+		"'$'", "UnquotedString",
+		"WhiteSpace",
+		"BodyString"
 ]
