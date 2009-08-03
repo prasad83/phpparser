@@ -46,7 +46,9 @@ public class PhpLexerTest {
     @Test
     public void test01() throws Exception{
         String name = "lexer01";
-        disp(name);
+        PhpLexer lex = res.lexer(name);
+        lex.setAllowShortOpenTag(true);
+        testForLexer(lex, name);
         
     }
 
